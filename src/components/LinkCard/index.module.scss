@@ -1,0 +1,39 @@
+.cardWrapper {
+}
+
+.card {
+  width: 40vw;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 5vw;
+  border: 2px dotted black;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+
+  p {
+    text-transform: uppercase;
+  }
+
+  p::after {
+    content: '👇';
+    margin-left: 2px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .card {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    width: 80vw;
+  }
+}
