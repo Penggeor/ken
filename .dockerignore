@@ -1,0 +1,59 @@
+# Node modules
+node_modules
+
+# Build output (不要忽略这个如果你在 Dockerfile 中不是从源代码开始构建的)
+# build
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.log
+
+# Directory used by npm
+.npm
+
+# Directory used by yarn
+.yarn-cache
+
+# Git directory and files
+.git
+.gitignore
+
+# IDE directories
+.idea
+.vscode
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Backup files
+*.bak
+*.swp
+*.swo
+
+# Dist directory (if exists)
+/dist
+
+# env files (it's important to keep environment variables secret!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Other common unnecessary files
+*.lock
+*.tar.gz
+*.zip
+*.rar

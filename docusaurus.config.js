@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'YOPTH',
+  title: '楷鹏',
   tagline: 'O ever youthful, O ever weeping.',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'http://wukaipeng.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Yopth', // Usually your GitHub org/user name.
-  projectName: 'Yopth.github.io', // Usually your repo name.
+  organizationName: 'Penggeor', // Usually your GitHub org/user name.
+  projectName: '', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
@@ -47,10 +47,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'YOPTH',
+        title: '',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/Logokp-logo-v3@3x.png',
         },
         items: [
           {
@@ -114,12 +114,16 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/Yopth/Yopth.github.io',
+                href: 'https://github.com/Penggeor',
+              },
+              {
+                label: '粤ICP备2023085392号',
+                href: 'https://beian.miit.gov.cn',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Pandy.`,
+        copyright: `Copyright © ${new Date().getFullYear()} 楷鹏.`,
       },
       prism: {
         theme: lightCodeTheme,
