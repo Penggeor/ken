@@ -22,8 +22,8 @@
 打包
 
 ```shell
-docker build -t ken:latest . 
-docker buildx build --platform=linux/amd64 -t ken/v1.0.0 .
+docker build -t ken:latest .
+docker buildx build --platform=linux/amd64 -t ken:v1.0.0 .
 ```
 
 压缩
@@ -35,7 +35,7 @@ docker save ken:latest -o ken
 上传
 
 ```shell
-scp ./ken ucloud:~ 
+scp ./ken ucloud:~
 ```
 
 解压
@@ -47,6 +47,17 @@ docker load -i ken
 运行
 
 ```shell
-docker run -d -p 4000:3000 ken:latest
+docker run -d -p 4000:3000 --name ken -e \
+POSTHOG_API_KEY= \
+GISCUS_REPO_ID= \
+GISCUS_CATEGORY_ID= \
+ken:v1.0.0
 ```
 
+## Roadmap
+
+- [x] 环境变量
+- [x] 支持评论
+- [x] 网站流量分析
+- [ ] HTTPS 支持
+- [ ] CI/CD 自动化

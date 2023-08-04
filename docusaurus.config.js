@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+require('dotenv').config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -18,6 +19,11 @@ const config = {
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
+  customFields: {
+    GISCUS_REPO_ID: process.env.GISCUS_REPO_ID,
+    GISCUS_CATEGORY_ID: process.env.GISCUS_CATEGORY_ID,
+  },
+
   presets: [
     [
       'classic',
@@ -26,14 +32,14 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/Penggeor/ken/blob/main/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/Penggeor/ken/blob/main/',
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
         },
@@ -112,13 +118,11 @@ const config = {
           {
             title: 'More',
             items: [
+              // {
+              //   label: '由优刻得提供服务器',
+              //   href: 'https://www.ucloud.cn/site/active/kuaijiesale.html',
+              // },
               {
-                label: '由优刻得提供服务器',
-                href: 'https://www.ucloud.cn/site/active/kuaijiesale.html',
-              },
-              {
-                // label: '由又拍云提供云存储',
-                // href: 'https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral',
                 html: `<a class="footer__link-item" style="display: flex;gap: 0.25rem;align-items: center;" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
                 由
                 <img src="/img/provider/又拍云_logo6.png" style="height: 1.5rem" />
@@ -170,6 +174,15 @@ const config = {
         routeBasePath: 'blog-news',
         blogSidebarTitle: '新闻',
         blogSidebarCount: 'ALL',
+      },
+    ],
+    [
+      "posthog-docusaurus",
+      {
+        apiKey: process.env.POSTHOG_API_KEY,
+        appUrl: "https://app.posthog.com", // optional
+        enableInDevelopment: true, // optional
+        // other options are passed to posthog-js init as is
       },
     ],
   ],
