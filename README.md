@@ -17,6 +17,35 @@
 我是说，十年的时间，除了变成中年人，我还可以做多少很酷的事。
 
 
+## Docker 部署
 
+打包
 
+```shell
+docker build -t ken:latest . 
+```
+
+压缩
+
+```shell
+docker save ken:latest -o ken
+```
+
+上传
+
+```shell
+scp ./ken ucloud:~ 
+```
+
+解压
+
+```shell
+docker load -i ken
+```
+
+运行
+
+```shell
+docker run -d -p 4000:3000 ken:latest
+```
 
