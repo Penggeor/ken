@@ -57,3 +57,6 @@ Thumbs.db
 *.tar.gz
 *.zip
 *.rar
+
+# Output
+*ken*

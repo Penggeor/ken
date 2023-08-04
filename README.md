@@ -23,6 +23,7 @@
 
 ```shell
 docker build -t ken:latest . 
+docker buildx build --platform=linux/amd64 -t ken/v1.0.0 .
 ```
 
 压缩
