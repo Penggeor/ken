@@ -51,12 +51,32 @@ Thumbs.db
 .env.development.local
 .env.test.local
 .env.production.local
+.env.example
 
 # Other common unnecessary files
 *.lock
 *.tar.gz
 *.zip
 *.rar
+
+# Git and version control
+.git/
+.gitignore
+.gitattributes
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Build output
+build/
+.cache/
+.docusaurus/
+
+# Backup files
+*.bak
+*.swp
+*.swo
 
 # Output
 *ken*

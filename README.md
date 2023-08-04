@@ -22,8 +22,11 @@
 打包
 
 ```shell
-docker build -t ken:latest .
-docker buildx build --platform=linux/amd64 -t ken:v1.0.0 .
+docker build \
+--build-arg POSTHOG_API_KEY=your_value \
+--build-arg GISCUS_REPO_ID=your_value \
+--build-arg GISCUS_CATEGORY_ID=your_value \
+-t ken:v1.0.0 .
 ```
 
 压缩
