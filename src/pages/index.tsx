@@ -12,12 +12,12 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="The is the Pandy's composition hub"
+      title="主页"
+      description="这是楷鹏的技术领域"
     >
       <HomepageHeader />
       <main>
-        <Project />
+        {/* <Project /> */}
         <Car />
       </main>
     </Layout>

@@ -34,7 +34,7 @@ const config = {
           // Please change this to your repo.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          blogSidebarTitle: 'All MEMEs',
+          blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
         },
         theme: {
@@ -53,11 +53,11 @@ const config = {
           src: 'img/Logokp-logo-v3@3x.png',
         },
         items: [
-          {
-            to: '/docs-engh/intro',
-            label: '英语',
-            position: 'left',
-          },
+          // {
+          //   to: '/docs-engh/intro',
+          //   label: '英语',
+          //   position: 'left',
+          // },
           {
             to: '/docs-tech/intro',
             label: '技术',
@@ -65,14 +65,14 @@ const config = {
           },
           {
             to: '/blog/intro',
-            label: '笑话',
+            label: '博客',
             position: 'left',
           },
-          {
-            to: '/blog-news/intro',
-            label: '新闻',
-            position: 'left',
-          },
+          // {
+          //   to: '/blog-news/intro',
+          //   label: '新闻',
+          //   position: 'left',
+          // },
           {
             href: 'https://github.com/Penggeor',
             label: 'GitHub',
@@ -87,11 +87,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: '学点英语',
-                to: '/docs-engh/intro',
-              },
-              {
-                label: '技术杂谈',
+                label: '技术领域',
                 to: '/docs-tech/intro',
               },
             ],
@@ -107,14 +103,28 @@ const config = {
                 label: 'Twitter',
                 href: 'https://twitter.com/Kail_Penggeor',
               },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/Penggeor',
+              },
             ],
           },
           {
             title: 'More',
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/Penggeor',
+                label: '由优刻得提供服务器',
+                href: 'https://www.ucloud.cn/site/active/kuaijiesale.html',
+              },
+              {
+                // label: '由又拍云提供云存储',
+                // href: 'https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral',
+                html: `<a class="footer__link-item" style="display: flex;gap: 0.25rem;align-items: center;" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
+                由
+                <img src="/img/provider/又拍云_logo6.png" style="height: 1.5rem" />
+                提供云存储
+                <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_node_modules-@docusaurus-theme-classic-lib-theme-Icon-ExternalLink-styles-module"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg>
+                </a>`
               },
               {
                 label: '粤ICP备2023085392号',

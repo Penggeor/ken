@@ -11,25 +11,13 @@ export default function HomepageHeader(): React.ReactElement {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className='container'>
-        <h1 className='hero__title'>公众号 「 楷鹏 」</h1>
-        {/* <p className='hero__subtitle'>{siteConfig.tagline}</p> */}
+        <h1 className='hero__title'>「 楷鹏的技术领域 」</h1>
         <p className='hero__subtitle'>
-          欢迎来到 Pandy 的创作小屋，这里收集我所有的项目、文章、博客笔记
+          作为一个程序员，有一个自己的个人网站是一件很酷的事情。
         </p>
-        {/* <div className={styles.buttons}>
-          <Link
-            className='button button--secondary button--lg'
-            to='/docs-engh/intro'
-          >
-            Go to 学点英语 👳
-          </Link>
-          <Link
-            className='button button--secondary button--lg'
-            to='/docs-tech/intro'
-          >
-            Go to 技术杂谈 💻
-          </Link>
-        </div> */}
+        <p className='hero__subtitle'>我已经很酷了。</p>
+        <p className='hero__subtitle'>那接下来，我要在这里沉淀个人在技术领域的知识。</p>
+        <p className='hero__subtitle'>你应该感到高兴，又多了一位旗鼓相当的对手。</p>
       </div>
     </header>
   )

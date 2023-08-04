@@ -3,13 +3,14 @@
   font-weight: 400;
   // height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 
 .QRCodeHeader {
   text-align: center;
   margin: auto 0;
   margin-top: 2rem;
-  // padding: .5rem 0;
 }

@@ -38,7 +38,12 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-@font-face {
+@import url('https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css');
+/* @import url("https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css");
+@import url("https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css");
+@import url("https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/style.css"); */
+
+/* @font-face {
   font-family: 'Tapestry';
   src: url('@site/static/fonts/Tapestry-Regular.ttf');
   font-weight: 400;
@@ -48,6 +53,11 @@
   font-family: 'ZCOOLXiaoWei';
   src: url('@site/static/fonts/ZCOOLXiaoWei-Regular.ttf');
   font-weight: 400;
+} */
+
+@font-face {
+  font-family: 'LXGW WenKai', sans-serif;
+  font-weight: 400;
 }
 
 h1,
@@ -56,11 +66,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Tapestry';
+  /* font-family: 'Tapestry'; */
+  font-family: 'LXGW WenKai';
 }
 
 * {
   box-sizing: border-box;
-  font-family: 'ZCOOLXiaoWei';
+  /* font-family: 'ZCOOLXiaoWei'; */
+  font-family: 'LXGW WenKai';
   font-weight: 400;
 }
