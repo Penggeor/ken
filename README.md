@@ -50,17 +50,12 @@ docker load -i ken
 运行
 
 ```shell
-docker run -d -p 4000:3000 --name ken -e \
-POSTHOG_API_KEY= \
-GISCUS_REPO_ID= \
-GISCUS_CATEGORY_ID= \
-ken:v1.0.0
+docker run -d -p 4000:3000 --name ken ken:v1.0.0
 ```
 
 ## Roadmap
 
-- [x] 环境变量
 - [x] 支持评论
 - [x] 网站流量分析
-- [ ] HTTPS 支持
+- [x] HTTPS 支持
 - [ ] CI/CD 自动化

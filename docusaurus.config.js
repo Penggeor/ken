@@ -9,7 +9,7 @@ require('dotenv').config();
 const config = {
   title: '楷鹏',
   tagline: 'O ever youthful, O ever weeping.',
-  url: 'http://wukaipeng.com',
+  url: 'https://wukaipeng.com/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
