@@ -59,14 +59,14 @@ const config = {
           src: 'img/Logokp-logo-v3@3x.png',
         },
         items: [
-          // {
-          //   to: '/docs-engh/intro',
-          //   label: '英语',
-          //   position: 'left',
-          // },
           {
             to: '/docs-tech/intro',
             label: '技术',
+            position: 'left',
+          },
+          {
+            to: '/docs-engh/intro',
+            label: '英语',
             position: 'left',
           },
           {
@@ -74,11 +74,6 @@ const config = {
             label: '博客',
             position: 'left',
           },
-          // {
-          //   to: '/blog-news/intro',
-          //   label: '新闻',
-          //   position: 'left',
-          // },
           {
             href: 'https://github.com/Penggeor',
             label: 'GitHub',
@@ -93,8 +88,16 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: '技术领域',
+                label: '技术',
                 to: '/docs-tech/intro',
+              },
+              {
+                label: '英语',
+                to: '/docs-engh/intro',
+              },
+              {
+                label: '博客',
+                to: '/blog/intro',
               },
             ],
           },
@@ -118,10 +121,10 @@ const config = {
           {
             title: 'More',
             items: [
-              // {
-              //   label: '由优刻得提供服务器',
-              //   href: 'https://www.ucloud.cn/site/active/kuaijiesale.html',
-              // },
+              {
+                label: '由 UCloud 提供服务器',
+                href: 'https://www.ucloud.cn/site/active/kuaijiesale.html',
+              },
               {
                 html: `<a class="footer__link-item" style="display: flex;gap: 0.25rem;align-items: center;" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
                 由
