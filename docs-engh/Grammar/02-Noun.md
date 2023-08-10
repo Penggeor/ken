@@ -48,13 +48,41 @@ colf 👉 col<u>ves</u>
 
 child 👉 <u>children</u>
 
+ox 👉 ox<u>en</u>
+
+~~brother / sister~~ 👉~~brotheren / sisteren~~ 原来的复数写法已经被 brothers 和 sisters 取代了
+
+> 🙋 为什么 ox（公牛）复数是 oxen，那 box 的复数为什么是 boxes？
+>
+> 👩‍🏫 这跟词源有关，这两个单词形近，但是 ox 是古英语，box 则是 希腊单词 → 拉丁语 → 法语 → 英语 这样演变来的。
+
+### base plurals 基本复数
+
+sleep 👉 <u>sleep</u>
+
+fish 👉 <u>fish</u>
+
+bison 👉 <u>bison</u> 北美野牛
+
+
+
+**Special exception 特例：**
+
+fish 🆚 fishes
+
+Special of fish 鱼类： Marter study thirty fish. 玛特研究 30 种鱼类
+
+Individual fish 鱼：Marty caught thirty fish. 马蒂抓住了 30 条鱼。
+
+
+
 
 
 mouse 👉 <u>mice</u>
 
 fungus 👉 <u>fungi</u>
 
-sleep 👉 <u>sleep</u>
+
 
 
 

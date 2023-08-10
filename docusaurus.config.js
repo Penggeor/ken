@@ -61,17 +61,27 @@ const config = {
         items: [
           {
             to: '/docs-tech/intro',
-            label: '技术',
+            label: '🦄 技术',
             position: 'left',
           },
           {
             to: '/docs-engh/intro',
-            label: '英语',
+            label: '🐳 英语',
             position: 'left',
           },
           {
-            to: '/blog/intro',
+            to: '/blog-tech/intro',
             label: '博客',
+            position: 'left',
+          },
+          {
+            to: '/blog-engh/intro',
+            label: 'Essay',
+            position: 'left',
+          },
+          {
+            to: '/blog-news/intro',
+            label: '新闻',
             position: 'left',
           },
           {
@@ -98,6 +108,14 @@ const config = {
               {
                 label: '博客',
                 to: '/blog/intro',
+              },
+              {
+                label: 'Essay',
+                to: '/blog-engh/intro',
+              },
+              {
+                label: '新闻',
+                to: '/blog-news/intro',
               },
             ],
           },
@@ -171,11 +189,33 @@ const config = {
     [
       '@docusaurus/plugin-content-blog',
       {
+        id: 'blog-tech',
+        path: 'blog-tech',
+        blogTitle: '博客',
+        routeBasePath: 'blog-tech',
+        blogSidebarTitle: 'ALL 👇',
+        blogSidebarCount: 'ALL',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'blog-engh',
+        path: 'blog-engh',
+        blogTitle: 'Essay',
+        routeBasePath: 'blog-engh',
+        blogSidebarTitle: 'ALL 👇',
+        blogSidebarCount: 'ALL',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
         id: 'blog-news',
         path: 'blog-news',
         blogTitle: '新闻',
         routeBasePath: 'blog-news',
-        blogSidebarTitle: '新闻',
+        blogSidebarTitle: 'ALL 👇',
         blogSidebarCount: 'ALL',
       },
     ],
