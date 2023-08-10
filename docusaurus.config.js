@@ -107,7 +107,7 @@ const config = {
               },
               {
                 label: '博客',
-                to: '/blog/intro',
+                to: '/blog-tech/intro',
               },
               {
                 label: 'Essay',
