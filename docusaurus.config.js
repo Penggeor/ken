@@ -15,7 +15,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Penggeor', // Usually your GitHub org/user name.
-  projectName: '', // Usually your repo name.
+  projectName: 'ken', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
@@ -70,17 +70,17 @@ const config = {
             position: 'left',
           },
           {
-            to: '/blog-tech/intro',
+            to: 'blog-tech',
             label: '博客',
             position: 'left',
           },
           {
-            to: '/blog-engh/intro',
+            to: 'blog-engh',
             label: 'Essay',
             position: 'left',
           },
           {
-            to: '/blog-news/intro',
+            to: 'blog-news',
             label: '新闻',
             position: 'left',
           },
@@ -107,15 +107,15 @@ const config = {
               },
               {
                 label: '博客',
-                to: '/blog-tech/intro',
+                to: 'blog-tech',
               },
               {
                 label: 'Essay',
-                to: '/blog-engh/intro',
+                to: 'blog-engh',
               },
               {
                 label: '新闻',
-                to: '/blog-news/intro',
+                to: 'blog-news',
               },
             ],
           },
@@ -195,6 +195,7 @@ const config = {
         routeBasePath: 'blog-tech',
         blogSidebarTitle: 'ALL 👇',
         blogSidebarCount: 'ALL',
+        authorsMapPath: "../author.yaml"
       },
     ],
     [
@@ -206,6 +207,7 @@ const config = {
         routeBasePath: 'blog-engh',
         blogSidebarTitle: 'ALL 👇',
         blogSidebarCount: 'ALL',
+        authorsMapPath: "../author.yaml"
       },
     ],
     [
