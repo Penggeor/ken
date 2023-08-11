@@ -44,6 +44,8 @@ loaf 👉 loa<u>ves</u>
 
 colf 👉 col<u>ves</u>
 
+
+
 ### en 结尾
 
 child 👉 <u>children</u>
@@ -52,11 +54,19 @@ ox 👉 ox<u>en</u>
 
 ~~brother / sister~~ 👉~~brotheren / sisteren~~ 原来的复数写法已经被 brothers 和 sisters 取代了
 
-> 🙋 为什么 ox（公牛）复数是 oxen，那 box 的复数为什么是 boxes？
->
-> 👩‍🏫 这跟词源有关，这两个单词形近，但是 ox 是古英语，box 则是 希腊单词 → 拉丁语 → 法语 → 英语 这样演变来的。
+:::info
 
-### base plurals 基本复数
+🙋 为什么 ox（公牛）复数是 oxen，那 box 的复数为什么是 boxes？
+
+👩‍🏫 这跟词源有关，这两个单词形近，但是 ox 是古英语，box 则是 希腊单词 → 拉丁语 → 法语 → 英语 这样演变来的。
+
+:::
+
+
+
+### Base plurals 基本复数
+
+单数和复数都是一样的：
 
 sleep 👉 <u>sleep</u>
 
@@ -64,7 +74,7 @@ fish 👉 <u>fish</u>
 
 bison 👉 <u>bison</u> 北美野牛
 
-
+<br />
 
 **Special exception 特例：**
 
@@ -76,13 +86,74 @@ Individual fish 鱼：Marty caught thirty fish. 马蒂抓住了 30 条鱼。
 
 
 
+### Foreign plurals 外来复数
 
+英语中外来词汇的名词复数：
 
-mouse 👉 <u>mice</u>
+🇮🇹 Latin 来自拉丁语
 
 fungus 👉 <u>fungi</u>
 
+> fungus /*ˈfʌŋɡəs*/ n. 真菌
+>
+> fungi /ˈfʌŋɡiː/
 
+cactus 👉 cacti
+
+> cactus /ˈkæktəs/ 仙人掌
+>
+> cacti /ˈkæktaɪ/
+
+🇬🇷 Greek 来自希腊语
+
+thesis
+
+> thesis /ˈθiːsɪs/ 论文；论题，论点；主题
+
+criteria
+
+> criteria /kraɪˈtɪriə/ 标准
+
+
+
+:::tip
+
+外来词中，有些复数形式改动了，而有些则没有。
+
+在使用的时候具体看语境，非正常语境下，fungus → fungus<u>es</u>，cactus → cactus<u>es</u> 都是可以接受的。
+
+随着时间更迭，fungus → fungi 这样正式但是不流通的不规则复数形式会慢慢消失。
+
+:::
+
+
+
+**常见的外来词汇复数变化**
+
+| Language | Change    | Singular 单数     | Irr. Plural 不规则复数 | Reg. Plural 规则复数 |
+| -------- | --------- | ----------------- | ---------------------- | -------------------- |
+| 🇮🇹 Latin | a → ae    | larv<u>a</u> 幼虫 | larv<u>ae</u>          | larvas               |
+|          | us → i    | fung<u>us</u>     | fung<u>i</u>           | fungus               |
+|          | um → a    | dat<u>um</u>      | dat<u>a</u>            | 🈚️                    |
+|          | ex → ices | ind<u>ex</u>      | ind<u>ices</u>         | Indexes              |
+| 🇬🇷 Greek | is → es   | thes<u>is</u>     | thes<u>es</u>          | thesise              |
+|          | on → a    | criteri<u>on</u>  | criteri<u>a</u>        | 🈚️                    |
+
+
+
+### Mutant plurals 突变复数
+
+Mutant plural noun: 不符合任意复数规律。只有七个：
+
+| Singular | Plural |
+| :------: | :----: |
+|   foot   |  feet  |
+|   man    |  men   |
+|  woman   | women  |
+|  tooth   | teeth  |
+|  goose   | Geese  |
+|  mouse   |  mice  |
+|  louse   |  lice  |
 
 
 
