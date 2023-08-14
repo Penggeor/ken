@@ -60,12 +60,12 @@ const config = {
         },
         items: [
           {
-            to: '/docs-tech/intro',
+            to: '/docs-tech/',
             label: '🦄 技术',
             position: 'left',
           },
           {
-            to: '/docs-engh/intro',
+            to: '/docs-engh/',
             label: '🐳 英语',
             position: 'left',
           },
@@ -104,11 +104,11 @@ const config = {
             items: [
               {
                 label: '技术',
-                to: '/docs-tech/intro',
+                to: '/docs-tech/',
               },
               {
                 label: '英语',
-                to: '/docs-engh/intro',
+                to: '/docs-engh/',
               },
               {
                 label: '博客',

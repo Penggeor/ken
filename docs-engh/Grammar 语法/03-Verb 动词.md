@@ -1,5 +1,5 @@
 ---
-slug: verb
+slug: /grammar/verb
 ---
 
 Verb can:

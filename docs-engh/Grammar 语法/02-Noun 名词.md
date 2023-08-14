@@ -1,5 +1,5 @@
 ---
-slug: noun
+slug: /grammar/noun
 ---
 
 **Noun**: basically mean to everything. A noun is a person, place, thing or idea. 一切事物，可以是人（生命体）、地方、事物，或者想法。
