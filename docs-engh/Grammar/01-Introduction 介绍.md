@@ -1,3 +1,9 @@
+---
+slug: introduction
+---
+
+
+
 What is grammar?
 
 - A set of rules that govern language. 语言规则
@@ -6,8 +12,3 @@ What is grammar?
 
 
 
-Resource
-
-课程来自可汗学院：https://www.khanacademy.org/humanities/grammar
-
-Youtube: https://www.youtube.com/watch?v=O-6q-siuMik

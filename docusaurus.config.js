@@ -80,8 +80,8 @@ const config = {
             position: 'left',
           },
           {
-            to: 'blog-news',
-            label: '新闻',
+            to: 'blog-read',
+            label: '阅读',
             position: 'left',
           },
           {
@@ -114,8 +114,8 @@ const config = {
                 to: 'blog-engh',
               },
               {
-                label: '新闻',
-                to: 'blog-news',
+                label: '阅读',
+                to: 'blog-read',
               },
             ],
           },
@@ -213,10 +213,10 @@ const config = {
     [
       '@docusaurus/plugin-content-blog',
       {
-        id: 'blog-news',
-        path: 'blog-news',
-        blogTitle: '新闻',
-        routeBasePath: 'blog-news',
+        id: 'blog-read',
+        path: 'blog-read',
+        blogTitle: '阅读',
+        routeBasePath: 'blog-read',
         blogSidebarTitle: 'ALL 👇',
         blogSidebarCount: 'ALL',
       },
