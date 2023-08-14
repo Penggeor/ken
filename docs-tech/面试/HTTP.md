@@ -1,3 +1,7 @@
+---
+slug: /interview/HTTP
+---
+
 ### Get 和 Post 两者的区别？
 
 👉 考点：HTTP 协议、TCP/IP 协议

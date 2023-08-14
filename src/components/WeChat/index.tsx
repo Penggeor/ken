@@ -45,7 +45,7 @@ export default function WeChat() {
         <div className='wrap'>
           <div className='card'>
             <div className={clsx('card__heaher')}>
-              <h1 className={styles.QRCodeHeader}>楷鹏的微信</h1>
+              <h1 className={styles.QRCodeHeader}>楷鹏的个人微信</h1>
             </div>
             <div className='card__body'>
               <img

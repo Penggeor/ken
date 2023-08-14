@@ -85,6 +85,11 @@ const config = {
             position: 'left',
           },
           {
+            href: '/wechat',
+            label: '微信',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/Penggeor',
             label: 'GitHub',
             position: 'right',
@@ -123,7 +128,7 @@ const config = {
             title: 'Contact Me',
             items: [
               {
-                label: 'WeChat',
+                label: '微信',
                 href: '/wechat',
               },
               {
