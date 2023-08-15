@@ -76,3 +76,7 @@ h6 {
   font-family: 'LXGW WenKai';
   font-weight: 400;
 }
+
+:root {
+  --docusaurus-highlighted-code-line-bg: rgb(196 196 196);
+}

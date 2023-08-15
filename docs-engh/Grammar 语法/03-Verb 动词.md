@@ -236,6 +236,12 @@ walk 的过去式是 walked，其他不规则单词其实也是为了发 -ed 这
 
 
 
+### Vowel-Shift Irregular Verb 元音变换动词
+
+Vowel 元音：Your tongue didn’t touch lips, teeth, or roof of you mouth.  你的舌头没有碰到嘴唇、牙齿或上颚。元音字母有 a，e，i，o，u，元音音标有：
+
+// TODO
+
 
 
 

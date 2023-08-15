@@ -171,6 +171,8 @@ const config = {
       },
     }),
 
+  themes: ['@docusaurus/theme-live-codeblock'],
+
   plugins: [
     'docusaurus-plugin-sass',
     [
