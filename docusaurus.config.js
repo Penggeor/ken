@@ -8,7 +8,7 @@ require('dotenv').config();
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '楷鹏',
-  tagline: 'O ever youthful, O ever weeping.',
+  tagline: '十年的时间，除了变成中年人，我还可以做多少很酷的事',
   url: 'https://wukaipeng.com/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -200,7 +200,7 @@ const config = {
         path: 'blog-tech',
         blogTitle: '博客',
         routeBasePath: 'blog-tech',
-        blogSidebarTitle: 'ALL 👇',
+        blogSidebarTitle: '✨',
         blogSidebarCount: 'ALL',
         authorsMapPath: "../author.yaml"
       },
@@ -212,7 +212,7 @@ const config = {
         path: 'blog-engh',
         blogTitle: 'Essay',
         routeBasePath: 'blog-engh',
-        blogSidebarTitle: 'ALL 👇',
+        blogSidebarTitle: '🌟',
         blogSidebarCount: 'ALL',
         authorsMapPath: "../author.yaml"
       },
@@ -224,7 +224,7 @@ const config = {
         path: 'blog-read',
         blogTitle: '阅读',
         routeBasePath: 'blog-read',
-        blogSidebarTitle: 'ALL 👇',
+        blogSidebarTitle: '💫',
         blogSidebarCount: 'ALL',
       },
     ],

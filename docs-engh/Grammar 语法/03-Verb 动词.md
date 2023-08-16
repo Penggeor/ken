@@ -65,7 +65,7 @@ All sentences contain verbs. 所有的句子都包含动词。
 
 ## Verb Tenses 动词时态
 
-🧙‍♂️ Tenses, or time wizard who can tells stories span all of time. 时态，或者叫做时间魔法师，掌握了时态，讲述故事的时候，你就可以**跨越任意时间维度**：
+🧙‍♂️ Tenses, or time wizard who can tell stories span all of time. 时态，或者叫做时间魔法师，掌握了时态，讲述故事的时候，你就可以**跨越任意时间维度**：
 
 Past 过去 ↔️ Present 现在 ↔️ Future 未来
 
@@ -238,25 +238,76 @@ walk 的过去式是 walked，其他不规则单词其实也是为了发 -ed 这
 
 ### Vowel-Shift Irregular Verb 元音变换动词
 
-Vowel 元音：Your tongue didn’t touch lips, teeth, or roof of you mouth.  你的舌头没有碰到嘴唇、牙齿或上颚。元音字母有 a，e，i，o，u，元音音标有：
+🔗 [区分元音音标和辅音音标](/blog-engh/clarify-vowel-consonant)
 
-// TODO
+Vowel 元音：Your tongue didn’t touch lips, teeth, or roof of your mouth.  发音的时候你的舌头没有碰到嘴唇、牙齿或上颚。
+
+| Present 现在式 | Past 过去式   | Past Perfect 过去分词 | 备注                   |
+| -------------- | ------------- | --------------------- | ---------------------- |
+| sing /sɪŋ/     | sang /sæŋ/    | sung /sʌŋ/            |                        |
+| drink /drɪŋk/  | drank /dræŋk/ | drunk /drʌŋk/         |                        |
+| win /wɪn/      | won /wʌn/     | won                   | 👈 过去分词和过去式一样 |
+| find /faɪnd/   | found /faʊnd/ | found                 |                        |
+| sit /sɪt/      | sat /sæt/     | sat                   |                        |
+| sneak /sniːk/  | sunck /snʌk/  | sunck                 |                        |
+| run /rʌn/      | ran /ræn/     | run                   | 👈 过去分词和现在式一样 |
+
+> 在视频中， David 把过去分词称为 past perfect，其实更加准确的称呼应该是 past participle。
+
+在 sing-sang-sung 中，我们发现发音的位置在移动的：
+
+👉 sing 可以感受到发音是在鼻腔部分（也就是口腔的前面部分）
+
+👉 sang 发音在口腔的中间部分
+
+👉 sung 发音到了喉咙部分
+
+![Mouth cavity](http://img.wukaipeng.com/2023/0816-063409-Illu01_head_neck.jpg)
 
 
 
+### The Irregular Verb gets taken a ride 被不规则动词“骗了”
+
+有些不规则动词也存在<u>通过元音变换</u>，但是它们的过去式 or 过去分词则是变为了 -en 结尾
+
+| Present <br />现在式 | Past <br />过去式 | Past Perfect <br />过去分词 | 备注                                                         |
+| -------------------- | ----------------- | --------------------------- | ------------------------------------------------------------ |
+| tear /ter/           | tore /tɔːr/       | torn /tɔːrn/                |                                                              |
+| show                 | showed            | shown                       |                                                              |
+| prove                | proved            | proven                      |                                                              |
+| bite                 | bit               | bitten                      |                                                              |
+| ride                 | rode              | ridden                      |                                                              |
+| eat                  | ate               | eaten                       |                                                              |
+| speak                | spoke             | spoken                      |                                                              |
+| be                   | was/were          | been                        |                                                              |
+| go                   | went              | gone                        | 👈 go 很奇怪，过去式 went 完全不一样，并且 gone 结尾是 -ne，但是发音却是 -en |
+
+ 
+
+😅 Irregular verbs are weird. There is no denying it. But we can break them down, and they can be understood. 毫无疑问，不规则动词很奇怪。但是我们可以拆分它们，然后让他们变得更加容易理解。
 
 
 
+### The Truly Irregular Verbs 真正的不规则动词
 
+接下来的不规则动词不符合 -ed、元音变换、-en 结尾这三种分类，他们是真正的不规则。
 
+| Change<br />改变 | Present <br />现在式 | Past <br />过去式 |
+| ---------------- | -------------------- | ----------------- |
+| -ught            | teach /tiːtʃ/        | taught /tɔːt/     |
+|                  | catch /kætʃ/         | caught /kɔːt/     |
+|                  | bring /brɪŋ/         | brought /brɔːt/   |
+| -d               | say /seɪ/            | said /sed/        |
+|                  | flee /fliː/          | fled /fled/       |
+| 过去式=现在式    | bet                  | bet               |
+|                  | set                  | set               |
+|                  | hurt                 | hurt              |
+| 情态助词         | can                  | could             |
+|                  | may                  | might             |
+|                  | Shall                | should            |
+|                  | will                 | Would             |
 
-
-
-
-
-
-
-
+🏆  If you can master these, you can be a grammar champion. 如果你掌握了这些，你就可以称为语法冠军
 
 
 
