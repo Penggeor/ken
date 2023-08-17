@@ -148,8 +148,8 @@ HTLM5 极大简化了 DTD 的声明，不再支持 XHTML，目前只有：
   <meta data-rh="true" name="docsearch:language" content="en">
   <meta data-rh="true" name="docsearch:docusaurus_tag" content="default">
   <meta data-rh="true" property="og:title" content="主页 | 楷鹏">
-  <meta data-rh="true" name="description" content="这是楷鹏的技术领域">
-  <meta data-rh="true" property="og:description" content="这是楷鹏的技术领域">
+  <meta data-rh="true" name="description" content="这是楷鹏的知识领域">
+  <meta data-rh="true" property="og:description" content="这是楷鹏的知识领域">
   <link data-rh="true" rel="icon" href="/img/favicon.ico">
   <link data-rh="true" rel="canonical" href="https://wukaipeng.com/">
   <link data-rh="true" rel="alternate" href="https://wukaipeng.com/" hreflang="en-GB">

@@ -11,13 +11,13 @@ export default function HomepageHeader(): React.ReactElement {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className='container'>
-        <h1 className='hero__title'>「 楷鹏的技术领域 」</h1>
-        <p className='hero__subtitle'>
-          作为一个程序员，有一个自己的个人网站是一件很酷的事情
-        </p>
+        <h1 className='hero__title'>幸会，我的老伙计</h1>
+        <p className='hero__subtitle'>有一个人网站是一件很酷的事情</p>
         <p className='hero__subtitle'>我已经很酷了 😎</p>
-        <p className='hero__subtitle'>那接下来，我要在这里沉淀个人在技术领域的知识</p>
-        <p className='hero__subtitle'>你应该感到高兴，又多了一位旗鼓相当的对手</p>
+        <p className='hero__subtitle'>一棵树，在现在最好的时机被种下</p>
+        <p className='hero__subtitle'>很期待十年之后，它会长成什么样</p>
+        <p className='hero__subtitle'>我是说，十年的时间</p>
+        <p className='hero__subtitle'>除了变成中年人，我还可以做多少很酷的事</p>
       </div>
     </header>
   )

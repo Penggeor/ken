@@ -13,11 +13,10 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title="主页"
-      description="这是楷鹏的技术领域"
+      description="楷鹏的知识领域"
     >
       <HomepageHeader />
       <main>
-        {/* <Project /> */}
         <Car />
       </main>
     </Layout>
