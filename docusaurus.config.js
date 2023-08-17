@@ -1,9 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-require('dotenv').config();
+const lightCodeTheme = require('prism-react-renderer/themes/github')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+require('dotenv').config()
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -52,51 +52,57 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      respectPrefersColorScheme: true,
       navbar: {
         title: '',
         logo: {
           alt: 'My Site Logo',
           src: 'img/Logokp-logo-v3@3x.png',
+          srcDark: 'img/Logokp-logo-v1-dark@3x.png',
         },
         items: [
           {
-            to: '/docs-tech/',
+            to: 'technique',
             label: '🦄 技术',
             position: 'left',
           },
           {
-            to: '/docs-engh/',
+            to: 'english',
             label: '🐳 英语',
             position: 'left',
           },
           {
-            to: '/docs-book/',
-            label: '🐶 读书',
+            to: 'read',
+            label: '🐶 阅读',
             position: 'left',
           },
           {
-            to: 'blog-tech',
+            type: 'dropdown',
             label: '博客',
             position: 'left',
-          },
-          {
-            to: 'blog-engh',
-            label: 'Essay',
-            position: 'left',
-          },
-          // {
-          //   to: 'blog-read',
-          //   label: '阅读',
-          //   position: 'left',
-          // },
-          {
-            href: '/wechat',
-            label: '微信',
-            position: 'right',
+            items: [
+              {
+                to: 'tech',
+                label: '👍 技术',
+              },
+              {
+                to: 'eng',
+                label: '✌️ 英文',
+              },
+              {
+                to: 'post',
+                label: '🤟 思考',
+              },
+            ],
           },
           {
             href: 'https://github.com/Penggeor',
-            label: 'GitHub',
+            position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
+          },
+          {
+            type: 'search',
             position: 'right',
           },
         ],
@@ -105,49 +111,62 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: '文档',
             items: [
               {
                 label: '技术',
-                to: '/docs-tech/',
+                to: 'technique',
               },
               {
                 label: '英语',
-                to: '/docs-engh/',
+                to: 'english',
               },
               {
-                label: '博客',
-                to: 'blog-tech',
+                label: '阅读',
+                to: 'read',
               },
-              {
-                label: 'Essay',
-                to: 'blog-engh',
-              },
-              // {
-              //   label: '阅读',
-              //   to: 'blog-read',
-              // },
             ],
           },
           {
-            title: 'Contact Me',
+            title: '博客',
+            items: [
+              {
+                label: '技术',
+                to: 'tech',
+              },
+              {
+                label: '英文',
+                to: 'eng',
+              },
+              {
+                label: '文章',
+                to: 'post',
+              },
+            ],
+          },
+          {
+            title: '联系方式',
             items: [
               {
                 label: '微信',
                 href: '/wechat',
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/Kail_Penggeor',
+                label: '邮箱',
+                href: 'mailto:wkpcoder@163.com',
               },
               {
                 label: 'GitHub',
                 href: 'https://github.com/Penggeor',
               },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/Kail_Penggeor',
+              },
             ],
           },
           {
-            title: 'More',
+            title: '更多信息',
             items: [
               {
                 label: '由 UCloud 提供服务器',
@@ -159,7 +178,7 @@ const config = {
                 <img src="/img/provider/又拍云_logo6.png" style="height: 1.5rem" />
                 提供云存储
                 <svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_node_modules-@docusaurus-theme-classic-lib-theme-Icon-ExternalLink-styles-module"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg>
-                </a>`
+                </a>`,
               },
               {
                 label: '粤ICP备2023085392号',
@@ -189,7 +208,7 @@ const config = {
       {
         id: 'docs-tech',
         path: 'docs-tech',
-        routeBasePath: 'docs-tech',
+        routeBasePath: 'technique',
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
@@ -198,7 +217,7 @@ const config = {
       {
         id: 'docs-engh',
         path: 'docs-engh',
-        routeBasePath: 'docs-engh',
+        routeBasePath: 'english',
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
@@ -207,7 +226,7 @@ const config = {
       {
         id: 'docs-book',
         path: 'docs-book',
-        routeBasePath: 'docs-book',
+        routeBasePath: 'read',
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
@@ -217,10 +236,10 @@ const config = {
         id: 'blog-tech',
         path: 'blog-tech',
         blogTitle: '博客',
-        routeBasePath: 'blog-tech',
+        routeBasePath: 'tech',
         blogSidebarTitle: '✨',
         blogSidebarCount: 'ALL',
-        authorsMapPath: "../author.yaml"
+        authorsMapPath: '../author.yaml',
       },
     ],
     [
@@ -229,28 +248,28 @@ const config = {
         id: 'blog-engh',
         path: 'blog-engh',
         blogTitle: 'Essay',
-        routeBasePath: 'blog-engh',
+        routeBasePath: 'eng',
         blogSidebarTitle: '🌟',
         blogSidebarCount: 'ALL',
-        authorsMapPath: "../author.yaml"
+        authorsMapPath: '../author.yaml',
       },
     ],
-    // [
-    //   '@docusaurus/plugin-content-blog',
-    //   {
-    //     id: 'blog-read',
-    //     path: 'blog-read',
-    //     blogTitle: '阅读',
-    //     routeBasePath: 'blog-read',
-    //     blogSidebarTitle: '💫',
-    //     blogSidebarCount: 'ALL',
-    //   },
-    // ],
     [
-      "posthog-docusaurus",
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'blog-post',
+        path: 'blog-post',
+        blogTitle: '阅读',
+        routeBasePath: 'post',
+        blogSidebarTitle: '💫',
+        blogSidebarCount: 'ALL',
+      },
+    ],
+    [
+      'posthog-docusaurus',
       {
         apiKey: process.env.POSTHOG_API_KEY,
-        appUrl: "https://app.posthog.com", // optional
+        appUrl: 'https://app.posthog.com', // optional
         enableInDevelopment: true, // optional
         // other options are passed to posthog-js init as is
       },
@@ -266,6 +285,6 @@ const config = {
       },
     },
   },
-};
+}
 
-module.exports = config;
+module.exports = config
