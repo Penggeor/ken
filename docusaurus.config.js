@@ -70,6 +70,11 @@ const config = {
             position: 'left',
           },
           {
+            to: '/docs-book/',
+            label: '🐶 读书',
+            position: 'left',
+          },
+          {
             to: 'blog-tech',
             label: '博客',
             position: 'left',
@@ -79,11 +84,11 @@ const config = {
             label: 'Essay',
             position: 'left',
           },
-          {
-            to: 'blog-read',
-            label: '阅读',
-            position: 'left',
-          },
+          // {
+          //   to: 'blog-read',
+          //   label: '阅读',
+          //   position: 'left',
+          // },
           {
             href: '/wechat',
             label: '微信',
@@ -118,10 +123,10 @@ const config = {
                 label: 'Essay',
                 to: 'blog-engh',
               },
-              {
-                label: '阅读',
-                to: 'blog-read',
-              },
+              // {
+              //   label: '阅读',
+              //   to: 'blog-read',
+              // },
             ],
           },
           {
@@ -198,6 +203,15 @@ const config = {
       },
     ],
     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'docs-book',
+        path: 'docs-book',
+        routeBasePath: 'docs-book',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+    [
       '@docusaurus/plugin-content-blog',
       {
         id: 'blog-tech',
@@ -221,17 +235,17 @@ const config = {
         authorsMapPath: "../author.yaml"
       },
     ],
-    [
-      '@docusaurus/plugin-content-blog',
-      {
-        id: 'blog-read',
-        path: 'blog-read',
-        blogTitle: '阅读',
-        routeBasePath: 'blog-read',
-        blogSidebarTitle: '💫',
-        blogSidebarCount: 'ALL',
-      },
-    ],
+    // [
+    //   '@docusaurus/plugin-content-blog',
+    //   {
+    //     id: 'blog-read',
+    //     path: 'blog-read',
+    //     blogTitle: '阅读',
+    //     routeBasePath: 'blog-read',
+    //     blogSidebarTitle: '💫',
+    //     blogSidebarCount: 'ALL',
+    //   },
+    // ],
     [
       "posthog-docusaurus",
       {
