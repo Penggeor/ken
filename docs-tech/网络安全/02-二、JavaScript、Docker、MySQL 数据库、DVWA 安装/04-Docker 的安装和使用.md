@@ -59,11 +59,14 @@ docker <command> --help
 ### 镜像
 
 ```shell
-# 列出所有镜像
+# 列出本地所有镜像
 docker images 
 
 # 搜索镜像
 docker search ${image_name:version}
+
+## 搜索镜像 stars 大于 5000
+docker search mysql --filter=STARS=5000
 
 # 下载镜像
 docker pull ${image_name:version}
@@ -71,6 +74,45 @@ docker pull ${image_name:version}
 # 删除镜像
 docker rmi ${image_name:version}
 ```
+
+
+
+### 容器
+
+```shell
+# 列出状态为运行中的容器
+docker ps
+-a # 列出所有状态的容器
+-q # 列出运行中的容器 ID
+
+# 运行容器
+docker run ${image:version}
+-d # 后台方式运行
+-it # 交互方式运行，能够进入容器查看内容
+-p # 端口映射
+exit # 退出容器
+ctrl+Q+P # 退出容器但是不会停止容器
+
+# 查看容器信息
+docker inspect ${container_id}
+
+# 删除容器
+docker rm ${container_id} 
+
+# 停止正在运行的容器
+docker stop ${container_id}
+
+# 强制停止正在运行的容器
+docker kill ${container_id}
+
+# 启动容器
+docker restart ${container_id}
+
+# 进入一个正在运行中的容器
+docker exec -it ${container_id} /bin/bash
+```
+
+
 
 
 

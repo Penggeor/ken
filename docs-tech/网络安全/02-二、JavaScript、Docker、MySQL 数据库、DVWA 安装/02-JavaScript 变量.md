@@ -259,6 +259,8 @@ console.log(str2.length); // 7
 
 #### 拼接
 
+使用 `+` 连字符进行拼接。
+
 ```js
 let str1 = 'hello';
 let str2 = ' world';
