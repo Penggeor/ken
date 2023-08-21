@@ -2,10 +2,6 @@
 slug: /grammar/course
 ---
 
-
-
-
-
 课程来自可汗学院
 
 可汗学院（英文字幕+练习题）：https://www.khanacademy.org/humanities/grammar

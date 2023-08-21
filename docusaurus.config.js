@@ -49,6 +49,9 @@ const config = {
       }),
     ],
   ],
+
+  themes: ['@docusaurus/theme-live-codeblock'],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -96,7 +99,7 @@ const config = {
             ],
           },
           {
-            href: 'https://github.com/Penggeor',
+            href: 'https://github.com/Penggeor/ken',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
@@ -197,9 +200,36 @@ const config = {
         minHeadingLevel: 2,
         maxHeadingLevel: 6,
       },
-    }),
+      algolia: {
+        // The application ID provided by Algolia
+        appId: process.env.ALGOLIA_APP_ID,
 
-  themes: ['@docusaurus/theme-live-codeblock'],
+        // Public API key: it is safe to commit it
+        apiKey: process.env.ALGOLIA_API_KEY,
+
+        indexName: process.env.ALGOLIA_INDEX_NAME,
+
+        // Optional: see doc section below
+        contextualSearch: false,
+
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        // externalUrlRegex: 'external\\.com|domain\\.com',
+
+        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+        replaceSearchResultPathname: {
+          from: '/zh-CN/', // or as RegExp: /\/docs\//
+          to: '/',
+        },
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: 'search',
+
+        //... other Algolia params
+      },
+    }),
 
   plugins: [
     'docusaurus-plugin-sass',
@@ -280,9 +310,14 @@ const config = {
     defaultLocale: 'zh-CN',
     locales: ['zh-CN'],
     localeConfigs: {
-      en: {
-        htmlLang: 'en-GB',
-      },
+      // en: {
+      //   htmlLang: 'en-GB',
+      // },
+      'zh-CN': {
+        label: '简体中文',
+        direction: 'ltr',
+        htmlLang: 'zh-CN',
+      }
     },
   },
 }

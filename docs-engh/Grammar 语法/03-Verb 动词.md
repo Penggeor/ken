@@ -7,7 +7,7 @@ Verb can:
 1. Show actions. 表达动作。 
 2. Link ideas. 联系（链接）想法
 
-:::info IMPORTANCE
+:::info 很重要
 
 All sentences contain verbs. 所有的句子都包含动词。
 
@@ -111,9 +111,9 @@ Stuff that is happening in later than now.
 
 Flag: **will**
 
-📍 Present tense: I eat this cup-cake.
+📍 Present tense: I eat this cupcake.
 
-📍 Past tense: I <u>will</u> eat this cup-cake.
+📍 Future tense: I <u>will</u> eat this cupcake.
 
 
 
@@ -165,6 +165,8 @@ Flag: **will**
 Helping verb 比较偏拉丁语化的称呼是 auxiliary verb。
 
 > auxiliary /ɔːɡˈzɪliəri/ a. 辅助的 n. 助手；助动词
+
+<br />
 
 一般有两种：to have / to be
 
@@ -307,7 +309,138 @@ Vowel 元音：Your tongue didn’t touch lips, teeth, or roof of your mouth.  �
 |                  | Shall                | should            |
 |                  | will                 | Would             |
 
-🏆  If you can master these, you can be a grammar champion. 如果你掌握了这些，你就可以称为语法冠军
+🏆  If you can master these, you can be a grammar champion. 如果你掌握了这些，你就可以称得上语法冠军
+
+
+
+## Verb Aspect 动词体
+
+Verb aspect: all the possible ways of expressing something in time.  在时间上所有可能的表达方式。
+
+
+
+🚀 我们在描述动作的时候，会分<u>两步</u>走：
+
+1. Tenses 时：确定动作发生的时间，是过去，现在，还是将来
+2. Aspect 态：确定动作发生的状态，是一般、正在进行、完成，还是完成进行
+
+排列组合就有以下时态：
+
+![03-Verb 动词-01](http://img.wukaipeng.com/2023/0820-092708-03-Verb%20%E5%8A%A8%E8%AF%8D-01.png)
+
+![03-Verb 动词-02](http://img.wukaipeng.com/2023/0820-092708-03-Verb%20%E5%8A%A8%E8%AF%8D-02.png)
+
+![03-Verb 动词-03](http://img.wukaipeng.com/2023/0820-092708-03-Verb%20%E5%8A%A8%E8%AF%8D-03.png)
+
+
+
+
+
+### Simple Aspect 一般体
+
+Simple aspect: 最基本的一种时态。
+
+🚶‍♂️ 过去一般：I walked. 
+
+🚶‍♂️ 现在一般：I walk. 
+
+🚶‍♂️ 将来一般：I will walk.
+
+
+
+### Progressive Aspect 进行体
+
+Progressive Aspect: Things are ongoing. 某事正在进行中。
+
+🚶‍♂️ 过去进行：I was walking. 
+
+🚶‍♂️ 现在进行：I am walking. 
+
+🚶‍♂️ 将来进行：I will be walking.
+
+
+
+<u>ABC</u>: Always Be Conjugating. 进行体的一个规则，就是说它的动词变为总是变为「be + v.ing」，即 be 动词+动词的 ing 形式。
+
+> conjugate /ˈkɑːndʒəɡeɪt/ 动词变位
+
+
+
+### Perfect Aspect 完成体
+
+Perfect Aspect: Something has been completed.
+
+🫧 过去完成：I <u>had washed</u> the dishes.
+
+🫧 现在完成：I <u>have washed</u> the dishes.
+
+🫧 将来完成：I will <u>have washed</u> the dishes.
+
+
+
+### Perfect Progressive Aspect 完成进行体
+
+Perfect progressive aspect: 
+
+- You’ve been doing something for a long time 你花了很长时间正在做一件事
+- Or you will have done something for a long time 或者你之前花了很长时间做完某事
+- Or that you had been doing something continuously 或者你会继续做某一件事情
+
+
+
+🍪 过去完成： I <u>had been eating</u> cookies. （之前一直在吃饼干，到现在已经吃完了）
+
+🍪 现在完成：I <u>have been eating</u> cookies. （之前一直在吃饼干，到现在还继续在吃）
+
+🍪 将来完成：I will <u>have been eating</u> cookies. （吃饼干花了很久的时间）
+
+
+
+## Modal Verb 情态动词
+
+🙋 What is modality? 什么是情态？
+
+ 👩‍🏫 Modality is expressed in these conditions: 情态是用于表达这些情况：
+
+- Likelihood/certainty 可能性/确定性
+- Ability 能力
+- Permission 许可
+- Obligation 义务
+
+<br />
+
+🔹 情态动词有：may、 might、 must、 can、 could、 shall、 should、 will、 would
+
+🔸 情态动词特点：
+
+- 适用于一切事物
+- 没有 to- 不定式，比如没有 I to can eat.
+
+<br />
+
+🌰 Example:
+
+- He <u>must</u> have gone that way! ➡ Likelihood.
+
+- You <u>must</u> be this tall to ride the coaster. ➡ Obligation.
+
+- You <u>must</u> remove your shoes.! ➡ Obligation.
+
+- It <u>may</u> rain. ➡ Possibility.
+
+- You <u>may</u> enter. ➡ Permission.
+
+- I <u>can</u> eat ten pounds of broccoli! ➡ Ability.
+
+- I <u>would</u> make the bed, but I’m tired. ➡ Possibility.
+
+- You <u>shouldn’t</u> do that.  ➡ Advise.
+
+- He <u>will</u> win the competition. ➡ Future.
+
+  > 在美式英语中，更多用 will，而英式英语则用 shall，来表达一种未来
+
+
 
 
 
