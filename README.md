@@ -16,6 +16,7 @@
 - 支持文章评论
 - 支持 HTTPS
 - 支持网站监控
+- 支持搜索
 
 
 
@@ -47,9 +48,11 @@
 
 6. [Docker](https://www.docker.com/)：除了部署网站，我还把 Nginx 运行在 Docker 上，而不是把 Nginx 安装在全局下。
 
-7. 又拍云 + uPic：又拍云提供云存储功能，uPic 是一款免费的图片上传应用，两者结合完成图床功能。
+7. Algolia：
 
-8. UCloud：提供服务器、域名、SSL 证书。
+8. 又拍云 + uPic：又拍云提供云存储功能，uPic 是一款免费的图片上传应用，两者结合完成图床功能。
+
+9. UCloud：提供服务器、域名、SSL 证书。
 
 
 
@@ -92,8 +95,4 @@ docker run -d -p 4000:3000 --name ken ken:v1.0.0
 
 ## Roadmap
 
-- [x] 支持评论
-- [x] 网站流量分析
-- [x] HTTPS 支持
-- [ ] Document Search
 - [ ] CI/CD 自动化

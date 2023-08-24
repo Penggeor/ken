@@ -70,6 +70,17 @@ h6 {
   font-family: 'LXGW WenKai';
 }
 
+u {
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 0.8px;
+  text-decoration-color: #3498db;
+}
+
+html[data-theme='dark'] u {
+  text-decoration-color: #9b59b6;
+}
+
 * {
   box-sizing: border-box;
   /* font-family: 'ZCOOLXiaoWei'; */

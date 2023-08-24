@@ -142,8 +142,8 @@ Who, who, whose, that, and which.
 1️⃣ **“That” is bad with commas.**
 
 > Brain Garnar says, nine times out of ten, if you want to use a relative pronoun and you’re trying to choose between “that” and “which”, you should probably use “that” and the one time out of ten that you do want to use “which”, you’re supposed to use a comma first.
-
-布莱恩·加纳说过，如果你使用关系代词，要从“that”或者“which”中挑选一个，<u>90% 情况下你会使用“that”</u>，10% 的时候，<u>如果前面有逗号，你才会想要用“which”</u>。
+>
+> 布莱恩·加纳说过，如果你使用关系代词，要从“that”或者“which”中挑选一个，<u>90% 情况下你会使用“that”</u>，10% 的时候，<u>如果前面有逗号，你才会想要用“which”</u>。
 
 👉 例句 1：The carrot, <u>which</u> was orange, was tasty. 
 
@@ -155,7 +155,7 @@ Who, who, whose, that, and which.
 
 👉 例句 3：The carrot, <u>that</u> was orange, was tasty. 
 
-这句例句和例句 1 一样，都属于 no restrictive relative clauses，但是它使用“that”去引导的，不论是在语法层面还是日常生活中，这样的表达都是很奇怪的，因此不建议这样用。❌
+这句例句和例句 1 一样，都属于 no restrictive relative clauses，但它是用“that”去引导的，虽然在语法层面没有问题，并没有一个强制的规则禁止这样做，但是对于 native speaker 来说，that 前面跟逗号的表达是非常奇怪的，因此不建议这样用。❌
 
 👉 例句 4：The carrot <u>that</u> was orange was tasty.
 
@@ -165,15 +165,37 @@ Who, who, whose, that, and which.
 
 2️⃣ **“Which” is bad with people.**
 
+Which 不适合指代人，that 适用于指代一切。
+
+The woman <u>that</u> boarded the plane. ✅
+
+The woman <u>which</u> boarded the plane. ❌
+
+ 
+
+### Who Versus Whom
+
+最基础的规则是，Who 和 Whom 都是指代人，Who 在从句中做主语（Subject），Whom 在从句中做宾语（Whom）。
+
+👉 The spy <u>who</u> loved me. 
+
+👉 The spy <u>whom</u> I love.
+
+<br />
+
+但是，who 扩展开来，也可以做从句中做宾语，但是 whom 则不可以在从句中做主语。
+
+The spy <u>who</u> loved me. ✅
+
+The spy <u>whom</u> loved me. ❌
+
+The spy <u>who</u> I love. ✅
+
+The spy <u>whom</u> I love. ✅
 
 
 
-
-
-
-
-
-
+基本上，你可以只用 who。
 
 
 

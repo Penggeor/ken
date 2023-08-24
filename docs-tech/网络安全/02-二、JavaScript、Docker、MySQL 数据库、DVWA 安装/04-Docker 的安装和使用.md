@@ -112,6 +112,35 @@ docker restart ${container_id}
 docker exec -it ${container_id} /bin/bash
 ```
 
+> 在 Docker 中，`kill` 和 `stop` 是两个不同的命令，用于停止正在运行的容器。
+>
+> - `docker kill` 命令用于立即停止容器的运行。它发送一个 SIGKILL 信号给容器的主进程，强制终止容器的运行。这个命令会立即停止容器，不会给容器执行任何清理操作的机会。
+>
+> - `docker stop` 命令用于优雅地停止容器的运行。它发送一个 SIGTERM 信号给容器的主进程，然后等待一段时间（默认为 10 秒）让容器执行清理操作。如果容器在等待时间内没有停止，那么会发送一个 SIGKILL 信号给容器，强制终止容器的运行。
+>
+> 总结来说，`kill` 是立即停止容器的运行，而 `stop` 是优雅地停止容器的运行。在大多数情况下，应该优先使用 `stop` 命令来停止容器，以便容器有机会执行清理操作。只有在必要的情况下，才使用 `kill` 命令来立即停止容器。
+
+### 扩展命令
+
+```shell
+# 宿主机拷贝到容器
+docker cp source_path ${container_id}:destination_path
+
+# 容器拷贝到宿主机
+docker cp ${container_id}:destination_path source_path
+
+# 保存一个 container 到 image
+docker commit ${container_id} image:version
+
+# 保存成 image
+docker save -o destination_path image_name
+
+# 加载到 image
+docker load -i source_path
+```
+
+
+
 
 
 
