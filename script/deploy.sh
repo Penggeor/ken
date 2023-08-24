@@ -8,6 +8,14 @@ ssh-add ~/.ssh/github
 cd ~/project/ken
 git pull origin main
 
+# Git 拉取成功才进入 Docker build
+if [ $? -eq 0 ]; then
+    echo "✅ Git pull was successful."
+else
+    echo "❌ Git pull failed. Not building the image."
+    exit 1
+fi
+
 # 读取当前版本号
 version=$(docker images ken --format "{{.Tag}}" | sort -V -r | head -n 1)
 
