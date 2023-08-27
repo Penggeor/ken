@@ -3,7 +3,22 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+const math = require('remark-math')
+const katex = require('rehype-katex')
+
 require('dotenv').config()
+
+const MathEquations = {
+  remarkPlugins: [math],
+  rehypePlugins: [katex],
+}
+
+
+const ContentParam  = {
+  sidebarPath: require.resolve('./sidebars.js'),
+  showLastUpdateTime: true,
+  ...MathEquations,
+}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -26,11 +41,12 @@ const config = {
 
   presets: [
     [
-      'classic',
+      // 'classic',
+      '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          ...ContentParam,
           // Please change this to your repo.
           // editUrl:
           //   'https://github.com/Penggeor/ken/blob/main/',
@@ -48,6 +64,16 @@ const config = {
         },
       }),
     ],
+  ],
+
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+        'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+      crossorigin: 'anonymous',
+    },
   ],
 
   themes: ['@docusaurus/theme-live-codeblock'],
@@ -76,7 +102,7 @@ const config = {
           },
           {
             to: 'read',
-            label: '🐶 阅读',
+            label: '🦋 阅读',
             position: 'left',
           },
           {
@@ -239,7 +265,7 @@ const config = {
         id: 'docs-tech',
         path: 'docs-tech',
         routeBasePath: 'technique',
-        sidebarPath: require.resolve('./sidebars.js'),
+        ...ContentParam,
       },
     ],
     [
@@ -248,7 +274,7 @@ const config = {
         id: 'docs-engh',
         path: 'docs-engh',
         routeBasePath: 'english',
-        sidebarPath: require.resolve('./sidebars.js'),
+        ...ContentParam,
       },
     ],
     [
@@ -257,7 +283,7 @@ const config = {
         id: 'docs-book',
         path: 'docs-book',
         routeBasePath: 'read',
-        sidebarPath: require.resolve('./sidebars.js'),
+        ...ContentParam,
       },
     ],
     [
@@ -270,6 +296,7 @@ const config = {
         blogSidebarTitle: '✨',
         blogSidebarCount: 'ALL',
         authorsMapPath: '../author.yaml',
+        ...MathEquations,
       },
     ],
     [
@@ -282,6 +309,7 @@ const config = {
         blogSidebarTitle: '🌟',
         blogSidebarCount: 'ALL',
         authorsMapPath: '../author.yaml',
+        ...MathEquations,
       },
     ],
     [
@@ -293,6 +321,7 @@ const config = {
         routeBasePath: 'post',
         blogSidebarTitle: '💫',
         blogSidebarCount: 'ALL',
+        ...MathEquations,
       },
     ],
     [
@@ -301,9 +330,17 @@ const config = {
         apiKey: process.env.POSTHOG_API_KEY,
         appUrl: 'https://app.posthog.com', // optional
         enableInDevelopment: true, // optional
-        // other options are passed to posthog-js init as is
       },
     ],
+    // https://github.com/grnet/docusaurus-terminology
+    // [
+    //   '@grnet/docusaurus-terminology',
+    //   {
+    //     termsDir: './docs/terms',
+    //     docsDir: './docs/',
+    //     glossaryFilepath: './docs/glossary.md',
+    //   },
+    // ],
   ],
 
   i18n: {
@@ -317,7 +354,7 @@ const config = {
         label: '简体中文',
         direction: 'ltr',
         htmlLang: 'zh-CN',
-      }
+      },
     },
   },
 }

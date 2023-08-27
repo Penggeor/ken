@@ -199,11 +199,38 @@ The spy <u>whom</u> I love. ✅
 
 
 
+## Subject and Object Pronouns 主语代词和宾语代词
+
+Subject 主语： The part of a sentence that does stuff. 进行动作的
+
+Object 宾语： The part of the sentence that has stuff done to it. 被动作作用的。
+
+<br />
+
+🌰 举例：<u>He</u> wrote an <u>e-mail</u>.
+
+| He      | wrote | an   | e-mail |
+| ------- | ----- | ---- | ------ |
+| 👇       |       |      | 👇      |
+| Subject |       |      | Object |
+
+<br />
+
+Subject pronouns include *I, we, he, she, you, they, who,* and *it*.
+
+Object pronouns include: *me, us, him, her, you, them, whom* and *it.*
 
 
 
+## Grammatical Person and Pronouns 语法上的人、代词
 
+The 3 persons spoken of in grammatical construction are based on distance. 在语法结构中提到的三个人称是<u>基于距离</u>来确定的。
 
+🧏 The 1st person is the one closest to you: yourself. The pronouns are I, me, my, we, us, and our. 第一人称是距离你最近的：<u>你自己</u>。对应的代词是 I、me、my、we、use，和 our。
+
+🙋 The second person is the one whom you are addressing. The pronouns are you, your, and yours. 第二人称是你<u>正在招呼的那个人</u>。对应的代词是 you、your 和 yours。
+
+👨‍👩‍👦‍👦 The third person is everyone else. The pronouns are he, she, it, they, them, and theirs. 第三人称是<u>其他所有人</u>。代词是：he、she、it、they、them 和 theirs。
 
 
 
