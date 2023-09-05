@@ -234,7 +234,7 @@ The 3 persons spoken of in grammatical construction are based on distance. åœ¨è¯
 
 
 
-
+## Grammatical Number
 
 
 
