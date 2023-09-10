@@ -19,6 +19,7 @@
     "@docusaurus/plugin-content-blog": "^2.0.0-rc.1",
     "@docusaurus/preset-classic": "^2.4.1",
     "@docusaurus/theme-live-codeblock": "^2.4.1",
+    "@docusaurus/theme-mermaid": "^2.4.1",
     "@docusaurus/theme-search-algolia": "^2.4.1",
     "@giscus/react": "^2.3.0",
     "@grnet/docusaurus-terminology": "^1.0.0",

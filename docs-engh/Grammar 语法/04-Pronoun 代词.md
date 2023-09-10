@@ -234,7 +234,76 @@ The 3 persons spoken of in grammatical construction are based on distance. 在�
 
 
 
-## Grammatical Number
+## Grammatical Number 语法上的数
+
+Pronoun number agreement 代词数一致，代词数和主语数要一致：
+
+👉 The <u>elephant</u> was grey. → <u>It</u> was grey.
+
+👉 The <u>elephants</u> were grey → <u>they</u> were grey
+
+<br />
+
+Singular: one of a thing. 单数
+
+Plural: more than one thing. 复数
+
+| Singular | Plural |
+| -------- | ------ |
+| I        | we     |
+| me       | us     |
+| my       | our    |
+
+<br />
+
+Two exceptions can be singular or plural 既可以是单数又可以是复数：
+
+- you
+- they
+
+✨ <u>Be consistent</u>. 保持统一，在上下文中，如果 you/they 是指单数，那么都要一直保持单数；同理，如果是复数，要一直保持复数。
+
+
+
+
+
+## Indefinite Pronoun 不定代词
+
+Any, anybody, each, everyone, nobody...
+
+1️⃣ They can be used as subjects or objects. 不定代词可以用于主语或者谓语。
+
+```mermaid
+---
+title: 🌰 例子
+---
+%%{init: {"flowchart": {"htmlLabels": false}} }%%
+graph LR;
+A(["👩 David, do you want pizza?"])-->B(["`🙋 Yes, please! I'd love **some**`"])
+A-->C(["`🙋 Yes, please! **Some** would be great!`"])
+```
+
+2️⃣ Both, neither, and either retain the dual. 这三个不定代词 both、neither、either 可以代指两个主语/谓语。
+
+```mermaid
+---
+title: 🌰 例子
+---
+%%{init: {"flowchart": {"htmlLabels": false}} }%%
+graph LR;
+A(["👩 David, do you want pizza?"])-->B(["`🙋 Yes, please! I'd love **some**`"])
+A-->C(["`🙋 Yes, please! **Some** would be great!`"])
+```
+
+
+
+
+
+
+
+
+
+
 
 
 

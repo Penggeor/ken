@@ -76,7 +76,7 @@ const config = {
     },
   ],
 
-  themes: ['@docusaurus/theme-live-codeblock'],
+  themes: ['@docusaurus/theme-live-codeblock', '@docusaurus/theme-mermaid'],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -357,6 +357,10 @@ const config = {
         htmlLang: 'zh-CN',
       },
     },
+  },
+
+  markdown: {
+    mermaid: true,
   },
 }
 
