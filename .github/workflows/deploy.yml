@@ -31,20 +31,42 @@ jobs:
     - name: Copy Docker image to remote server
       env:
         DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+        SERVER_IP: ${{ secrets.SERVER_IP }}
+        DOCKER_IMAGE_PATH: ${{ secrets.DOCKER_IMAGE_PATH }}
       run: |
         echo "$DEPLOY_KEY" | tr -d '\r' > deploy_key
         chmod 600 deploy_key
-        scp -i deploy_key -o StrictHostKeyChecking=no docusaurus-image.tar ubuntu@117.50.181.177:~/github-cicd/
+        scp -i deploy_key -o StrictHostKeyChecking=no docusaurus-image.tar $SSH_USERNAME@$SERVER_IP:$DOCKER_IMAGE_PATH
         rm -f deploy_key
+
+    # - name: Load and Run Docker image on remote server
+    #   env:
+    #     DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+    #     SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+    #     SERVER_IP: ${{ secrets.SERVER_IP }}
+    #     DOCKER_IMAGE_PATH: ${{ secrets.DOCKER_IMAGE_PATH }}
+    #   run: |
+    #     echo "$DEPLOY_KEY" | tr -d '\r' > deploy_key
+    #     chmod 600 deploy_key
+    #     ssh -i deploy_key -o StrictHostKeyChecking=no $SSH_USERNAME@$SERVER_IP << 'ENDSSH'
+    #     docker load -i $DOCKER_IMAGE_PATH
+    #     docker run -d -p 3000:3000 docusaurus-image
+    #     ENDSSH
+    #     rm -f deploy_key
 
     - name: Load and Run Docker image on remote server
       env:
         DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+        SERVER_IP: ${{ secrets.SERVER_IP }}
+        DOCKER_IMAGE_PATH: ${{ secrets.DOCKER_IMAGE_PATH }}
       run: |
         echo "$DEPLOY_KEY" | tr -d '\r' > deploy_key
         chmod 600 deploy_key
-        ssh -i deploy_key -o StrictHostKeyChecking=no ubuntu@117.50.181.177 << 'ENDSSH'
-        docker load -i ~/github-cicd/docusaurus-image.tar
+        ssh -i deploy_key -o StrictHostKeyChecking=no $SSH_USERNAME@$SERVER_IP << ENDSSH
+        docker load -i $DOCKER_IMAGE_PATH/docusaurus-image.tar
         docker run -d -p 3000:3000 docusaurus-image
         ENDSSH
         rm -f deploy_key
+
