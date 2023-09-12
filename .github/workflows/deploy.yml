@@ -10,74 +10,59 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Build Docker image
-      run: |
-        docker build \
-          --build-arg POSTHOG_API_KEY=${{ secrets.POSTHOG_API_KEY }} \
-          --build-arg GISCUS_REPO_ID=${{ secrets.GISCUS_REPO_ID }} \
-          --build-arg GISCUS_CATEGORY_ID=${{ secrets.GISCUS_CATEGORY_ID }} \
-          --build-arg ALGOLIA_APP_ID=${{ secrets.ALGOLIA_APP_ID }} \
-          --build-arg ALGOLIA_API_KEY=${{ secrets.ALGOLIA_API_KEY }} \
-          --build-arg ALGOLIA_INDEX_NAME=${{ secrets.ALGOLIA_INDEX_NAME }} \
-          -t docusaurus-image .
+      - name: Build Docker image
+        run: |
+          docker build \
+            --build-arg POSTHOG_API_KEY=${{ secrets.POSTHOG_API_KEY }} \
+            --build-arg GISCUS_REPO_ID=${{ secrets.GISCUS_REPO_ID }} \
+            --build-arg GISCUS_CATEGORY_ID=${{ secrets.GISCUS_CATEGORY_ID }} \
+            --build-arg ALGOLIA_APP_ID=${{ secrets.ALGOLIA_APP_ID }} \
+            --build-arg ALGOLIA_API_KEY=${{ secrets.ALGOLIA_API_KEY }} \
+            --build-arg ALGOLIA_INDEX_NAME=${{ secrets.ALGOLIA_INDEX_NAME }} \
+            -t docusaurus-image .
 
-    - name: Save Docker image to file
-      run: |
-        docker save docusaurus-image -o docusaurus-image.tar
+      - name: Save Docker image to file
+        run: |
+          docker save docusaurus-image -o docusaurus-image.tar
 
-    - name: Copy Docker image to remote server
-      env:
-        DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
-        SERVER_IP: ${{ secrets.SERVER_IP }}
-        DOCKER_IMAGE_PATH: ${{ secrets.DOCKER_IMAGE_PATH }}
-      run: |
-        echo "$DEPLOY_KEY" | tr -d '\r' > deploy_key
-        chmod 600 deploy_key
-        scp -i deploy_key -o StrictHostKeyChecking=no docusaurus-image.tar $SSH_USERNAME@$SERVER_IP:$DOCKER_IMAGE_PATH
-        rm -f deploy_key
+      - name: Copy Docker image to remote server
+        env:
+          DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+          DOCKER_IMAGE_PATH: ${{ secrets.DOCKER_IMAGE_PATH }}
+        run: |
+          echo "$DEPLOY_KEY" | tr -d '\r' > deploy_key
+          chmod 600 deploy_key
+          scp -i deploy_key -o StrictHostKeyChecking=no docusaurus-image.tar $SSH_USERNAME@$SERVER_IP:$DOCKER_IMAGE_PATH
+          rm -f deploy_key
 
-    # - name: Load and Run Docker image on remote server
-    #   env:
-    #     DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-    #     SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
-    #     SERVER_IP: ${{ secrets.SERVER_IP }}
-    #     DOCKER_IMAGE_PATH: ${{ secrets.DOCKER_IMAGE_PATH }}
-    #   run: |
-    #     echo "$DEPLOY_KEY" | tr -d '\r' > deploy_key
-    #     chmod 600 deploy_key
-    #     ssh -i deploy_key -o StrictHostKeyChecking=no $SSH_USERNAME@$SERVER_IP << ENDSSH
-    #     docker load -i $DOCKER_IMAGE_PATH/docusaurus-image.tar
-    #     docker run -d -p 3000:3000 docusaurus-image
-    #     ENDSSH
-    #     rm -f deploy_key
-    - name: Load and Run Docker image on remote server
-      env:
-        DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
-        SERVER_IP: ${{ secrets.SERVER_IP }}
-        DOCKER_IMAGE_PATH: ${{ secrets.DOCKER_IMAGE_PATH }}
-      run: |
-        echo "$DEPLOY_KEY" | tr -d '\r' > deploy_key
-        chmod 600 deploy_key
-        ssh -i deploy_key -o StrictHostKeyChecking=no $SSH_USERNAME@$SERVER_IP << ENDSSH
-        # 如果旧容器存在，先停止并删除
-        if docker ps -a | grep 'docusaurus-container'; then
-          docker stop docusaurus-container
-          docker rm docusaurus-container
-        fi
-        
-        # 加载新的Docker镜像
-        docker load -i $DOCKER_IMAGE_PATH/docusaurus-image.tar
-        
-        # 启动新容器
-        docker run -d -p 3000:3000 --name docusaurus-container docusaurus-image
-        
-        # 清理悬挂的镜像层
-        docker image prune -f
-        ENDSSH
-        rm -f deploy_key
+      - name: Load and Run Docker image on remote server
+        env:
+          DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+          DOCKER_IMAGE_PATH: ${{ secrets.DOCKER_IMAGE_PATH }}
+        run: |
+          echo "$DEPLOY_KEY" | tr -d '\r' > deploy_key
+          chmod 600 deploy_key
+          ssh -i deploy_key -o StrictHostKeyChecking=no $SSH_USERNAME@$SERVER_IP << ENDSSH
+          # 如果旧容器存在，先停止并删除
+          if docker ps -a | grep 'docusaurus-container'; then
+            docker stop docusaurus-container
+            docker rm docusaurus-container
+          fi
 
+          # 加载新的Docker镜像
+          docker load -i $DOCKER_IMAGE_PATH/docusaurus-image.tar
+
+          # 启动新容器
+          docker run -d -p 4000:3000 --name docusaurus-container docusaurus-image
+
+          # 清理悬挂的镜像层
+          docker image prune -f
+          ENDSSH
+          rm -f deploy_key
