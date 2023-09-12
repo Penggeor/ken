@@ -49,12 +49,11 @@ jobs:
     #   run: |
     #     echo "$DEPLOY_KEY" | tr -d '\r' > deploy_key
     #     chmod 600 deploy_key
-    #     ssh -i deploy_key -o StrictHostKeyChecking=no $SSH_USERNAME@$SERVER_IP << 'ENDSSH'
-    #     docker load -i $DOCKER_IMAGE_PATH
+    #     ssh -i deploy_key -o StrictHostKeyChecking=no $SSH_USERNAME@$SERVER_IP << ENDSSH
+    #     docker load -i $DOCKER_IMAGE_PATH/docusaurus-image.tar
     #     docker run -d -p 3000:3000 docusaurus-image
     #     ENDSSH
     #     rm -f deploy_key
-
     - name: Load and Run Docker image on remote server
       env:
         DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
@@ -65,8 +64,20 @@ jobs:
         echo "$DEPLOY_KEY" | tr -d '\r' > deploy_key
         chmod 600 deploy_key
         ssh -i deploy_key -o StrictHostKeyChecking=no $SSH_USERNAME@$SERVER_IP << ENDSSH
+        # 如果旧容器存在，先停止并删除
+        if docker ps -a | grep 'docusaurus-container'; then
+          docker stop docusaurus-container
+          docker rm docusaurus-container
+        fi
+        
+        # 加载新的Docker镜像
         docker load -i $DOCKER_IMAGE_PATH/docusaurus-image.tar
-        docker run -d -p 3000:3000 docusaurus-image
+        
+        # 启动新容器
+        docker run -d -p 3000:3000 --name docusaurus-container docusaurus-image
+        
+        # 清理悬挂的镜像层
+        docker image prune -f
         ENDSSH
         rm -f deploy_key
 
