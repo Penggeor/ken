@@ -49,11 +49,13 @@
 
 6. [Docker](https://www.docker.com/)：除了部署网站，我还把 Nginx 运行在 Docker 上，而不是把 Nginx 安装在全局下。
 
-7. Algolia：
+7. Algolia：搜索服务
 
 8. 又拍云 + uPic：又拍云提供云存储功能，uPic 是一款免费的图片上传应用，两者结合完成图床功能。
 
 9. UCloud：提供服务器、域名、SSL 证书。
+
+10. Github Action：CI/CD 部署
 
 
 
