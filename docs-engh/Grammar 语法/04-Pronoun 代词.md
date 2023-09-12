@@ -29,7 +29,7 @@ slug: /grammar/pronoun
 
 
 ## Personal Pronouns 人称代词
-
+""
 
 
 |                          | First Person<br />第一人称 | Second Person<br />第二人称 | Third Person<br />第三人称                                   |
@@ -67,9 +67,9 @@ Possession = Having stuff
 
 🌰 Example
 
-That is <u>my</u> book. 👈👉 That book is <u>mine</u>.
+That is <u>my</u> book. ↔️ That book is <u>mine</u>.
 
-That is <u>his</u> hat. 👈👉 That hat is <u>his</u>.
+That is <u>his</u> hat. ↔️ That hat is <u>his</u>.
 
 
 
@@ -145,21 +145,21 @@ Who, who, whose, that, and which.
 >
 > 布莱恩·加纳说过，如果你使用关系代词，要从“that”或者“which”中挑选一个，<u>90% 情况下你会使用“that”</u>，10% 的时候，<u>如果前面有逗号，你才会想要用“which”</u>。
 
-👉 例句 1：The carrot, <u>which</u> was orange, was tasty. 
+👉 例句 1：The carrot, <u>which</u> was orange, was tasty.  ✅
 
-这句例句属于 no restrictive relative clauses，即属于非限制性关系从句，也就是把这句“which was orange”从句去掉，并不会影响主句，用 which 去引导非限制性关系从句，这种表达是合理的。✅
+这句例句属于 no restrictive relative clauses，即属于非限制性关系从句，也就是把这句“which was orange”从句去掉，并不会影响主句，用 which 去引导非限制性关系从句，这种表达是合理的。
 
-👉 例句 2：The carrot <u>which</u> was orange was tasty. 
+👉 例句 2：The carrot <u>which</u> was orange was tasty.  ✅
 
-这句例句属于 restrictive relative clauses，即限制性关系从句，不能去掉从句，它限制了这个颜色必须是 orange 的 carrot，用 which 去引导限制性关系从句，这种表达也是合理的。✅
+这句例句属于 restrictive relative clauses，即限制性关系从句，不能去掉从句，它限制了这个颜色必须是 orange 的 carrot，用 which 去引导限制性关系从句，这种表达也是合理的。
 
-👉 例句 3：The carrot, <u>that</u> was orange, was tasty. 
+👉 例句 3：The carrot, <u>that</u> was orange, was tasty.  ❌
 
-这句例句和例句 1 一样，都属于 no restrictive relative clauses，但它是用“that”去引导的，虽然在语法层面没有问题，并没有一个强制的规则禁止这样做，但是对于 native speaker 来说，that 前面跟逗号的表达是非常奇怪的，因此不建议这样用。❌
+这句例句和例句 1 一样，都属于 no restrictive relative clauses，但它是用“that”去引导的，虽然在语法层面没有问题，并没有一个强制的规则禁止这样做，但是对于 native speaker 来说，that 前面跟逗号的表达是非常奇怪的，因此不建议这样用。
 
-👉 例句 4：The carrot <u>that</u> was orange was tasty.
+👉 例句 4：The carrot <u>that</u> was orange was tasty. ✅
 
-这句例句和例句 2 一样，都属于 restrictive relative  clauses，这种表达同样是合理的。✅
+这句例句和例句 2 一样，都属于 restrictive relative  clauses，这种表达同样是合理的。
 
 <br />
 
@@ -207,18 +207,22 @@ Object 宾语： The part of the sentence that has stuff done to it. 被动作�
 
 <br />
 
-🌰 举例：<u>He</u> wrote an <u>e-mail</u>.
+```mermaid
+---
+title: 🌰 例子
+---
+graph TB
+A(["He wrote an e-mail"]) -- He --> B([Subject 主语])
+A -- "e-mail" --> C([Object 宾语])
+```
 
-| He      | wrote | an   | e-mail |
-| ------- | ----- | ---- | ------ |
-| 👇       |       |      | 👇      |
-| Subject |       |      | Object |
+
 
 <br />
 
 Subject pronouns include *I, we, he, she, you, they, who,* and *it*.
 
-Object pronouns include: *me, us, him, her, you, them, whom* and *it.*
+Object pronouns include *me, us, him, her, you, them, whom* and *it.*
 
 
 
@@ -269,7 +273,9 @@ Two exceptions can be singular or plural 既可以是单数又可以是复数：
 
 ## Indefinite Pronoun 不定代词
 
-Any, anybody, each, everyone, nobody...
+Indefinite pronoun: undefined、uncertain. 不定代词跟它的名字一样，是未定义的、不指定的。
+
+不定代词有：Any, anybody, each, everyone, nobody...
 
 1️⃣ They can be used as subjects or objects. 不定代词可以用于主语或者谓语。
 
@@ -283,7 +289,7 @@ A(["👩 David, do you want pizza?"])-->B(["`🙋 Yes, please! I'd love **some**
 A-->C(["`🙋 Yes, please! **Some** would be great!`"])
 ```
 
-2️⃣ Both, neither, and either retain the dual. 这三个不定代词 both、neither、either 可以代指两个主语/谓语。
+2️⃣ Both, neither, and either retain the dual. 这三个不定代词 both、neither、either 可以代指两个主语/谓语，它们是英语中仅有的可以指代两件事物的单词。
 
 ```mermaid
 ---
@@ -291,9 +297,46 @@ title: 🌰 例子
 ---
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
 graph LR;
-A(["👩 David, do you want pizza?"])-->B(["`🙋 Yes, please! I'd love **some**`"])
-A-->C(["`🙋 Yes, please! **Some** would be great!`"])
+A(["👩 Do you like mangoes or cherries more?"])-->B(["`😃 I like **both** equally.`"])
 ```
+
+3️⃣ Usually treated as singular. (except for both, many, others, several, and sometimes some) 通常认为是单数形式。（除了 both、many、others，有时候还有 some）
+
+**Nobody** <u>was</u> home. 没人在家。↔️ was 是单数形式
+
+**Everybody** <u>knows</u> that I love onions. ↔️ knows 是第三人称单数形式
+
+**Everyone** <u>was</u> crouched behind furniture to surprise me... but I already knew **they** were there. 所有人都蜷缩在家具背后给我一个惊喜。。。但是我已经知道他们在那里了。 ↔️ 前半句是单数形式，后半句中用复数 they 去指代 everyone
+
+:::tip 在语法上会不会有点奇怪呢？
+
+在第三句中，用复数 they 去指代单数 Everyone，这在语法上看似很奇怪。
+
+正如《Garnar’s Modern American Usage》作者 Garnar 说： “Sometimes meaning rather than grammar governs the agreement.” <u>某些情况下，要保证句意一致而非语法一致</u>。也就是句子能说得通、说得顺，那就是合理的。
+
+不定代词被认为是单数形式，这本身就不太符合语法，其实英语本来就混乱，
+
+:::
+
+
+
+## Emphatic Pronoun 强调代词
+
+同反身代词，但它是在一种表示强调的语境下使用的：
+
+👉 I’ll do it <u>myself</u>!  我会做的！
+
+👉 I heard it <u>myself</u>. 我听到了。
+
+👉 The princess <u>herself</u>. 公主本人。
+
+
+
+
+
+
+
+
 
 
 
