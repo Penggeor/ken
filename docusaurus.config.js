@@ -218,6 +218,12 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} 楷鹏.`,
       },
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
+      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
