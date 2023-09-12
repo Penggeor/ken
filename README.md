@@ -17,6 +17,7 @@
 - 支持 HTTPS
 - 支持网站监控
 - 支持搜索
+- CI/CD 自动化
 
 
 
@@ -92,7 +93,3 @@ docker load -i ken
 ```shell
 docker run -d -p 4000:3000 --name ken ken:v1.0.0
 ```
-
-## Roadmap
-
-- [ ] CI/CD 自动化
