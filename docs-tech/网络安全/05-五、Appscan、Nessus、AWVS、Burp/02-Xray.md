@@ -31,7 +31,7 @@ ray-crawler-testphp.html
 
  
 
-🦀 操作：https://docs.xray.cool/#/tutorial/webscan_proxy
+🦀 操作：[https://docs.xray.cool/#/tutorial/webscan_proxy](https://docs.xray.cool/#/tutorial/webscan_proxy)
 
 
 

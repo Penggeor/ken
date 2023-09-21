@@ -2,8 +2,6 @@
 slug: /grammar/pronoun
 ---
 
-
-
 假设我们没有代词：
 
 👉 <u>Emma</u> laughed so hard, milk came out of <u>Emma’s</u> nose.
