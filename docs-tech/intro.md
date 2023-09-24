@@ -5,12 +5,5 @@ slug: /
 
 # 技术领域
 
-📌 TODO
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
-👉 Linux
-
-👉 浏览器
-
-👉 网络安全
-
-👉 面试

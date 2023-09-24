@@ -1,5 +1,5 @@
 ---
-slug: css/css-in-depth/01
+slug: /css/css-in-depth/01
 ---
 
 # PART1 REVIEWING THE FUNDAMENTALS
