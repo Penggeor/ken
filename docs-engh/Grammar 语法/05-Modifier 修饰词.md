@@ -1,5 +1,6 @@
 ---
-slug: /grammar/adjective
+slug: /grammar/modifier
+
 ---
 
 Adjective change, or describe stuff. 形容词用来改变、描述事物。
@@ -54,11 +55,8 @@ C("这里的 the 是特定的，特指那个很大很新鲜的芒果")-->D(["[�
 A/an 和 the 的区别， the 可以用于单数和复数，a/an 只能用于单数：
 
 - May I have the mango? ✅
-
 - May I have the mangos? ✅
-
 - May I have a mango? ✅
-
 - ~~May I have a mangos?~~ ❌ 可以用 May I have some mangos?
 
 <br />
@@ -71,15 +69,23 @@ an 只是为了方便发音，否则 a apple 发音不仅累，而且快速读�
 
 一些例子：
 
-| A                                                            | AN                                                           |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| A bonobo（/bɒˈnəʊbəʊ/ 倭黑猩猩）<br />![The Leakey Foundation Rare bonobo behavior is photographic gold](http://img.wukaipeng.com/2023/0925-073554-%C2%A9-Christian-Ziegler-Wildlife-Photographer-of-the-Year-low-res-683x1024.jpg) | An orangutan（/əˈræŋətæn/ 红毛猩猩）<br />![Orangutan](http://img.wukaipeng.com/2023/0925-075916-1o3iawhhf7_sumatran_orangutan_8.6.2012_Hero_and_Circle_image_XL_257636.jpg) |
-| A pencil                                                     | An open door                                                 |
-| A zebra（/ˈziːbrə/ 斑马）                                    | An extra pudding cup                                         |
-| A sailboat（/ˈseɪlboʊt/ 帆船）                               | An **NBA** player                                            |
-| A **unicorn**（/ˈjuːnɪkɔːrn/ 独角兽）                        |                                                              |
+| A                                     | AN                                   |
+| ------------------------------------- | ------------------------------------ |
+| A bonobo（/bɒˈnəʊbəʊ/ 倭黑猩猩）      | An orangutan（/əˈræŋətæn/ 红毛猩猩） |
+| A pencil                              | An open door                         |
+| A zebra（/ˈziːbrə/ 斑马）             | An extra pudding cup                 |
+| A sailboat（/ˈseɪlboʊt/ 帆船）        | An **NBA** player                    |
+| A **unicorn**（/ˈjuːnɪkɔːrn/ 独角兽） |                                      |
 
 
+
+倭黑猩猩 🦍
+
+![The Leakey Foundation Rare bonobo behavior is photographic gold](http://img.wukaipeng.com/2023/0925-073554-%C2%A9-Christian-Ziegler-Wildlife-Photographer-of-the-Year-low-res-683x1024.jpg)
+
+红毛猩猩 🦧
+
+![Orangutan](http://img.wukaipeng.com/2023/0925-075916-1o3iawhhf7_sumatran_orangutan_8.6.2012_Hero_and_Circle_image_XL_257636.jpg)
 
 ## Adverb 副词
 
@@ -93,7 +99,7 @@ modifies verbs and adjectives. 修饰动词和形容词。
 
 🏃‍♂️ Greyson ran <u>slowly</u>.
 
-🚚 Pearl arranged the funiture <u>slowly</u>.
+🚚 Pearl arranged the furniture <u>slowly</u>.
 
 🍔 Vanessa was <u>very</u> hungry.
 
@@ -161,7 +167,7 @@ modifies verbs and adjectives. 修饰动词和形容词。
 
 🔟 the thing 事物，比如“mower”
 
-> 助记小技巧：dosa scomp
+> 助记小技巧：**dosa-scomp**
 
 <br />
 
@@ -173,19 +179,46 @@ French old white house 👉 old white French house  老式的白色法国房子
 
 
 
+### Adjective and commos
+
+假设你买到了一个变质的苹果，粘的（sticky），烂的（mushy），绿色的（green）苹果，你会生气的对售货员说：
+
+😡 You sold me a sticky<u>,</u> mushy apple!
+
+或者说
+
+😤 You sold me a mushy green apple!
+
+第一句中，sticky 和 mushy 属于 **coordinated adjective（并列形容词）**，在形容词顺序中都属于同一列——opinion，所以两者中间加上逗号（`,`）分割，位置可以相互调换。
+
+第二句中，mushy 和 green 不是并列形容词，一个是 opinion，一个是 color，所以不用逗号分割，并且位置不能调换。
+
+| 并列形容词   | 非并列形容词 |
+| ------------ | ------------ |
+| 用逗号分隔   | 不用逗号分隔 |
+| 可以交换位置 | 不能交换位置 |
 
 
 
+## Comparative and the Superlative 比较级和最高级
 
+假设这里有三只企鹅，并且他们的心情是不一样的：
 
+🐧😃 Raúl: 它的开心程度是 ⭐️⭐️⭐️
 
+🐧🙂 Cesar: 它的开心程度是 ⭐️
 
+🐧🤣 Gabriela: 它的开心程度是 ⭐️⭐️⭐️⭐️⭐️
 
+对比「 🐧😃 Raúl」 和 「🐧🙂 Cesar」，我们可以说：
 
+- Raúl is <u>happier</u> than Cesar.
+- Cesar is <u>less happy</u> than Raúl.
 
+将 「🐧🤣 Gabriela」以及「🐧🙂 Cesar」 对比其他所有企鹅，我们可以说：
 
-
-
+- Gabriela is the <u>happiest</u> penguin.
+- Cesar is the <u>least happy</u> penguin.
 
 
 

