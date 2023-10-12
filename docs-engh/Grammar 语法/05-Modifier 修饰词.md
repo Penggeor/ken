@@ -222,7 +222,13 @@ French old white house 👉 old white French house  老式的白色法国房子
 
 
 
-
+| Word                      | Description                                    | Comparative                | Superlative                  |
+| ------------------------- | ---------------------------------------------- | -------------------------- | ---------------------------- |
+| c<u>u</u>te               | 1 个音节，以 -e 结尾                           | +r 👉 cute                  | +s 👉 cutest                  |
+| b<u>i</u>g                | 1 个音节，中间一个元音字母，结尾一个辅音字母   | 双写辅音字母 + er 👉 bigger | 双写辅音字母 + est 👉 biggest |
+| sw<u>ee</u>t/sh<u>or</u>t | 1 个音节，中间两个元音字母或者结尾两个辅音字母 | +er 👉 sweeter/shorter      | +est 👉 sweetest/shortest     |
+| shiny                     | 2 个音节，以 -y 结尾                           | y→i + er 👉 shinier         | y→i + est shniest            |
+| magnificant               | ≧ 2 个音节，并且不是 -y 结尾                   | more magnificant           | most magnificant             |
 
 
 
