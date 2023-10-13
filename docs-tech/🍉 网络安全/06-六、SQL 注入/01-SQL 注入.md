@@ -621,7 +621,7 @@ docker run -d -p 80:80 area39/pikachu
 
 
 
-## Get Shell
+### Get Shell
 
 MySQL 支持写文件。条件：
 
@@ -650,6 +650,60 @@ MySQL 支持写文件。条件：
 接着使用 HackBar 来请求 POST 并注入参数 `a`：
 
 ![](http://img.wukaipeng.com/2023/1012-085943-image-20231012085942942.png)
+
+
+
+或者使用蚁剑：
+
+![](http://img.wukaipeng.com/2023/1013-083921-image-20231013083919924.png)
+
+## 注入绕过
+
+### 大小写绕过
+
+利用大小写匹配绕过，最简单的绕过方式
+
+```
+z.com/index.php?page_id=-15 uNIoN sELecT 1,2,3,4
+```
+
+### 替换关键字
+
+正则表达式替换掉关键字
+
+```
+z.com/index.php?page_id=-15 UNIunionON SELselectECT 1,2,3,4
+```
+
+假设只有一次正则全局匹配，那么 `UNIunionON` 中间 `union` 匹配并被删除掉，结果剩下 `UNION`。
+
+
+
+### 使用编码
+
+1. URL 编码
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
