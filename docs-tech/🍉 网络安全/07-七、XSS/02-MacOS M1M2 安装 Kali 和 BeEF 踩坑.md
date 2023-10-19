@@ -2,8 +2,6 @@
 slug: /net-security/07/02
 ---
 
-
-
 ### 在 M1/M2 Mac 上安装 Kali
 
 下载 UMT 虚拟机：[https://mac.getutm.app/](https://mac.getutm.app/)

@@ -45,7 +45,7 @@ SQL 注入条件：
 
 ![](http://img.wukaipeng.com/2023/0922-080220-image-20230922080219805.png)
 
-
+## 注入方式
 
 ### Union 注入
 
@@ -607,7 +607,7 @@ docker run -d -p  8081:80 --name="pikachu" area39/pikachu
 
 ![](http://img.wukaipeng.com/2023/1011-082149-image-20231011082149432.png)
 
-拦截请求
+拦截请求，可以看到，已经注入成功，请求返回了所有数据：
 
 ![](http://img.wukaipeng.com/2023/1012-075115-image-20231012075115796.png)
 
@@ -621,7 +621,7 @@ docker run -d -p  8081:80 --name="pikachu" area39/pikachu
 
 
 
-### Get Shell
+## Get Shell
 
 MySQL 支持写文件。条件：
 
@@ -633,11 +633,11 @@ MySQL 支持写文件。条件：
 
 执行如下代码：
 
-```
+```sql
 ' union select 1, "<?php eval($_POST['a']);" into outfile '/var/www/html/inject.php
 ```
 
-这里 `eval()` 同 Javascript 的 eval，把字符串当做命令执行
+这里 `eval()` 同 Javascript 的 `eval()`，把字符串当做命令执行
 
 `$_POST['a']` 是指获取 HTTP 请求中的 POST 的参数 `a`
 
@@ -835,7 +835,7 @@ mysql> select-count(user_id)test from users;
 
 ### 预编译
 
-SQL 注入原因还是因为存在字符串并进行语法分析，执行语句。而通过预编译：
+SQL 注入原因还是因为**先拼接字符串，然后再进行语法分析，执行语句**。而通过预编译：
 
 ```java
 String sql = "select id, num from user where id=?";    //定义SQL语句
@@ -844,7 +844,7 @@ String sql = "select id, num from user where id=?";    //定义SQL语句
       ps.executeQuery();    //执行
 ```
 
-让 SQl 引擎预编译好语法，语法已经确定，那么填充进来的参数就只是一个值，不会再进行语法分析，这是防御 SQL 注入最有效的方式。
+让 SQl 引擎预**先编译好语法，后面填充进来的参数就只是一个值，不会再进行语法分析**，这是防御 SQL 注入最有效的方式。
 
 ### 安全函数
 

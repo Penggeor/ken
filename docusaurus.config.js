@@ -227,7 +227,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['java', 'bash'],
+        additionalLanguages: ['java', 'bash', 'php'],
       },
       tableOfContents: {
         minHeadingLevel: 2,

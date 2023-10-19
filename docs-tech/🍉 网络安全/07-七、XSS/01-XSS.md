@@ -204,7 +204,7 @@ http://192.168.64.4:3000/api/seng/clone_page\?token\=44738d265d43e98903df4f7b082
 
 克隆 Pikachu » Cross-Site Scripting » 反射型 XSS（post）页面：
 
-```
+```bash
 curl -H "Content-Type: application/json; charset=UTF-8"  \
   -d '{"url": "http://175.178.126.31:8081/vul/xss/xsspost/post_login.php", "mount": "/pikachu"}' \
   -X POST \
