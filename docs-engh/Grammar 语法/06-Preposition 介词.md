@@ -4,6 +4,8 @@ slug: /grammar/preposition
 
 **Preposition 介词**：Where？When？How？
 
+## 简要解释
+
 🏠 **Where 解释地点**
 
 ![](http://img.wukaipeng.com/2023/1017-134331-image-20231017134329914.png)
@@ -20,7 +22,9 @@ slug: /grammar/preposition
 
 
 
-## 时间
+## 详细解释
+
+### 时间
 
 🕐 **After** 之后
 
@@ -77,9 +81,35 @@ slug: /grammar/preposition
 
 - You have <u>until</u> midnight to rescue the Ambassador, break the curse, and save Prince Wilbur. 你们必须在午夜前救出大使，打破诅咒，救出威尔伯王子。
 
-## 空间
+### 空间
+
+![place](http://img.wukaipeng.com/2023/10/24-134133-place.jpeg)
+
+### 非时间非空间的介词
+
+🧩 **About**（Subject）主题
+
+- Tell me <u>about</u> yourself! 告诉我关于你自己的事吧!
+
+🧩 **By**（Agent）代理
+
+- The book was written <u>by</u> Sudhir. 这本书是 Sudhir 写的。
+
+🧩 **For**（Use）用途
+
+- It's <u>for</u> chipping wood. 这是用来劈柴的。
+
+🧩 **Of**（Belong）归属
+
+- the great green dragon <u>of</u> Inverness. 因弗内斯的绿巨龙
+
+🧩 **With**（Together）一起
+
+- There goes that snail <u>with</u> the painted shell. 那只带着彩绘壳的蜗牛走了
 
 
 
-![](http://img.wukaipeng.com/2023/10/23-131034-d10e4aebd6a14d9fbc4b99003129c984_th.jpeg)
+
+
+
 
