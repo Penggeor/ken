@@ -1,3 +1,9 @@
+---
+slug: /net-security/08/02
+---
+
+
+
 Mac M1/M2 免费好用的虚拟机应用不多，一个是 UTM，另外一个是 VMware Fusion，试过用 UTM 安装了 Windows8、Windows10，但是安装完成之后不仅卡顿，而且显示效果也不是正常的 Windows 系统，因此改用了 VMware Fusion，VMware Fusion 是收费应用，不过个人版是免费的。
 
 首先是下载 Windows11 镜像，可以用 👉 [CrystalFetch](https://apps.apple.com/us/app/crystalfetch-iso-downloader/id6454431289)
@@ -14,17 +20,13 @@ Mac M1/M2 免费好用的虚拟机应用不多，一个是 UTM，另外一个是
 
 ![](http://img.wukaipeng.com/2023/10/26-061655-image-20231026061654931.png)
 
-下载小皮面板 PHP 和一个上传文件漏洞靶场 Upload-labs 👉 
-
-
+下载小皮面板 PHP 和一个上传文件漏洞靶场 Upload-labs 👉 [00截断环境.zip](https://github.com/Penggeor/NetSecurity/blob/main/%E7%AC%AC%2009%20%E5%91%A8/00%E6%88%AA%E6%96%AD%E7%8E%AF%E5%A2%83.zip)
 
 将他们拖到 Windows11 中（注意要按照教程所说，给 VMWare Fusion 录屏权限），然后首先打开小皮面板 PhpStudy2018.exe，将他们解压到一个**没有中文、没有空格**的路径的文件夹中，解压后再文件夹中打开 phpStudy.exe：
 
 ![](http://img.wukaipeng.com/2023/10/26-073302-image-20231026073301738.png)
 
-刚开始运行 PhpStudy.exe 会提示缺少 vc9、vc11、vc14，可以打开官方的链接网站，登录后下载，也可以从 github 这里直接下载 👉 
-
-
+刚开始运行 PhpStudy.exe 会提示缺少 vc9、vc11、vc14，可以打开官方的链接网站，登录后下载，也可以从 github 这里直接下载 👉 [32位vc9和11、14运行库.zip](https://github.com/Penggeor/NetSecurity/blob/main/%E7%AC%AC%2009%20%E5%91%A8/32%E4%BD%8Dvc9%E5%92%8C11%E3%80%8114%E8%BF%90%E8%A1%8C%E5%BA%93.zip) 
 
 安装好之后解压并安装，这时重启 PhpStudy 就不会报错了，我们可以打开 phpinfo 页面查看：
 
