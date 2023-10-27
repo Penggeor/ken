@@ -1,3 +1,13 @@
-隐藏当前应用：<kbd>Command</kbd> + <kbd>H</kbd>
+---
+slug: mac-shortcut
+---
 
-隐藏其他所有：<kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>H</kbd>
+
+
+
+| 功能作用          | MacOS 快捷键                                          |
+| ----------------- | ----------------------------------------------------- |
+| 🎨 打开 emoji 面板 | <kbd>ctrl</kbd> + <kbd>cmd</kbd> + <kbd>space</kbd>   |
+|                   |                                                       |
+| 🙈 隐藏当前应用    | <kbd>Command</kbd> + <kbd>H</kbd>                     |
+| 🙈 隐藏其他应用    | <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>H</kbd> |
