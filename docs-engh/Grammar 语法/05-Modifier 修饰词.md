@@ -168,6 +168,10 @@ modifies verbs and adjectives. 修饰动词和形容词。
 🔟 the thing 事物，比如“mower”
 
 > 助记小技巧：**dosa-scomp**
+>
+> 中式的助记小技巧：美小圆旧黄，中国木书房
+>
+> // TODO: 这里“圆旧”和 dosa-scomp 不太一样
 
 <br />
 

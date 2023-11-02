@@ -109,6 +109,50 @@ slug: /grammar/preposition
 
 
 
+## Compound Preposition 复合介词
+
+复合介词：比普通介词长度更长。
+
+❄️ **Between**（Consider individual）认为是个体
+
+- The firefly zipped <u>between</u> the raindrops. 萤火虫在雨点之间快速移动。
+- What do you want to watch? I can’t decide <u>between</u> “Humdinger!” And “Police Cat”. 你想看什么?我决定不了是“Humdinger!”还有“警察猫”
+
+❄️ **Among**（Consider collectively）认为是集合
+
+- Ashley and Cyrus frolicked <u>among</u> the daisies. 希礼和塞勒斯在雏菊丛中嬉戏。
+- <u>Among</u> the ideas you’ve had, I like this one best. 在你所有的主意中，我最喜欢这个。
+
+❄️ **Around**
+
+- The fox ran <u>around</u> the tree. 狐狸绕着树跑。
+- The mayor talked <u>around</u> the issue. 市长绕开了这个问题。
+
+❄️ **Against**（Opposition）反对
+
+- Rudyard leaned heavily <u>against</u> a tree. 拉迪亚德重重地靠在一棵树上。
+- Georgie campaigned <u>against</u> clog dancing. 乔治发起了反对跳木屐舞的运动。
+
+❄️ **Within**（In）里面
+
+- There is a frog <u>within</u> the pond. 池塘里有一只青蛙。
+
+- Who can say what is <u>within</u> Ralph’s heart? 谁能说出拉尔夫的内心?
+
+❄️ **Without**（No with）
+
+- He complied without argument. 他没有争辩就服从了。
+
+❄️ **Inside**（In/Within）
+
+- What’s inside the box? 盒子里有什么?
+- What’s inside her mind right now? 她现在在想什么?
+
+❄️ **Beyond**（Far away、Past）
+
+- <u>Beyond</u> those mountains is Terrell’s kingdom. 山那边就是特雷尔的王国。
+- This strawberry’s flavor is <u>beyond</u> anything I’ve ever had before. 这草莓的味道比我以前吃过的都好。
+
 
 
 
