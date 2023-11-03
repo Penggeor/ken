@@ -33,7 +33,7 @@
 
 供应商层面上：
 
-1. [Docusaurus](https://docusaurus.io/)： Facebook 开源的博客网站，名字有点难拼写，它由 Docu 和 saurus 组合而成，前者是指“文档”，后者是指“蜥蜴”，寓意轻量快捷的文档生成框架。它如今的 V2 版本已经相当成熟，该有的响应式、主题模式、MDX、版本控制、多语言支持等等全都有，并且它通过 swizzle 的机制，能够让我们进一步自定义任意组件。
+1. [Docusaurus V3.0](https://docusaurus.io/)： Facebook 开源的博客网站，名字有点难拼写，它由 Docu 和 saurus 组合而成，前者是指“文档”，后者是指“蜥蜴”，寓意轻量快捷的文档生成框架。它如今的 V2 版本已经相当成熟，该有的响应式、主题模式、MDX、版本控制、多语言支持等等全都有，并且它通过 swizzle 的机制，能够让我们进一步自定义任意组件，目前已更新至 V3.0。
 
    ![Docusaurus](https://ph-files.imgix.net/7a8c1deb-6539-476c-bd6a-907c830b2394.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&fit=max&dpr=2)
 

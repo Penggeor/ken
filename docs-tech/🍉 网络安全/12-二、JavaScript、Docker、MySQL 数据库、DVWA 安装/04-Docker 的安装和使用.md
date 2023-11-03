@@ -23,7 +23,7 @@ Docker 是一个开源的应用容器引擎，可以把应用打包成可移植�
 - docker官方中国区  https://registry.docker-cn.com
 - 网易  http://hub-mirror.c.163.com
 - USTC  http://docker.mirrors.ustc.edu.cn
-- 阿里云  http://<你的ID>.mirror.aliyuncs.com
+- 阿里云  http://YOUR_ID.mirror.aliyuncs.com
 - DaoCloud http://f1361db2.m.daocloud.io
 
 

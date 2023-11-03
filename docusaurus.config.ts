@@ -1,27 +1,21 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
-
-const lightCodeTheme = require('prism-react-renderer/themes/github')
-const darkCodeTheme = require('prism-react-renderer/themes/dracula')
-const math = require('remark-math')
-const katex = require('rehype-katex')
-
-require('dotenv').config()
+import type { Config } from '@docusaurus/types'
+import type * as PresetClassic from '@docusaurus/preset-classic'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
+import 'dotenv/config'
 
 const MathEquations = {
-  remarkPlugins: [math],
-  rehypePlugins: [katex],
+  remarkPlugins: [remarkMath],
+  rehypePlugins: [rehypeKatex],
 }
 
-
-const ContentParam  = {
+const ContentParam = {
   sidebarPath: require.resolve('./sidebars.js'),
   showLastUpdateTime: true,
   ...MathEquations,
 }
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+const config: Config = {
   title: '楷鹏',
   tagline: '十年的时间，除了变成中年人，我还可以做多少很酷的事',
   url: 'https://wukaipeng.com/',
@@ -43,26 +37,19 @@ const config = {
     [
       // 'classic',
       '@docusaurus/preset-classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           ...ContentParam,
-          // Please change this to your repo.
-          // editUrl:
-          //   'https://github.com/Penggeor/ken/blob/main/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          // editUrl:
-          //   'https://github.com/Penggeor/ken/blob/main/',
           blogSidebarTitle: 'All posts',
           blogSidebarCount: 'ALL',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      } satisfies PresetClassic.Options,
     ],
   ],
 
@@ -79,8 +66,7 @@ const config = {
   themes: ['@docusaurus/theme-live-codeblock', '@docusaurus/theme-mermaid'],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
       respectPrefersColorScheme: true,
       navbar: {
         title: '',
@@ -225,8 +211,8 @@ const config = {
         },
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        // theme: lightCodeTheme,
+        // darkTheme: darkCodeTheme,
         additionalLanguages: ['java', 'bash', 'php'],
       },
       tableOfContents: {
@@ -275,7 +261,7 @@ const config = {
         //   template: '#zoom-template',
         // },
       },
-    }),
+    } satisfies PresetClassic.ThemeConfig,
 
   plugins: [
     'docusaurus-plugin-sass',
@@ -352,16 +338,7 @@ const config = {
         enableInDevelopment: true, // optional
       },
     ],
-    // https://github.com/grnet/docusaurus-terminology
-    // [
-    //   '@grnet/docusaurus-terminology',
-    //   {
-    //     termsDir: './docs/terms',
-    //     docsDir: './docs/',
-    //     glossaryFilepath: './docs/glossary.md',
-    //   },
-    // ],
-    'plugin-image-zoom'
+    'plugin-image-zoom',
   ],
 
   i18n: {
@@ -384,4 +361,4 @@ const config = {
   },
 }
 
-module.exports = config
+export default config
