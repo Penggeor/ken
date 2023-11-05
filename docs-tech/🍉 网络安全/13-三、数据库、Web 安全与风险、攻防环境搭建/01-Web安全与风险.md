@@ -202,7 +202,7 @@ Connection: Keep-Al ive
 
 5xx：服务端错误
 
-🛠️ [HTTP 状态码清单工具](https://t.he3app.com?djv8)
+🛠️ HTTP 状态码清单工具： [https://t.he3app.com?djv8](https://t.he3app.com?djv8)
 
 ### 5. HTTP 消息
 
@@ -378,7 +378,7 @@ URL 主要使用 ASCII 上可打印字符，对于超出 ASCII 的特殊字符�
 
 比如“你”，在 UTF-8 中，用十六进制字节表示为：`0xE4 0xBD 0xA0`，接着再进一步编码为 `%E4%BD%A0`。
 
-🛠️ [URL 解码工具](https://t.he3app.com?edh4)
+🛠️ URL 解码工具： [https://t.he3app.com?edh4](https://t.he3app.com?edh4)
 
 #### Unicode 编码
 

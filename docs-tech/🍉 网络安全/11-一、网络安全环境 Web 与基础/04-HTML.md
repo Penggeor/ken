@@ -399,9 +399,7 @@ Get 和 Post 请求区别见：[Get 和 Post 两者的区别？](https://wukaipe
 
 工具推荐
 
-👉 速查表：[https://t.he3app.com?y19y](https://t.he3app.com?y19y)
-
-👉 转义：https://t.he3app.com?2ii8
+👉 HTML 转义：[https://t.he3app.com?2ii8](https://t.he3app.com?2ii8)
 
 <br />
 

@@ -2,6 +2,7 @@ import type { Config } from '@docusaurus/types'
 import type * as PresetClassic from '@docusaurus/preset-classic'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
+import { themes } from 'prism-react-renderer'
 import 'dotenv/config'
 
 const MathEquations = {
@@ -98,15 +99,15 @@ const config: Config = {
             items: [
               {
                 to: 'tech',
-                label: '👍 技术',
+                label: '🌃 技术',
               },
               {
                 to: 'eng',
-                label: '✌️ 英文',
+                label: '🌌 英文',
               },
               {
                 to: 'post',
-                label: '🤟 思考',
+                label: '🎇 思考',
               },
             ],
           },
@@ -211,8 +212,8 @@ const config: Config = {
         },
       },
       prism: {
-        // theme: lightCodeTheme,
-        // darkTheme: darkCodeTheme,
+        theme: themes.github,
+        darkTheme: themes.dracula,
         additionalLanguages: ['java', 'bash', 'php'],
       },
       tableOfContents: {
