@@ -1,5 +1,5 @@
 ---
-slug: mac-shortcut
+slug: /mac/shortcut
 ---
 
 

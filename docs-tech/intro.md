@@ -1,8 +1,22 @@
 ---
 sidebar_position: 1
 slug: /
-title: 技术领域
+title: ✨ 技术领域
 ---
 
 
 ![](https://quotes-github-readme.vercel.app/api?theme=radical)
+
+快捷导航：
+
+👉 [Mac | MacOS 快捷键](/technique/mac/shortcut)
+
+👉 [网络安全 | 工具大全](/technique/net-security/tools)
+
+👉 [网络安全 | 靶场大全](/technique/net-security/range)
+
+👉 [Linux | 常用命令大全](/technique/linux/command)
+
+👉 [Linux | 高频快捷键大全](/technique/linux/shortcut)
+
+👉 [Docker | Docker 命令大全](/technique/docker/commands)
