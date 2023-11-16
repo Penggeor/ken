@@ -1,5 +1,6 @@
 ---
 slug: /IELTS/youdao/GSL
+unlisted: true
 ---
 
 【挑战双 12 前背完 GSL 词汇】
