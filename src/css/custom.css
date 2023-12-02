@@ -17,7 +17,7 @@
 }
 
 :root {
-  --ifm-color-primary: #2F3391;
+  --ifm-color-primary: #2f3391;
   --ifm-color-primary-dark: #2a2e83;
   --ifm-color-primary-darker: #282b7b;
   --ifm-color-primary-darkest: #212465;
@@ -81,6 +81,15 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: 'Monaspace Radon', monospace;
+  src: url('/fonts/MonaspaceRadonVarVF.ttf');
+  /* src: url('@site/static/fonts/MonaspaceRadonVarVF.woff2') format('woff2'),
+    url('@site/static/fonts/MonaspaceRadonVarVF.woff') format('woff'); */
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1,
 h2,
 h3,
@@ -109,6 +118,14 @@ html[data-theme='dark'] u {
   /* font-weight: 400; */
 }
 
+/* pre code {
+  font-family: 'Monaspace Radon';
+} */
+
+/* pre {
+  font-family: 'Monaspace Radon';
+} */
+
 :root {
   --docusaurus-highlighted-code-line-bg: rgb(196 196 196);
 }
@@ -131,7 +148,6 @@ html[data-theme='dark'] .header-github-link:before {
     no-repeat;
 }
 
-
 hr {
   border: 0;
   height: 1px;
@@ -143,22 +159,56 @@ hr:before {
   height: 1em;
 }
 hr:after {
-  content:'';
+  content: '';
   height: 0.5em;
   top: 1px;
 }
 
-hr:before, hr:after {
+hr:before,
+hr:after {
   content: '';
   position: absolute;
   width: 100%;
 }
 
-hr, hr:before {
-  background: -moz-radial-gradient(center, ellipse cover, var(--ifm-hr-background-color) 0%, rgba(0,0,0,0) 75%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 75%, color-stop(0%,var(--ifm-hr-background-color)), color-stop(75%,rgba(0,0,0,0)));
-  background: -webkit-radial-gradient(center, ellipse cover, var(--ifm-hr-background-color) 0%,rgba(0,0,0,0) 75%);
-  background: -o-radial-gradient(center, ellipse cover, var(--ifm-hr-background-color) 0%,rgba(0,0,0,0) 75%);
-  background: -ms-radial-gradient(center, ellipse cover, var(--ifm-hr-background-color) 0%,rgba(0,0,0,0) 75%);
-  background: radial-gradient(ellipse at center, var(--ifm-hr-background-color) 0%,rgba(0,0,0,0) 75%);
+hr,
+hr:before {
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    var(--ifm-hr-background-color) 0%,
+    rgba(0, 0, 0, 0) 75%
+  );
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0px,
+    center center,
+    75%,
+    color-stop(0%, var(--ifm-hr-background-color)),
+    color-stop(75%, rgba(0, 0, 0, 0))
+  );
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    var(--ifm-hr-background-color) 0%,
+    rgba(0, 0, 0, 0) 75%
+  );
+  background: -o-radial-gradient(
+    center,
+    ellipse cover,
+    var(--ifm-hr-background-color) 0%,
+    rgba(0, 0, 0, 0) 75%
+  );
+  background: -ms-radial-gradient(
+    center,
+    ellipse cover,
+    var(--ifm-hr-background-color) 0%,
+    rgba(0, 0, 0, 0) 75%
+  );
+  background: radial-gradient(
+    ellipse at center,
+    var(--ifm-hr-background-color) 0%,
+    rgba(0, 0, 0, 0) 75%
+  );
 }

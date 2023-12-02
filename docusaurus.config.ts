@@ -112,9 +112,17 @@ const config: Config = {
             ],
           },
           {
+            href: "https://wukaipeng.com/wechat",
+            position: 'right',
+            label: "微信",
+            'aria-label': 'WeChat',
+            target: '_self'
+          },
+          {
             href: 'https://github.com/Penggeor/ken',
             position: 'right',
-            className: 'header-github-link',
+            label: 'GitHub',
+            // className: 'header-github-link',
             'aria-label': 'GitHub repository',
           },
           {
@@ -165,7 +173,7 @@ const config: Config = {
             items: [
               {
                 label: '微信',
-                href: '/wechat',
+                href: 'https://wukaipeng.com/wechat',
               },
               {
                 label: '邮箱',
