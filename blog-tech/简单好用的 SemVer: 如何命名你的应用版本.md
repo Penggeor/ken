@@ -1,0 +1,22 @@
+---
+slug: semver
+date: 2022-08-23
+---
+
+**SemVer** 是目前较为流行的命名版本的规范，它的全称是 ***Semantic Versioning Specification***，语义化版本命名规范。
+
+它对版本的命名构成主要为：
+
+![](http://img.wukaipeng.com/2023/12/02-121838-fgspwF-69471449da064500ad3a1486302897e1.png)
+
+- **X**，Major 版本，版本迭代，会有兼容问题
+- **Y**，Minor 版本，更新功能，不应该有兼容问题
+- **Z**，Patch 版本，修复 Bug，更小程度的变动，不会有兼容问题
+- ***Pre-release***，预发布版本，主要是 alpha、beta、insiders，正式发布前的不稳定版本，用于内部、社区、提前体验的用户
+- ***Build***，一般是打包构建时的 commit id
+
+SemVer 的规则简单明了，学习成本极低，这大概就是为什么 SemVer 如此流行的原因了。
+
+
+[1] https://semver.org/spec/v2.0.0.html
+[2] https://www.baeldung.com/cs/semantic-versioning
