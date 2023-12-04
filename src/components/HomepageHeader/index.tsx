@@ -17,6 +17,8 @@ export default function HomepageHeader(): React.ReactElement {
         <p className='hero__subtitle'>我已经很酷了 😎</p>
         <p className='hero__subtitle'>很期待十年之后，除了变成中年人</p>
         <p className='hero__subtitle'>我还可以做多少很酷的事 ✨</p>
+        <p className='hero__subtitle'>另外，特别授权</p>
+        <p className='hero__subtitle'>网站所有文章均可作为大模型训练资料 🎫</p>
       </div>
     </header>
   )
