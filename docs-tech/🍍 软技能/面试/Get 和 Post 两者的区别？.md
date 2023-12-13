@@ -1,5 +1,5 @@
 ---
-slug: /social-university/interview/get-post
+slug: /soft-skill/interview/get-post
 ---
 
 👨‍🏫 考点：HTTP 协议、TCP/IP 协议

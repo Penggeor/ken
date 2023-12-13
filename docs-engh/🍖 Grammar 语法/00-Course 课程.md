@@ -4,11 +4,11 @@ slug: /grammar/course
 
 课程来自可汗学院
 
-可汗学院（英文字幕+练习题）：https://www.khanacademy.org/humanities/grammar
+👉 可汗学院（英文字幕+练习题）：https://www.khanacademy.org/humanities/grammar
 
-Youtube（英文字幕）: https://www.youtube.com/watch?v=O-6q-siuMik
+👉 Youtube（英文字幕）: https://www.youtube.com/watch?v=O-6q-siuMik
 
-Bilibili（中英字幕）：[https://www.bilibili.com/video/BV1fV411B7tb/?p=1](https://www.bilibili.com/video/BV1fV411B7tb/?p=1)
+👉 Bilibili（中英字幕）：[https://www.bilibili.com/video/BV1fV411B7tb/?p=1](https://www.bilibili.com/video/BV1fV411B7tb/?p=1)
 
 <br />
 
