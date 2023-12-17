@@ -1,0 +1,8 @@
+{
+  "label": "🌽 云原生",
+  "position": 17,
+  "link": {
+    "type": "generated-index",
+    "description": "云原生相关技术，包括 Docker、Kubernetes、Istio 等"
+  }
+}

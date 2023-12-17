@@ -123,8 +123,6 @@ ERROR 1054 (42S22): Unknown column '3' in 'order clause'
 
 ---
 
-联合注入的过程：
-
 1️⃣ 判断列数、显示位
 
 2️⃣ 获取目标数据库名

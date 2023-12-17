@@ -1,5 +1,5 @@
 ---
-slug: /ai/output-json
+slug: output-json
 ---
 
 如何让 GPT 输出稳定的 JSON 结构是一个常见的需求，根据   [@宝玉老师](https://weibo.com/1727858283/NhkVKolQ8) 的提示，发现除了用 function calling，还可以用 TypeScript 去做限制，稳定输出 JSON 结果。

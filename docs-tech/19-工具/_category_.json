@@ -1,0 +1,8 @@
+{
+  "label": "🍅 工具",
+  "position": 19,
+  "link": {
+    "type": "generated-index",
+    "description": "工具使用，比如 Git、VSCode 等"
+  }
+}
