@@ -157,6 +157,10 @@ if (strpos($_SERVER['HTTP_USER_AGENT'], 'Firefox') == true) {
 </p>
 ```
 
+![](http://img.wukaipeng.com/2023/12/30-213648-x3jxWz-image-20231230213647377.png)
+
+
+
 4-1.php 存在 XSS 漏洞，进一步修改
 
 ```php
