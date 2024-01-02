@@ -17,13 +17,15 @@ slug: /net-security/10/09
 
 常见 CTF 题目：[https://www.ctfhub.com](https://www.ctfhub.com)
 
-### SQL 注入
+## SQL 注入
 
 ![](http://img.wukaipeng.com/2023/12/15-080046-IOW1OG-image-20231215080045546.png)
 
 ![](http://img.wukaipeng.com/2023/12/15-080106-gmml1U-image-20231215080106026.png)
 
 ![](http://img.wukaipeng.com/2023/12/15-080120-h1ksHf-image-20231215080120156.png)
+
+### 手动注入
 
 我们使用联合注入的方式：
 
@@ -57,9 +59,9 @@ table_name='flag' #` ，发现 `flag` 字段
 
 ![](http://img.wukaipeng.com/2023/12/17-091938-jLwlOd-image-20231217091938107.png)
 
+### 使用 SQLMap
 
-
-
+// TODO
 
 
 
