@@ -155,5 +155,53 @@ slug: /grammar/preposition
 
 
 
+### Prepositional Phrases 介词性短语
+
+介词性短语作用：
+
+1️⃣ 名词 As nouns
+
+<u>To steal the Queen’s diamonds</u> would be a terrible crime.
+
+2️⃣ 形容词 As adverbs
+
+I  would enjoy exploring the Cathedral <u>of Glass</u>.
+
+3️⃣ 副词 As adjectives
+
+The undiscovered country, <u>from whose bourn no traveler returns</u>. (From Hamlet abount dealth)
+
+---
+
+注意使用，注意避免引起歧义：
+
+🧔‍♂️: I knew a man with a wooden leg named Smith.
+
+👦: What was the name of his other leg?
+
+> Solve the problem: I knew a man named Smith who had a wooden leg.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
