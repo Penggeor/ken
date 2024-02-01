@@ -19,7 +19,7 @@ Composer version 2.6.6 2023-12-08 18:32:26
 composer config -g repo.packagist composer https://packagist.phpcomposer.com
 ```
 
-👉 ThinkPHP 官方文档：[https://www.kancloud.cn/manual/thinkphp5/118006](https://www.kancloud.cn/manual/thinkphp5/118006)
+👉 ThinkPHP 官方文档：[https://doc.thinkphp.cn/v8_0/preface.html](https://doc.thinkphp.cn/v8_0/preface.html)
 
 > 如果安装报错需要先删除之前的镜像
 > composer config -g --unset repos.packagist
@@ -38,5 +38,22 @@ php think run
 
 ![](http://img.wukaipeng.com/2024/02/01-205447-wBqyse-image-20240201205447023.png)
 
+ThinkPHP 是 MVC 架构，想要添加新的路由，在 `route/app.php` 中路径添加：
 
+```php
+Route::get('jike/:name', 'index/jike');
+```
+
+然后在 `app/controller/index.php` 中添加成员方法：
+
+```php
+    public function jike($name = 'ThinkPHP8')
+    {
+        return 'hello,' . $name;
+    }
+```
+
+接着就可以访问了：
+
+![](http://img.wukaipeng.com/2024/02/01-235347-wjbtVC-image-20240201235347741.png)
 
