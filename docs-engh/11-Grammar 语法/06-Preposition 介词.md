@@ -155,7 +155,7 @@ slug: /grammar/preposition
 
 
 
-### Prepositional Phrases 介词性短语
+## Prepositional Phrases 介词性短语
 
 介词性短语作用：
 
@@ -183,7 +183,13 @@ The undiscovered country, <u>from whose bourn no traveler returns</u>. (From Ham
 
 
 
+## Terminal Preposition 结束介词
 
+Terminal Preposition 结束介词：以介词作为句子结束，例子：
+
+👉 It’s a crazy would we live in.
+
+👉 That’s not behavior I will pull up with.
 
 
 

@@ -1,0 +1,145 @@
+---
+slug: ai-as-multiplication
+date: 2024-02-04
+---
+
+2022 年底 AIGC 的出现，让 2023 年成为**通用人工智能元年**。
+
+这是最好的时代，利用 AI，之前仅能存在幻想中的事物落地成现实。
+
+只需要寥寥几句话，就可以描绘一张斑斓的画，真实而又丰富的画。
+
+目前 AI 生图的大模型不多，大名鼎鼎的有 Midjourney，不过它**闭源，并且国内用户使用不方便**。
+
+**Stable Diffusion**，一款**免费开源，而又强大的 AI 生图模型**，正在成为 AI 绘画的宠儿。
+
+比如这张庆祝新年的图片，正是出自 Stable Diffusion 之手：
+
+![](http://img.wukaipeng.com/2024/02/04-113744-b06nB3-a0f200afc67f4519a1688e5553b06d02.webp)
+
+Stable Diffusion 支持**文生图**（通过提示词文字生成图片）、**图生图**（通过垫图+提示词文字生成图片）、**文生视频**、**视频生成视频**。
+
+如下是一个图生图的例子，通过一张手绘的垫图（左侧），生成一张真实的苹果图片（右侧）：
+
+![](http://img.wukaipeng.com/2024/02/04-113800-7lkToh-c02282039963420ca629af80274b163b.png)
+
+还有比如前阵子抖音比较火的 AI 变换视频：
+
+
+
+<iframe width="720" height="405" frameborder="0" src="https://www.ixigua.com/iframe/7331579249955963442?autoplay=0" referrerpolicy="unsafe-url" allowfullscreen></iframe>
+
+
+
+
+为了探索 Stable Diffusion 想象力的边际，在临近甲辰龙年之际，我们决定开发一款龙年贺卡小程序，效果图如下：
+
+![](http://img.wukaipeng.com/2024/02/04-113807-IdzR4C-5ab4031e920a4f6b88ba0d1bd440a9fb.png)
+我们选择了一个叫做 Comfy UI 的开源框架，基于工作流的交互，让 Stable Diffusion 的编排和出图更加方便和快捷：
+
+![](http://img.wukaipeng.com/2024/02/04-113814-DN9Ljh-f87bf16543334912bf188ff443ba148e.png)
+
+Comfy UI 官方介绍称之为：“**最强大的 Stable Diffusion 的图形化操作界面**”
+
+👉 官网链接： [https://github.com/comfyanonymous/ComfyUI](https://github.com/comfyanonymous/ComfyUI)
+
+
+虽然有 Comfy UI 加持，但在一开始，就碰壁了，**无法生成文字**，如下：
+
+![](http://img.wukaipeng.com/2024/02/04-113832-3zUTJj-04-113819-eeqPwz-68510d5092d846f48bf6d74126a66951.jpeg)
+
+左边这张「龙年大吉」是我们输入给 Stable Diffusion 垫图，右边是图片是基于垫图和提示词生成的图片。
+
+可以看到，文字根本是混乱的。
+
+这个痛点强如 Midjourney 也无法解决，这是由于**文字的特殊性**。
+
+就说汉字，书体有篆书、隶书、楷书、行书、草书等，排列有从左往右、从右往左、从上往下等。
+
+另外一种解决思路是，我们把文字也作为垫图之一，比如这张「龙年大吉」的图片：
+
+![](http://img.wukaipeng.com/2024/02/04-113932-k0slDI-068b35eb5125425a964d5117a5bbf862.png)
+
+生成结果：
+
+![](http://img.wukaipeng.com/2024/02/04-113936-8aB6Kq-644cdee4e0294d9b9419a1ddd4e1fd4a.png)
+
+这个方案似乎能走得通，但是很快又遇到麻烦，对于稍微复杂的字，生成效果就不行了，比如「甲辰臻祥」：
+
+![](http://img.wukaipeng.com/2024/02/04-113942-fqj6OI-930ff501491649a2b5e690f7adb0ae56.png)
+
+为了解决这个问题，加上时间的有限性，只能在产品层面做出改动，贺卡图片由模板 + 主体图片组成，模板提前预制，主体图片则由 AI 生成，不包含文字：
+
+
+![](http://img.wukaipeng.com/2024/02/04-113946-u8tHhU-176624fa71034d168b277f051f28c04e.jpeg)
+
+另外一个问题，就是涉及到人物，像手部、面部比较复杂的内容时，生成效果较差，如下小女孩的手部：
+
+![](http://img.wukaipeng.com/2024/02/04-113951-gykFCB-82a2b592edb547bba6bbd3afe3852755.png)
+这个解决方案较多：
+
+1. 可以选择合适的 Stable Diffusion 模型
+2. 利用插件做手部、面部的修正
+3. 添加负面提示词（Negative Prompt）
+
+
+
+
+
+有了如上的探索，我们终于开始我们的乘法之路。
+
+首先是选定关于新年的元素（Element），比如龙、财神爷、灯笼、白鹤等元素。
+
+![](http://img.wukaipeng.com/2024/02/04-113955-JpjovL-98c61e20a7aa4ae195b6a019a3c974b8.png)
+
+
+其次是风格（Style），我们探索了十多种 Stable Diffusion 生成的风格：
+
+![](http://img.wukaipeng.com/2024/02/04-114002-vYR82T-7037e66c97fb4561b5f4773b51d6b0dc.png)
+
+Stable Diffusion 稳如老狗，各种风格都驾驭得住。
+
+通过 $Element \times Style$，我们为每一个元素生成对应的风格图片。
+
+**乘法的力量是不言而喻的**，在几周时间，我们为了贺卡小程序生成了上万张图片。
+
+
+AIGC 之前，这绝对实现不了，能做的，只是加法，并且还需要专业的设计师。
+
+假设一个设计师 5 分钟出一张图，一万张图片，不眠不休，至少要 34 天：
+
+$$
+10000 \times 5 \div 60 \div 24 = 34.7222222222
+$$
+
+
+**这种人力成本、时间成本，一下子就被 AI 打下来了**。
+
+目前 AI 还处于早期阶段，相信随着时间推移，AI 能力会更强，应用的场景会更广，拭目以待。
+
+
+目前小程序也以及正式上线，名字很有年味，叫做「**画年**」
+
+![](http://img.wukaipeng.com/2024/02/04-114006-B8hT7A-d3518964160a4d19bce0b5085c1484f4.png)
+
+操作简单，选择一个钟意的模板，一键生成：
+
+
+![](http://img.wukaipeng.com/2024/02/04-114013-sktwSW-18483245df8a49ec861bc0f21a4df603.jpeg)
+
+
+如果不满意，可以调整配图 or 祝福语：
+
+
+![](http://img.wukaipeng.com/2024/02/04-114019-peTaMO-b0f0494aa31d4a7e90dae33adb0456a8.jpeg)
+
+如果你有拜年贺卡需求，不妨体验一下这款小程序，目前免费使用。
+
+最后推荐一些好用的资源
+
+
+👉 **程序员楷鹏**，可以在这个公众号上联系到我
+
+👉 [wukaipeng.com](https://wukaipeng.com/)，上面收录个人所有的技术和英语博客，这个博客网站在 GitHub 开源，基于最新的 Docusaurus3，欢迎 star
+
+👉 [doc.starflow.tech](https://doc.starflow.tech/)  专门面向中文的提示词工程指南，同样开源，一起学习进步
