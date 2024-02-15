@@ -1,0 +1,84 @@
+---
+slug: bit-byte-kb-gb-mb
+date: 2024-02-07
+---
+
+**Monaspace**，由 GitHub 开源的代码字体，包含 5 种变形字体的等宽代码字体家族，颜值 ++。
+
+这 5 种字体分别是：
+
+1️⃣ **Radon 手写风格字体**
+
+![](http://img.wukaipeng.com/2024/02/15-112838-Kt1yjm-0b1515bdd59e4a13b4ffeb2c88bd01c2.png)
+
+![](http://img.wukaipeng.com/2024/02/15-112939-l6cBdx-e83c131bbb80477384e8de796f51d3de-20240215112939793.png)
+
+
+
+
+
+2️⃣ **Krypton 机械风格字体**
+
+![](http://img.wukaipeng.com/2024/02/15-112905-v0qvxz-ff6016bf0bd54118aa333a3d398244a0.png)
+
+![](http://img.wukaipeng.com/2024/02/15-112850-Y0X5g2-54792f1e3edf42b98aa1e2771547be6e.png)
+
+
+
+3️⃣ **Xenon 衬线风格字体**
+
+![](http://img.wukaipeng.com/2024/02/15-112855-0gnovN-fd0dde46d6b540d8b9942d17199810d5.png)
+
+![](http://img.wukaipeng.com/2024/02/15-112954-QEsed4-617ffb68ff114d7da9c3b96f6e35481d.png)
+
+
+
+
+
+4️⃣ **Argon 人文风格字体**
+
+![](http://img.wukaipeng.com/2024/02/15-113000-1YCib3-a87a10f92674473a93a220287c2b46f8.png)
+
+![](http://img.wukaipeng.com/2024/02/15-113006-0T9UAQ-b3b81cd9c0804e2a8f8ea22f0039f278.png)
+
+
+
+5️⃣ **Neon 现代风格字体**
+
+![](http://img.wukaipeng.com/2024/02/15-113013-t2fUUG-468099c48e554bfdb3b5b2922de3e4b5.png)
+
+![](http://img.wukaipeng.com/2024/02/15-113017-4BjVLg-b73ab6b059cd4332a31a900abc284087.png)
+
+
+
+
+
+👉 项目地址：https://github.com/githubnext/monaspace?tab=readme-ov-file#coding-ligatures
+
+下载方式
+
+**MacOS** 
+
+使用 brew 安装：
+
+```bash
+brew tap homebrew/cask-fonts
+brew install font-monaspace
+```
+
+**Windows**
+
+下载该文件：https://github.com/githubnext/monaspace/tree/main/fonts/otf
+
+拖到 `C:\Windows\Fonts` 中，点击安装
+
+
+下载好后，如果是 VSCode 文件，可以在设置中找到 `font-family`，改为：`'Monaspace Radon', monospace`
+
+![](http://img.wukaipeng.com/2024/02/15-113023-6WKrCV-07c1c29dcdcf4da1a0c0ba9e1fb643f2.png)
+
+---
+
+👉 **程序员楷鹏**，如果有任何前端、 AI 方向的问题，可以在这个公众号上联系到我 🧑‍💻
+
+👉 [wukaipeng.com](https://wukaipeng.com/)，上面收录个人所有的**技术和英语文章**，整个博客内容在 GitHub 开源，基于 Facebook 最新的 Docusaurus 3.0，欢迎 star ⭐️
