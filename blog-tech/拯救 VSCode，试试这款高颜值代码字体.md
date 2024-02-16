@@ -1,5 +1,5 @@
 ---
-slug: bit-byte-kb-gb-mb
+slug: monaspace
 date: 2024-02-07
 ---
 

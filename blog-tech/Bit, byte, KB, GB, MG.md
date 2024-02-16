@@ -1,21 +1,34 @@
 ---
 slug: bit-byte-kb-gb-mb
 date: 2022-11-15
+title: bit, byte, KB, GB, MG, TB, PB
 ---
 
 1bit 是计算机中最小的数据单位，1bit 就对应一个高低电位。
 
-1bit $\times$ 8 $=$ 1byte
+$$$
+1bit \times 8 = 1byte
+$$$
 
-1byte $\times$ 1024 $=$ 1KB (kilobyte)
+$$$
+1byte \times 1024 = 1KB (kilobyte)
+$$$
 
-1KB $\times$ 1024 $=$ 1MB (megabyte)
+$$$
+1KB \times 1024 = 1MB (megabyte)
+$$$
 
-1MB $\times$ 1024 $=$ 1GB (gigabyte)
+$$$
+1MB \times 1024 = 1GB (gigabyte)
+$$$
 
-1G $\times$ 1024 $=$ 1TB (terabyte)
+$$$
+1GB \times 1024 = 1TB (terabyte)
+$$$
 
-1TB $\times$ 1024 $=$ 1PB (petabyte)
+$$$
+1TB \times 1024 = 1PB (petabyte)
+$$$
 
 ---
 

@@ -78,36 +78,36 @@ const config: Config = {
         },
         items: [
           {
-            to: 'technique',
-            label: '🦄 技术',
-            position: 'left',
+            to: 'tech',
+            label: '🌃 技术',
           },
           {
-            to: 'english',
-            label: '🐳 英语',
-            position: 'left',
+            to: 'eng',
+            label: '🌌 英文',
           },
           {
-            to: 'read',
-            label: '🦋 阅读',
-            position: 'left',
+            to: 'post',
+            label: '🎇 思考',
           },
           {
             type: 'dropdown',
-            label: '博客',
+            label: '知识库',
             position: 'left',
             items: [
               {
-                to: 'tech',
-                label: '🌃 技术',
+                to: 'technique',
+                label: '🦄 技术',
+                // position: 'left',
               },
               {
-                to: 'eng',
-                label: '🌌 英文',
+                to: 'english',
+                label: '🐳 英语',
+                // position: 'left',
               },
               {
-                to: 'post',
-                label: '🎇 思考',
+                to: 'read',
+                label: '🦋 阅读',
+                // position: 'left',
               },
             ],
           },
