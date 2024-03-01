@@ -83,7 +83,7 @@
 
 @font-face {
   font-family: 'Monaspace Radon', monospace;
-  src: url('/fonts/MonaspaceRadonVarVF.ttf');
+  src: url('/fonts/MonaspaceRadonVarVF.woff2') format("woff2 supports variations"),;
   /* src: url('@site/static/fonts/MonaspaceRadonVarVF.woff2') format('woff2'),
     url('@site/static/fonts/MonaspaceRadonVarVF.woff') format('woff'); */
   font-weight: normal;
@@ -118,9 +118,9 @@ html[data-theme='dark'] u {
   /* font-weight: 400; */
 }
 
-/* pre code {
-  font-family: 'Monaspace Radon';
-} */
+pre code *{
+  font-family: 'Monaspace Radon' !important;
+}
 
 /* pre {
   font-family: 'Monaspace Radon';

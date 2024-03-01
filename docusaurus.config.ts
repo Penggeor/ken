@@ -29,6 +29,19 @@ const config: Config = {
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
+  headTags: [
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preload",
+        href: "/fonts/MonaspaceRadonVarVF.woff2",
+        as: "font",
+        type: "font/woff2",
+        crossorigin: "anonymous",
+      },
+    },
+  ],
+
   customFields: {
     GISCUS_REPO_ID: process.env.GISCUS_REPO_ID,
     GISCUS_CATEGORY_ID: process.env.GISCUS_CATEGORY_ID,
@@ -70,6 +83,7 @@ const config: Config = {
     {
       respectPrefersColorScheme: true,
       navbar: {
+        hideOnScroll: true,
         title: '',
         logo: {
           alt: 'My Site Logo',
