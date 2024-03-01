@@ -78,38 +78,71 @@ const config: Config = {
         },
         items: [
           {
-            to: 'tech',
-            label: '🌃 技术',
-          },
-          {
-            to: 'eng',
-            label: '🌌 英文',
-          },
-          {
-            to: 'post',
-            label: '🎇 思考',
-          },
-          {
-            type: 'dropdown',
-            label: '知识库',
+            to: 'blog',
+            label: '🌟 博客',
             position: 'left',
-            items: [
-              {
-                to: 'technique',
-                label: '🦄 技术',
-                // position: 'left',
-              },
-              {
-                to: 'english',
-                label: '🐳 英语',
-                // position: 'left',
-              },
-              {
-                to: 'read',
-                label: '🦋 阅读',
-                // position: 'left',
-              },
-            ],
+          },
+          // {
+          //   to: 'tech',
+          //   label: '🌃 技术',
+          // },
+          // {
+          //   to: 'eng',
+          //   label: '🌌 英文',
+          // },
+          // {
+          //   to: 'post',
+          //   label: '🎇 思考',
+          // },
+          // {
+          //   type: 'dropdown',
+          //   label: '知识库',
+          //   position: 'left',
+          //   items: [
+          //     {
+          //       to: 'technique',
+          //       label: '🦄 技术',
+          //       // position: 'left',
+          //     },
+          //     {
+          //       to: 'english',
+          //       label: '🐳 英语',
+          //       // position: 'left',
+          //     },
+          //     {
+          //       to: 'read',
+          //       label: '🦋 阅读',
+          //       // position: 'left',
+          //     },
+          //   ],
+          // },
+          {
+            to: 'technique',
+            label: '🦄 技术',
+            // position: 'left',
+          },
+          {
+            to: 'english',
+            label: '🐳 英语',
+            // position: 'left',
+          },
+          {
+            to: 'read',
+            label: '🦋 阅读',
+            // position: 'left',
+          },
+          {
+            href: 'https://github.com/Penggeor/ken',
+            position: 'right',
+            // label: 'GitHub',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
+          },
+          {
+            label: 'RSS',
+            href: 'https://wukaipeng.com/rss.xml',
+            position: 'right',
+            'aria-label': 'RSS',
           },
           {
             href: "https://wukaipeng.com/wechat",
@@ -119,11 +152,10 @@ const config: Config = {
             target: '_self'
           },
           {
-            href: 'https://github.com/Penggeor/ken',
+            label: 'Twitter',
+            href: 'https://twitter.com/Kail_Penggeor',
             position: 'right',
-            label: 'GitHub',
-            // className: 'header-github-link',
-            'aria-label': 'GitHub repository',
+            'aria-label': 'Twitter',
           },
           {
             type: 'search',
@@ -134,37 +166,50 @@ const config: Config = {
       footer: {
         style: 'dark',
         links: [
+          // {
+          //   title: '文档',
+          //   items: [
+          //     {
+          //       label: '技术',
+          //       to: 'technique',
+          //     },
+          //     {
+          //       label: '英语',
+          //       to: 'english',
+          //     },
+          //     {
+          //       label: '阅读',
+          //       to: 'read',
+          //     },
+          //   ],
+          // },
+          // {
+          //   title: '博客',
+          //   items: [
+          //     {
+          //       label: '技术',
+          //       to: 'tech',
+          //     },
+          //     {
+          //       label: '英文',
+          //       to: 'eng',
+          //     },
+          //     {
+          //       label: '文章',
+          //       to: 'post',
+          //     },
+          //   ],
+          // },
           {
-            title: '文档',
+            title: '本站',
             items: [
               {
-                label: '技术',
-                to: 'technique',
+                label: '知识库',
+                to: 'docs',
               },
               {
-                label: '英语',
-                to: 'english',
-              },
-              {
-                label: '阅读',
-                to: 'read',
-              },
-            ],
-          },
-          {
-            title: '博客',
-            items: [
-              {
-                label: '技术',
-                to: 'tech',
-              },
-              {
-                label: '英文',
-                to: 'eng',
-              },
-              {
-                label: '文章',
-                to: 'post',
+                label: '博客',
+                to: 'blog',
               },
             ],
           },
@@ -301,44 +346,57 @@ const config: Config = {
         ...ContentParam,
       },
     ],
-    [
-      '@docusaurus/plugin-content-blog',
-      {
-        id: 'blog-tech',
-        path: 'blog-tech',
-        blogTitle: '博客',
-        routeBasePath: 'tech',
-        blogSidebarTitle: '✨',
-        blogSidebarCount: 'ALL',
-        authorsMapPath: '../author.yaml',
-        ...MathEquations,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-blog',
-      {
-        id: 'blog-engh',
-        path: 'blog-engh',
-        blogTitle: 'Essay',
-        routeBasePath: 'eng',
-        blogSidebarTitle: '🌟',
-        blogSidebarCount: 'ALL',
-        authorsMapPath: '../author.yaml',
-        ...MathEquations,
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-blog',
-      {
-        id: 'blog-post',
-        path: 'blog-post',
-        blogTitle: '阅读',
-        routeBasePath: 'post',
-        blogSidebarTitle: '💫',
-        blogSidebarCount: 'ALL',
-        ...MathEquations,
-      },
-    ],
+    // [
+    //   '@docusaurus/plugin-content-blog',
+    //   {
+    //     id: 'blog',
+    //     path: 'blog',
+    //     blogTitle: '博客',
+    //     // routeBasePath: '/',
+    //     blogSidebarTitle: '✨',
+    //     blogSidebarCount: 'ALL',
+    //     authorsMapPath: '../author.yaml',
+    //     ...MathEquations,
+    //   },
+    // ],
+    // [
+    //   '@docusaurus/plugin-content-blog',
+    //   {
+    //     id: 'blog-tech',
+    //     path: 'blog-tech',
+    //     blogTitle: '博客',
+    //     routeBasePath: 'tech',
+    //     blogSidebarTitle: '✨',
+    //     blogSidebarCount: 'ALL',
+    //     authorsMapPath: '../author.yaml',
+    //     ...MathEquations,
+    //   },
+    // ],
+    // [
+    //   '@docusaurus/plugin-content-blog',
+    //   {
+    //     id: 'blog-engh',
+    //     path: 'blog-engh',
+    //     blogTitle: 'Essay',
+    //     routeBasePath: 'eng',
+    //     blogSidebarTitle: '🌟',
+    //     blogSidebarCount: 'ALL',
+    //     authorsMapPath: '../author.yaml',
+    //     ...MathEquations,
+    //   },
+    // ],
+    // [
+    //   '@docusaurus/plugin-content-blog',
+    //   {
+    //     id: 'blog-post',
+    //     path: 'blog-post',
+    //     blogTitle: '阅读',
+    //     routeBasePath: 'post',
+    //     blogSidebarTitle: '💫',
+    //     blogSidebarCount: 'ALL',
+    //     ...MathEquations,
+    //   },
+    // ],
     [
       'posthog-docusaurus',
       {
