@@ -77,11 +77,6 @@ const config: Config = {
           srcDark: 'img/Logokp-logo-v1-dark@3x.png',
         },
         items: [
-          {
-            to: 'blog',
-            label: '🌟 博客',
-            position: 'left',
-          },
           // {
           //   to: 'tech',
           //   label: '🌃 技术',
@@ -130,6 +125,11 @@ const config: Config = {
             to: 'read',
             label: '🦋 阅读',
             // position: 'left',
+          },
+          {
+            to: 'blog',
+            label: '🌟 博客',
+            position: 'left',
           },
           {
             href: 'https://github.com/Penggeor/ken',
