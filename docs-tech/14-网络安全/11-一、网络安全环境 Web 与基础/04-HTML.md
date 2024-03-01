@@ -156,10 +156,6 @@ HTLM5 极大简化了 DTD 的声明，不再支持 XHTML，目前只有：
   <link data-rh="true" rel="alternate" href="https://wukaipeng.com/zh-CN/" hreflang="zh-CN">
   <link data-rh="true" rel="alternate" href="https://wukaipeng.com/" hreflang="x-default">
   <script type="text/javascript" async="" src="https://app.posthog.com/static/array.js"></script>
-  <link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="楷鹏 RSS Feed">
-  <link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="楷鹏 Atom Feed">
-  <link rel="alternate" type="application/rss+xml" href="/blog-news/rss.xml" title="楷鹏 RSS Feed">
-  <link rel="alternate" type="application/atom+xml" href="/blog-news/atom.xml" title="楷鹏 Atom Feed">
   <link rel="preload" href="/assets/js/runtime~main.a232d5a8.js" as="script">
   <link rel="preload" href="/assets/js/main.1f0d0795.js" as="script">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" data-rh="true">

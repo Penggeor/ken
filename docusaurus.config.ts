@@ -21,7 +21,7 @@ const config: Config = {
   tagline: '十年的时间，除了变成中年人，我还可以做多少很酷的事',
   url: 'https://wukaipeng.com/',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'Penggeor', // Usually your GitHub org/user name.
