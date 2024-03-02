@@ -154,7 +154,7 @@ const config: Config = {
           },
           {
             label: 'RSS',
-            href: 'https://wukaipeng.com/rss.xml',
+            href: 'https://wukaipeng.com/blog/rss.xml',
             position: 'right',
             'aria-label': 'RSS',
           },
