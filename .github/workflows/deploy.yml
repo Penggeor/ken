@@ -60,7 +60,7 @@ jobs:
           docker load -i $DOCKER_IMAGE_PATH/docusaurus-image.tar
 
           # 启动新容器，设置自启动
-          docker run -d -p 4000:3000 --name docusaurus-container docusaurus-image --restart=always
+          docker run -d -p 4000:3000 --restart=always --name docusaurus-container docusaurus-image
 
           # 清理悬挂的镜像层
           docker image prune -f
