@@ -15,7 +15,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@boombox/storage": "^1.0.2",
+    "@boombox/storage": "^1.1.0",
     "@docusaurus/core": "^3.0.0",
     "@docusaurus/plugin-content-blog": "^3.0.0",
     "@docusaurus/preset-classic": "^3.0.0",
