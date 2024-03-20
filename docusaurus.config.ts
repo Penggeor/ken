@@ -103,28 +103,6 @@ const config: Config = {
           //   to: 'post',
           //   label: '🎇 思考',
           // },
-          // {
-          //   type: 'dropdown',
-          //   label: '知识库',
-          //   position: 'left',
-          //   items: [
-          //     {
-          //       to: 'technique',
-          //       label: '🦄 技术',
-          //       // position: 'left',
-          //     },
-          //     {
-          //       to: 'english',
-          //       label: '🐳 英语',
-          //       // position: 'left',
-          //     },
-          //     {
-          //       to: 'read',
-          //       label: '🦋 阅读',
-          //       // position: 'left',
-          //     },
-          //   ],
-          // },
           {
             to: 'technique',
             label: '🦄 技术',
@@ -159,17 +137,33 @@ const config: Config = {
             'aria-label': 'RSS',
           },
           {
-            href: "https://wukaipeng.com/wechat",
+            type: 'dropdown',
+            label: '联系我',
             position: 'right',
-            label: "微信",
-            'aria-label': 'WeChat',
-            target: '_self'
+            items: [
+              {
+                href: "https://wukaipeng.com/wechat",
+                label: "微信",
+                'aria-label': 'WeChat',
+                target: '_self'
+              },
+              {
+                label: 'Twitter',
+                href: 'https://twitter.com/Kail_Penggeor',
+                'aria-label': 'Twitter',
+              },
+            ]
           },
           {
-            label: 'Twitter',
-            href: 'https://twitter.com/Kail_Penggeor',
+            type: 'dropdown',
+            label: '写作工具',
             position: 'right',
-            'aria-label': 'Twitter',
+            items: [
+              {
+                to: 'sandwich',
+                label: '🥪 文章前后添加固定内容',
+              },
+            ],
           },
           {
             type: 'search',
