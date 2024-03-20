@@ -1,0 +1,70 @@
+.main {
+  height: 80vh;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 20px;
+}
+
+@mixin textarea-style {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 100%;
+}
+
+@mixin button-style {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.left {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 20% 1fr 20%;
+  row-gap: 10px;
+
+  textarea {
+    @include textarea-style;
+  }
+
+  .content {
+    position: relative;
+
+    button {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      @include button-style;
+    }
+  }
+}
+
+.right {
+  height: 100%;
+  position: relative;
+
+  textarea {
+    height: 100%;
+    width: 100%;
+    @include textarea-style;
+    cursor: not-allowed;
+  }
+
+  button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    @include button-style;
+  }
+}
