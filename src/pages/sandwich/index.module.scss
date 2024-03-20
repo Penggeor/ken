@@ -1,5 +1,5 @@
 .main {
-  height: 80vh;
+  height: 90vh;
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 20px;
@@ -31,7 +31,7 @@
 .left {
   display: grid;
   height: 100%;
-  grid-template-rows: 20% 1fr 20%;
+  grid-template-rows: 15% 1fr 15%;
   row-gap: 10px;
 
   textarea {
