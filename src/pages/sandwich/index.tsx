@@ -24,6 +24,7 @@ export default function () {
   const [state, setState] = useState<Storage>(storage)
   const [result, setResult] = useState<string>('')
   const [copyFeedback, setCopyFeedback] = useState<string>('copy')
+  const [pasteFeedback, setPasteFeedback] = useState<string>('paste')
 
   useEffect(() => {
     localStorage.setItem(KEY, state)
@@ -46,6 +47,18 @@ export default function () {
       setCopyFeedback('copy')
     }, 1000)
   }
+  const handlePaste = async () => {
+    try {
+      const text = await navigator.clipboard.readText()
+      setState({ ...state, content: text })
+      setPasteFeedback('pasted')
+      setTimeout(() => {
+        setPasteFeedback('paste')
+      }, 1000)
+    } catch (err) {
+      setPasteFeedback('failed')
+    }
+  }
 
   return (
     <Layout
@@ -61,7 +74,7 @@ export default function () {
             onChange={handlePrefixChange}
           />
           <div className={styles.content}>
-            <button>Paste</button>
+            <button onClick={handlePaste}>Paste</button>
             <textarea
               id='content'
               placeholder='Enter the main content here'
