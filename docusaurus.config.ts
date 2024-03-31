@@ -163,6 +163,10 @@ const config: Config = {
                 to: 'sandwich',
                 label: '🥪 文章前后添加固定内容',
               },
+              {
+                to: 'what-week-of-the-year-is-it-this-week',
+                label: '📅 本周是今年的第几周',
+              }
             ],
           },
           {

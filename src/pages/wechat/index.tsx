@@ -1,5 +1,4 @@
 import React from 'react';
-
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import WeChat from '@site/src/components/WeChat';
 import Layout from '@theme/Layout';

@@ -42,9 +42,9 @@ export default function () {
   }
   const handleCopy = () => {
     navigator.clipboard.writeText(result)
-    setCopyFeedback('copied')
+    setCopyFeedback('Copied!')
     setTimeout(() => {
-      setCopyFeedback('copy')
+      setCopyFeedback('Copy')
     }, 1000)
   }
   const handlePaste = async () => {
