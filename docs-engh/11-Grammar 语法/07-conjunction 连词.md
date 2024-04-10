@@ -51,3 +51,37 @@ A7(S) --> B7(So)
 
 ## Subordinating Conjunction 从属连词
 
+Clause have two type 从句有两种：
+
+1. Independent Clause 独立从句，包含主语+动词
+2. Dependent Clause 从属从句
+
+> All sentences $=$ Clauses 所有的句子 $=$ 从句
+>
+> All Clauses $\ne$ Sentences 所有的从句 $\ne$ 句子
+
+Herbert performed his irresponsible experiments because he was curious.
+
+前半段「Herbert performed his irresponsible experiments」是独立从句，独立代表一件事情。
+
+后半段「because he was curious」是从属从句，提供更进一步的信息，没办法独立，需要从属于另外的从句才有意义。
+
+连接从属从句的连词，就是**从属连词**
+
+🌰 **Although** she loved Sir Reginald, Lady Penelope hated his pranks. 尽管她爱着雷金纳德爵士，但佩内洛普夫人讨厌他的恶作剧。
+
+这里「Although」就是从属连词
+
+从属连词：
+
+| Column 1 | Column 2 | Column 3    | Column 4    |
+| -------- | -------- | ----------- | ----------- |
+| After    | Because  | Even though | Like        |
+| Although | Before   | If          | Rather than |
+| As       | Even if  | If only     | Since       |
+| As if    | That     | Though      | Until       |
+| When     | Where    | Whereas     | Whether     |
+| Wherever | Which    | While       |             |
+
+
+
