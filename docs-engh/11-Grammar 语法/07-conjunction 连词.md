@@ -4,7 +4,7 @@ slug: /grammar/conjunction
 
 连词：连接单词、句子和从句。
 
-## Coordinating Conjunction
+## Coordinating Conjunctions 并且连词
 
 助记：**FAN BOYS**
 
@@ -49,7 +49,7 @@ A7(S) --> B7(So)
 
 
 
-## Subordinating Conjunction 从属连词
+## Subordinating Conjunctions 从属连词
 
 Clause have two type 从句有两种：
 
@@ -82,6 +82,24 @@ Herbert performed his irresponsible experiments because he was curious.
 | As if    | That     | Though      | Until       |
 | When     | Where    | Whereas     | Whether     |
 | Wherever | Which    | While       |             |
+
+
+
+## Correlative Conjunctions 对等连词
+
+**Either/or**: Either the wallpaper go, or I do.
+
+**Neither/nor**: Neither Jia nor Becca like Howard.
+
+**Both/and**: Both Bigby and LaDoux were career criminals.
+
+**As/so**: As goes Kansas, so goes nation.
+
+**Whether/or**: Whether you like shrimp or chocolate, there’s certain to be something for you at the Veracruz food fair.
+
+
+
+
 
 
 

@@ -120,14 +120,14 @@ const config: Config = {
           },
           {
             to: 'blog',
-            label: '🌟 博客',
+            label: '🌌 博客',
             position: 'left',
           },
           {
             href: 'https://github.com/Penggeor/ken',
             position: 'right',
-            // label: 'GitHub',
-            className: 'header-github-link',
+            label: 'GitHub',
+            // className: 'header-github-link',
             'aria-label': 'GitHub repository',
           },
           {
@@ -150,7 +150,7 @@ const config: Config = {
               {
                 label: 'Twitter',
                 href: 'https://twitter.com/Kail_Penggeor',
-                'aria-label': 'Twitter',
+                'aria-label': 'X',
               },
             ]
           },
@@ -178,40 +178,6 @@ const config: Config = {
       footer: {
         style: 'dark',
         links: [
-          // {
-          //   title: '文档',
-          //   items: [
-          //     {
-          //       label: '技术',
-          //       to: 'technique',
-          //     },
-          //     {
-          //       label: '英语',
-          //       to: 'english',
-          //     },
-          //     {
-          //       label: '阅读',
-          //       to: 'read',
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: '博客',
-          //   items: [
-          //     {
-          //       label: '技术',
-          //       to: 'tech',
-          //     },
-          //     {
-          //       label: '英文',
-          //       to: 'eng',
-          //     },
-          //     {
-          //       label: '文章',
-          //       to: 'post',
-          //     },
-          //   ],
-          // },
           {
             title: '本站',
             items: [
