@@ -182,8 +182,16 @@ const config: Config = {
             title: '本站',
             items: [
               {
+                label: '技术',
+                to: 'technique',
+              },
+              {
+                label: '英语',
+                to: 'english',
+              },
+              {
                 label: '知识库',
-                to: 'docs',
+                to: 'read',
               },
               {
                 label: '博客',
@@ -228,7 +236,7 @@ const config: Config = {
                 </a>`,
               },
               {
-                label: '粤ICP备2023085392号',
+                label: '粤 ICP 备 2023085392 号',
                 href: 'https://beian.miit.gov.cn',
               },
             ],
@@ -242,7 +250,7 @@ const config: Config = {
             ]
           },
           {
-            title: '发电支持一下',
+            title: '支持一下',
             items: [
               {
                 label: '爱发电',
