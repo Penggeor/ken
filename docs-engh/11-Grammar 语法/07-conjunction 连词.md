@@ -87,15 +87,15 @@ Herbert performed his irresponsible experiments because he was curious.
 
 ## Correlative Conjunctions 对等连词
 
-**Either/or**: Either the wallpaper go, or I do.
+- **Either/or**: Either the wallpaper go, or I do.
 
-**Neither/nor**: Neither Jia nor Becca like Howard.
+- **Neither/nor**: Neither Jia nor Becca like Howard.
 
-**Both/and**: Both Bigby and LaDoux were career criminals.
+- **Both/and**: Both Bigby and LaDoux were career criminals.
 
-**As/so**: As goes Kansas, so goes nation.
+- **As/so**: As goes Kansas, so goes nation.
 
-**Whether/or**: Whether you like shrimp or chocolate, there’s certain to be something for you at the Veracruz food fair.
+- **Whether/or**: Whether you like shrimp or chocolate, there’s certain to be something for you at the Veracruz food fair.
 
 
 
