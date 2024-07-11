@@ -11,3 +11,6 @@ slug: /os/mac/shortcut
 |                   |                                                       |
 | 🙈 隐藏当前应用    | <kbd>Command</kbd> + <kbd>H</kbd>                     |
 | 🙈 隐藏其他应用    | <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>H</kbd> |
+|                   |                                                       |
+| 📁 Finder: 显式被隐藏的文件 |  <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>.</kbd>               |
+
