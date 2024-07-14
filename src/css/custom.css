@@ -59,7 +59,15 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-@import url('https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css');
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1/lxgwwenkaimono-regular.css');
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1/lxgwwenkai-regular.css');
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1/lxgwwenkai-light.css');
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1/lxgwwenkaimono-light.css');
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1/lxgwwenkai-bold.css');
+@import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1/lxgwwenkaimono-bold.css');
+
+/* @import url("https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Light/result.css"); */
+/* @import url('https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/style.css'); */
 /* @import url("https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css");
 @import url("https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css");
 @import url("https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/style.css"); */
@@ -79,6 +87,7 @@
 @font-face {
   font-family: 'LXGW WenKai', sans-serif;
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
