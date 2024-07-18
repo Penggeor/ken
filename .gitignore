@@ -24,3 +24,7 @@ yarn-error.log*
 
 # Env
 .env
+
+
+# Miscellaneous
+*test.js
