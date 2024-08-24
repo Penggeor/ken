@@ -125,16 +125,34 @@ const config: Config = {
           },
           {
             href: 'https://github.com/Penggeor/ken',
-            position: 'right',
             label: 'GitHub',
+            position: 'right',
             // className: 'header-github-link',
             'aria-label': 'GitHub repository',
           },
+
+          // {
+          //   label: 'RSS',
+          //   href: 'https://wukaipeng.com/blog/rss.xml',
+          //   position: 'right',
+          //   'aria-label': 'RSS',
+          // },
           {
-            label: 'RSS',
-            href: 'https://wukaipeng.com/blog/rss.xml',
+            type: 'dropdown',
+            label: '其他平台',
             position: 'right',
-            'aria-label': 'RSS',
+            items: [
+              {
+                label: 'X (Twitter)',
+                href: 'https://twitter.com/x_wukaipeng',
+                'aria-label': 'X',
+              },
+              {
+                label: 'Jike 即刻',
+                href: 'https://okjk.co/8FI5oD',
+                'aria-label': '即刻',
+              },
+            ]
           },
           {
             type: 'dropdown',
@@ -148,24 +166,39 @@ const config: Config = {
                 target: '_self'
               },
               {
-                label: 'X(Twitter)',
-                href: 'https://twitter.com/x_wukaipeng',
-                'aria-label': 'X',
+                label: 'Email',
+                href: 'mailto:wkpcoder@163.com',
+                'aria-label': 'Email',
               },
+              // {
+              //   label: 'X(Twitter)',
+              //   href: 'https://twitter.com/x_wukaipeng',
+              //   'aria-label': 'X',
+              // },
+              // {
+              //   label: '即刻',
+              //   href: 'https://okjk.co/8FI5oD',
+              //   'aria-label': '即刻',
+              // }
             ]
           },
           {
             type: 'dropdown',
-            label: '写作工具',
+            label: 'Miscellaneous',
             position: 'right',
             items: [
               {
+                label: 'RSS 订阅',
+                href: 'https://wukaipeng.com/blog/rss.xml',
+                'aria-label': 'RSS',
+              },
+              {
                 to: 'sandwich',
-                label: '🥪 文章前后添加固定内容',
+                label: '写作工具 🥪 文章前后添加固定内容',
               },
               {
                 to: 'what-week-of-the-year-is-it-this-week',
-                label: '📅 本周是今年的第几周',
+                label: '写作工具 📅 本周是今年的第几周',
               }
             ],
           },
@@ -207,7 +240,7 @@ const config: Config = {
                 href: 'https://wukaipeng.com/wechat',
               },
               {
-                label: '邮箱',
+                label: 'Email',
                 href: 'mailto:wkpcoder@163.com',
               },
               {
@@ -215,9 +248,14 @@ const config: Config = {
                 href: 'https://github.com/penggeor',
               },
               {
-                label: 'Twitter',
+                label: 'X (Twitter)',
                 href: 'https://twitter.com/x_wukaipeng',
               },
+              {
+                label: '即刻',
+                href: 'https://okjk.co/8FI5oD',
+                'aria-label': '即刻',
+              }
             ],
           },
           {
