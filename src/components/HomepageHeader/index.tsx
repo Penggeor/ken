@@ -11,9 +11,9 @@ export default function HomepageHeader(): React.ReactElement {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className='container'>
-        <p className='hero__title'>“ 妓女不能等有了性欲才接客</p>
-        <p className='hero__title'>作家不能等有了灵感才写作 ”</p>
-        <p className='hero__title'>——李敖</p>
+        <p className='hero__title'>“你写的每一行代码</p>
+        <p className='hero__title'>都是你的名片”</p>
+        {/* <p className='hero__title'>💳</p> */}
       </div>
     </header>
   )
