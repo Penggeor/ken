@@ -124,6 +124,11 @@ const config: Config = {
             position: 'left',
           },
           {
+            to: 'weekly',
+            label: '🌃 周刊'  ,
+            position: 'left',
+          },
+          {
             href: 'https://github.com/Penggeor/ken',
             label: 'GitHub',
             position: 'right',
@@ -392,13 +397,26 @@ const config: Config = {
         ...ContentParam,
       },
     ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'blog-weekly',
+        path: 'blog-weekly',
+        blogTitle: '周刊',
+        routeBasePath: 'weekly',
+        blogSidebarTitle: '✨',
+        blogSidebarCount: 'ALL',
+        authorsMapPath: '../author.yaml',
+        ...MathEquations,
+      },
+    ],
     // [
     //   '@docusaurus/plugin-content-blog',
     //   {
     //     id: 'blog',
     //     path: 'blog',
     //     blogTitle: '博客',
-    //     // routeBasePath: '/',
+    //     routeBasePath: '/',
     //     blogSidebarTitle: '✨',
     //     blogSidebarCount: 'ALL',
     //     authorsMapPath: '../author.yaml',
