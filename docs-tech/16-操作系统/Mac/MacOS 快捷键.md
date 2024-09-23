@@ -14,5 +14,7 @@ slug: /os/mac/shortcut
 |                   |                                                       |
 | 📁 Finder: 显式被隐藏的文件 |  <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>.</kbd>               |
 |  |  |
-| 🖥️ 切换上一个桌面 | <kbd>Control</kbd> + <kbd>→</kbd>
-| 🖥️ 切换下一个桌面 | <kbd>Control</kbd> + <kbd>←</kbd>
+| 🖥️ 切换上一个桌面 | <kbd>Control</kbd> + <kbd>→</kbd> |
+| 🖥️ 切换下一个桌面 | <kbd>Control</kbd> + <kbd>←</kbd> |
+| | |
+| 💽 打开内置录屏 |  <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>5</kbd> |
