@@ -407,6 +407,12 @@ const config: Config = {
         blogSidebarTitle: '✨',
         blogSidebarCount: 'ALL',
         authorsMapPath: '../author.yaml',
+        feedOptions: {
+          type: 'all',
+          title: '生活周刊',
+          copyright: `版权 © ${new Date().getFullYear()} 吴楷鹏`,
+          description: '每周更新的生活周刊',
+        },
         ...MathEquations,
       },
     ],
