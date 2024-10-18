@@ -142,23 +142,23 @@ const config: Config = {
           //   position: 'right',
           //   'aria-label': 'RSS',
           // },
-          {
-            type: 'dropdown',
-            label: '其他平台',
-            position: 'right',
-            items: [
-              {
-                label: 'X (Twitter)',
-                href: 'https://twitter.com/x_wukaipeng',
-                'aria-label': 'X',
-              },
-              {
-                label: 'Jike 即刻',
-                href: 'https://okjk.co/8FI5oD',
-                'aria-label': '即刻',
-              },
-            ]
-          },
+          // {
+          //   type: 'dropdown',
+          //   label: '其他平台',
+          //   position: 'right',
+          //   items: [
+          //     {
+          //       label: 'X (Twitter)',
+          //       href: 'https://twitter.com/x_wukaipeng',
+          //       'aria-label': 'X',
+          //     },
+          //     {
+          //       label: 'Jike 即刻',
+          //       href: 'https://okjk.co/8FI5oD',
+          //       'aria-label': '即刻',
+          //     },
+          //   ]
+          // },
           {
             type: 'dropdown',
             label: '联系我',
@@ -189,22 +189,27 @@ const config: Config = {
           },
           {
             type: 'dropdown',
-            label: 'Miscellaneous',
+            label: 'RSS',
             position: 'right',
             items: [
               {
-                label: 'RSS 订阅',
+                label: '博客 RSS 📶',
                 href: 'https://wukaipeng.com/blog/rss.xml',
                 'aria-label': 'RSS',
               },
               {
-                to: 'sandwich',
-                label: '写作工具 🥪 文章前后添加固定内容',
+                label: '周刊 RSS 📶',
+                href: 'https://wukaipeng.com/weekly/rss.xml',
+                'aria-label': 'RSS',
               },
-              {
-                to: 'what-week-of-the-year-is-it-this-week',
-                label: '写作工具 📅 本周是今年的第几周',
-              }
+              // {
+              //   to: 'sandwich',
+              //   label: '写作工具 🥪 文章前后添加固定内容',
+              // },
+              // {
+              //   to: 'what-week-of-the-year-is-it-this-week',
+              //   label: '写作工具 📅 本周是今年的第几周',
+              // }
             ],
           },
           {
