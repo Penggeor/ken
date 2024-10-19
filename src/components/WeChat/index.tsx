@@ -10,7 +10,7 @@ export default function WeChat() {
   return (
     <main>
       <div className={styles.wrapper}>
-        <div className='wrap'>
+        {/* <div className='wrap'>
           <div className='card'>
             <div className={clsx('card__heaher')}>
               <h1 className={styles.QRCodeHeader}>技术公众号「程序员楷鹏」</h1>
@@ -24,7 +24,7 @@ export default function WeChat() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
         {/* <div className='wrap'>
           <div className='card'>
             <div className={clsx('card__heaher')}>
