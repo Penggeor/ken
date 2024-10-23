@@ -162,13 +162,13 @@ Flag: **will**
 - Link ideas
 - **Helping other verbs.** 帮助其他动词
 
-Helping verb 比较偏拉丁语化的称呼是 auxiliary verb。
+Helping verb 比较偏拉丁语化、正式化的称呼是 auxiliary verb（辅助动词）。
 
 > auxiliary /ɔːɡˈzɪliəri/ a. 辅助的 n. 助手；助动词
 
 <br />
 
-一般有两种：to have / to be
+助动词其实是 have 和 be 的曲折变化形式而已。
 
 🌰 Example：
 
@@ -324,7 +324,7 @@ Verb aspect: all the possible ways of expressing something in time.  在时间�
 1. Tenses 时：确定动作发生的时间，是过去，现在，还是将来
 2. Aspect 态：确定动作发生的状态，是一般、正在进行、完成，还是完成进行
 
-排列组合就有以下时态：
+排列组合就有以下 16 种时态：
 
 ![03-Verb 动词-01](http://img.wukaipeng.com/2023/0820-092708-03-Verb%20%E5%8A%A8%E8%AF%8D-01.png)
 

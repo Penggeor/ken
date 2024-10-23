@@ -279,3 +279,13 @@ hr:before {
     rgba(0, 0, 0, 0) 75%
   );
 }
+
+div[class^=announcementBar_] {
+  --site-announcement-bar-stripe-color1: #e8d7ff;
+  --site-announcement-bar-stripe-color2: #ffe9d1;
+  /* background: repeating-linear-gradient(35deg,var(--site-announcement-bar-stripe-color1),var(--site-announcement-bar-stripe-color1)20px,var(--site-announcement-bar-stripe-color2)10px,var(--site-announcement-bar-stripe-color2)40px); */
+  /* 改为好看的渐变背景颜色 */
+  background: linear-gradient(35deg, var(--site-announcement-bar-stripe-color1), var(--site-announcement-bar-stripe-color2));
+  font-size: 20px;
+  font-weight: 700
+}

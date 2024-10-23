@@ -93,7 +93,7 @@ Adverb: modifies everything that isn’t a noun. 修饰除了名词外的一切�
 
 modifies verbs and adjectives. 修饰动词和形容词。
 
-> 从词根看，adverb → ad + verb，ad- 是 to 的意思，而 verb 是动词的意思。
+> 从词根看，adverb = ad + verb，ad- 是 to 的意思，而 verb 是动词的意思。
 
 例子：
 
