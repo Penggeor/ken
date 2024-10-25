@@ -44,7 +44,7 @@ leaf 👉 lea<u>ves</u>
 
 loaf 👉 loa<u>ves</u>
 
-colf 👉 col<u>ves</u>
+calf 👉 cal<u>ves</u>
 
 
 
@@ -54,7 +54,7 @@ child 👉 <u>children</u>
 
 ox 👉 ox<u>en</u>
 
-~~brother~~ 👉~~brotheren~~ 
+~~brother~~ 👉~~brotheren
 
 ~~sister~~ 👉 ~~sisteren~~ 原来的复数写法已经被 brothers 和 sisters 取代了
 
@@ -62,7 +62,7 @@ ox 👉 ox<u>en</u>
 
 🙋 为什么 ox（公牛）复数是 oxen，而 box 的复数则是 boxes？
 
-👩‍🏫 这跟词源有关，这两个单词形近，但是 ox 是古英语，box 则是 希腊单词 → 拉丁语 → 法语 → 英语 这样演变来的。
+👩‍🏫 这跟词源有关，虽然这两个单词形近，但 ox 来自古英语，box 则是 希腊单词 → 拉丁语 → 法语 → 英语 这样演变来的。
 
 :::
 
@@ -94,7 +94,7 @@ Individual fish 鱼：Marty caught thirty fish. 马蒂抓住了 30 条鱼。
 
 英语中外来词汇的名词复数：
 
-🇮🇹 Latin 来自拉丁语
+🇮🇹 Latin 拉丁语
 
 fungus 👉 <u>fungi</u>
 
@@ -108,7 +108,7 @@ cactus 👉 cacti
 >
 > cacti /ˈkæktaɪ/
 
-🇬🇷 Greek 来自希腊语
+🇬🇷 Greek 希腊语
 
 thesis
 
