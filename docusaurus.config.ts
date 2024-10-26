@@ -424,7 +424,7 @@ const config: Config = {
           type: 'all',
           title: '生活周刊',
           copyright: `版权 © ${new Date().getFullYear()} 吴楷鹏`,
-          description: '每周更新的生活周刊',
+          description: `每周更新的生活周刊 #feedId:${process.env.FEED_ID}+userId:${process.env.USER_ID}#`,
         },
         ...MathEquations,
       },
