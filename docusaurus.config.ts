@@ -371,6 +371,14 @@ const config: Config = {
         //   template: '#zoom-template',
         // },
       },
+      announcementBar: {
+        id: 'support_us',
+        content:
+          '一款有用、好用的智能阅读助手 🚀 <a target="_blank" rel="noopener noreferrer" href="https://baoyueai.com/home/scenes?utm_id=237648#part-8">包阅</a>',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
     } satisfies PresetClassic.ThemeConfig,
 
   plugins: [
@@ -416,7 +424,7 @@ const config: Config = {
           type: 'all',
           title: '生活周刊',
           copyright: `版权 © ${new Date().getFullYear()} 吴楷鹏`,
-          description: '每周更新的生活周刊',
+          description: `每周更新的生活周刊 feedId:60244255202015232+userId:69676769296017408`,
         },
         ...MathEquations,
       },
