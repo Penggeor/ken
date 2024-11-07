@@ -57,8 +57,9 @@ const config: Config = {
         },
         blog: {
           showReadingTime: true,
-          blogSidebarTitle: 'All posts',
+          blogSidebarTitle: '✨',
           blogSidebarCount: 'ALL',
+          ...MathEquations
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -439,7 +440,7 @@ const config: Config = {
     //     blogSidebarTitle: '✨',
     //     blogSidebarCount: 'ALL',
     //     authorsMapPath: '../author.yaml',
-    //     ...MathEquations,
+    //     // ...MathEquations,
     //   },
     // ],
     // [
