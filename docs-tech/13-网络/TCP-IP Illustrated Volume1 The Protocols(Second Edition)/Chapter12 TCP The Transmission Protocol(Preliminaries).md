@@ -37,8 +37,8 @@ Packet erasure(drops) solution:
 - **Stop and wait**: sender inject single packet into communication path and have to waiting ACK.
 - Throughput performance: data sent on the network per unit time. It is proportional to $M/R$, 
   - $M$​ : packet size; $R$: round-trip time(RTT)
-  - For a fixed-size packet, as $R$​ goes up:arrow_heading_up: , the throughput goes down:arrow_heading_down: .(Assuming not packet lose or damaged in transit)
-  - The network in idle also have lower efficiency.
+  - For a fixed-size packet, as $R$​ goes up:arrow_heading_up: , the throughput goes down:arrow_heading_down: . (Assuming not packet lose or damaged in transit)
+  - The network in idle also has lower efficiency.
 
 Sender need to consider:
 
@@ -53,7 +53,7 @@ Receiver need to consider:
 
 Other issue:
 
-1. Receiver is slower than the sender.(Receiver will drop the packet because can’t dispose overwhelming packet from sender)
+1. Receiver is slower than the sender. (Receiver will drop the packet because can’t dispose overwhelming packet from sender)
 2. Network infrastructure(e.g. routers in middle) can’t copy with rate of data the sender and receiver wish to use.
 
 ![Consider](http://img.wukaipeng.com/2023/0923-152740-Consider.png)
@@ -64,34 +64,34 @@ Other issue:
 
 ***window size***: number of packets in the window.
 
-:speech_balloon: Window is like canteen window which controls who be serviced and have three state: not yet service/servicing/serviced.
+:speech_balloon: Window is like canteen window which controls who be serviced and has three state: not yet service/servicing/serviced.
 
 ![](http://img.wukaipeng.com/2023/0923-152740-%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20211122201720.jpg)
 
 Window can combat many problems: 
 
 - At sender:
-  - what packets can be release.
-  - what packet are awaiting ACK.
-  - what packets cannot yet be send.
+  - what packets can be released.
+  - what packets are awaiting ACK.
+  - what packets cannot yet be sent.
 - At receiver:
-  - what packets have been received and acknowledge.
+  - what packets have been received and acknowledged.
   - what packets are expected.
   - how much memory has been allocated to hold them.
 
-Still not resolve:
+Still not resolved:
 
 - how large the window should be.
 - data transfer rate.
 
 ### 12.1.3 Variable Windows: Flow Control and Congestion Control
 
-***Flow Control***: the way to force sender slow down. Two type:
+***Flow Control***: the way to force the sender to slow down. Two types:
 
-1. *Rate-based* flow control: fixed rate allocation which not allow be exceeded.
+1. *Rate-based* flow control: fixed rate allocation which is not allowed to be exceeded.
 2. *Window-based* flow control: dynamic rate 
    1. *Window advertisement*(or *window update*): the method to signal the sender how large a window to use.
-   2. Window advertisement and ACK are together in single packet in practical.
+   2. Window advertisement and ACK are together in a single packet in practice.
 
 ---
 
@@ -103,45 +103,45 @@ Transfer rate: $SW/R$
 
 ---
 
-***Congestion Control***: the special form of flow control which copy with the data transfer rate between sender and receiver. 
+***Congestion Control***: the special form of flow control which copies the data transfer rate between sender and receiver. 
 
 :question: The problem of congestion control in datagram-style networks, and more generally *queuing theory* to which it is closely related, has remained a major research topic for years, and it is unlikely to ever be solved completely for all circumstances.
 
 ---
 
-- *Explicit* signaling: have a protocol specific field. e.g. window advertisement.
+- *Explicit* signaling: have a protocol-specific field. e.g. window advertisement.
 
 - *Implicit* signaling: need other evidence.
 
 ### 12.1.4 Setting the Retransmission Timeout
 
-***Retransmission timeout***: the time to wait before concluding that a packet has been lost and should be resend.
+***Retransmission timeout***: the time to wait before concluding that a packet has been lost and should be resent.
 
 To determine retransmission timeout:
 
 - the time to send the packet.
-- the time receiver process it and send an ACK.
-- the time for ACK travel back to the sender.
-- the time sender process the ACK.
+- the time receiver processes it and sends an ACK.
+- the time for ACK to travel back to the sender.
+- the time the sender processes the ACK.
 
-:sob: None of these time are known with certainty!
+:sob: None of these times are known with certainty!
 
-:tired_face: These time vary over time as additional load is added to or removed from the end hosts or routers.
+:tired_face: These times vary over time as additional load is added to or removed from the end hosts or routers.
 
 ---
 
 *Round-trip-time estimation*: try to estimate the time which can’t exactly get but approximately approach. 
 
-The timeout is large than time by round-trip-time estimation.
+The timeout is larger than time by round-trip-time estimation.
 
 ## 12.2 Introduction to TCP
 
 ### 12.2.1 The TCP Service Model
 
-**TCP provide a connection-oriented, reliable, byte streaming service.**
+**TCP provides a connection-oriented, reliable, byte streaming service.**
 
-- Connection-oriented: Two endpoint have to establish a TCP connection before exchange data.
-- Byte streaming: Each endpoint individually choose write or read extent.
+- Connection-oriented: Two endpoints have to establish a TCP connection before exchanging data.
+- Byte streaming: Each endpoint individually chooses write or read extent.
 
 ### 12.2.2 Reliability in TCP
 
