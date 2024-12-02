@@ -394,14 +394,14 @@ const config: Config = {
         //   template: '#zoom-template',
         // },
       },
-      announcementBar: {
-        id: 'support_us',
-        content:
-          '一款有用、好用的智能阅读助手 🚀 <a target="_blank" rel="noopener noreferrer" href="https://baoyueai.com/home/scenes?utm_id=237648#part-8">包阅</a>',
-        backgroundColor: '#fafbfc',
-        textColor: '#091E42',
-        isCloseable: true,
-      },
+      // announcementBar: {
+      //   id: 'support_us',
+      //   content:
+      //     '一款有用、好用的智能阅读助手 🚀 <a target="_blank" rel="noopener noreferrer" href="https://baoyueai.com/home/scenes?utm_id=237648#part-8">包阅</a>',
+      //   backgroundColor: '#fafbfc',
+      //   textColor: '#091E42',
+      //   isCloseable: true,
+      // },
     } satisfies PresetClassic.ThemeConfig,
 
   plugins: [
