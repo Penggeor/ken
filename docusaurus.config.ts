@@ -294,10 +294,10 @@ const config: Config = {
           {
             title: '供应商',
             items: [
-              // {
-              //   label: '由 UCloud 提供服务器',
-              //   href: 'https://www.ucloud.cn/site/active/kuaijiesale.html?invitation_code=C1xCCE664C27422',
-              // },
+              {
+                label: '由 UCloud 提供服务器',
+                href: 'https://www.ucloud.cn/site/active/kuaijiesale.html?invitation_code=C1xCCE664C27422',
+              },
               {
                 html: `<a class="footer__link-item" style="display: flex;gap: 0.25rem;align-items: center;" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
                 由
