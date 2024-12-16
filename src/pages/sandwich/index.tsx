@@ -3,12 +3,8 @@ import { useState, useEffect } from 'react'
 import Layout from '@theme/Layout'
 import { localStorage } from '@boombox/storage'
 import styles from './index.module.scss'
-import useIsBrowser from '@docusaurus/useIsBrowser'
 
 export default function () {
-  // const isBrowser = useIsBrowser()
-  // if (!isBrowser) return <div></div>
-
   const KEY = 'sandwich'
   type Storage = {
     prefix: string
