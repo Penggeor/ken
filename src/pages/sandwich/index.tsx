@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import type React from 'react'
+import { useState, useEffect } from 'react'
 import Layout from '@theme/Layout'
 import { localStorage } from '@boombox/storage'
 import styles from './index.module.scss'
@@ -62,7 +63,7 @@ export default function () {
 
   return (
     <Layout
-      title={`Post Sandwich`}
+      title='Post Sandwich'
       description='Post tool that allow you to add fixed prefix and suffix to your content.'
     >
       <main className={styles.main}>
@@ -74,7 +75,7 @@ export default function () {
             onChange={handlePrefixChange}
           />
           <div className={styles.content}>
-            <button onClick={handlePaste}>Paste</button>
+            <button type="button" onClick={handlePaste}>Paste</button>
             <textarea
               id='content'
               placeholder='Enter the main content here'
@@ -90,7 +91,7 @@ export default function () {
           />
         </div>
         <div className={styles.right}>
-          <button className={'copy'} onClick={handleCopy}>
+          <button type="button" className={'copy'} onClick={handleCopy}>
             {copyFeedback}
           </button>
           <textarea
