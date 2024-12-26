@@ -454,7 +454,7 @@ const config: Config = {
         authorsMapPath: '../author.yaml',
         feedOptions: {
           type: 'all',
-          title: 'Deving Weekly',
+          title: 'Deving 周刊',
           copyright: `版权 © ${new Date().getFullYear()} 吴楷鹏`,
           description: `每周更新有料周刊，分享编程、生活、健康和思考 feedId:60244255202015232+userId:69676769296017408`,
         },
