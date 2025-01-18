@@ -1,5 +1,7 @@
 # Ken - 快速搭建你的个人博客网站
 
+基于 Facebook 开源的静态博客生成框架，短时间可完成开发、部署并上线。
+
 ```mermaid
 graph LR;
    A[整体功能]
@@ -18,9 +20,6 @@ graph LR;
    A --> G
    A --> H
 ```
-
-基于 Facebook 开源的静态博客生成框架，短时间可完成部署并上线。
-
 
 技术供应层面上：
 
@@ -49,38 +48,24 @@ graph LR;
 10. Github Action：CI/CD 部署
 
 
-## Docker 部署
+## 开发
 
-打包
-
-```shell
-docker build \
---build-arg POSTHOG_API_KEY=your_value \
---build-arg GISCUS_REPO_ID=your_value \
---build-arg GISCUS_CATEGORY_ID=your_value \
--t ken:v1.0.0 .
-```
-
-压缩
+1. 拉去代码到本地
 
 ```shell
-docker save ken:latest -o ken
+git clone git@github.com:Penggeor/ken.git
 ```
 
-上传
+2. 安装依赖
 
 ```shell
-scp ./ken ucloud:~
+npm install
 ```
 
-解压
+3. 本地运行
 
 ```shell
-docker load -i ken
+npm run start
 ```
 
-运行
-
-```shell
-docker run -d -p 4000:3000 --name ken ken:v1.0.0
-```
+然后访问 `http://localhost:3000` 即可看到效果。
