@@ -49,7 +49,6 @@ const config: Config = {
 
   presets: [
     [
-      // 'classic',
       '@docusaurus/preset-classic',
       {
         docs: {
@@ -59,6 +58,7 @@ const config: Config = {
           showReadingTime: true,
           blogSidebarTitle: '✨',
           blogSidebarCount: 'ALL',
+          onUntruncatedBlogPosts: 'ignore',
           ...MathEquations
         },
         theme: {
@@ -93,7 +93,7 @@ const config: Config = {
         },
         items: [
           {
-            to: 'weekly',
+            to: 'weekly/index',
             label: '🌃 周刊'  ,
             position: 'left',
           },
@@ -113,111 +113,29 @@ const config: Config = {
               {
                 to: 'english',
                 label: '🐳 英语',
-                // position: 'left',
               },
               {
                 to: 'read',
                 label: '🦋 阅读',
-                // position: 'left',
               },
               {
                 to: 'blog',
                 label: '🌌 博客',
-                // position: 'left',
               },
               {
                 label: '📶 博客 RSS',
-                // href: 'https://wukaipeng.com/blog/rss.xml',
                 to: 'blog/rss.xml',
                 'aria-label': 'RSS',
               },
               {
                 label: '📶 周刊 RSS',
-                // href: 'https://wukaipeng.com/weekly/rss.xml',
                 to: 'weekly/rss.xml',
                 'aria-label': 'RSS',
               },
             ]
           },
-          // {
-          //   label: 'RSS',
-          //   href: 'https://wukaipeng.com/blog/rss.xml',
-          //   position: 'right',
-          //   'aria-label': 'RSS',
-          // },
-          // {
-          //   type: 'dropdown',
-          //   label: '其他平台',
-          //   position: 'right',
-          //   items: [
-          //     {
-          //       label: 'X (Twitter)',
-          //       href: 'https://twitter.com/x_wukaipeng',
-          //       'aria-label': 'X',
-          //     },
-          //     {
-          //       label: 'Jike 即刻',
-          //       href: 'https://okjk.co/8FI5oD',
-          //       'aria-label': '即刻',
-          //     },
-          //   ]
-          // },
-          // {
-          //   type: 'dropdown',
-          //   label: '联系我',
-          //   position: 'right',
-          //   items: [
-          //     {
-          //       href: "https://wukaipeng.com/wechat",
-          //       label: "微信",
-          //       'aria-label': 'WeChat',
-          //       target: '_self'
-          //     },
-          //     {
-          //       label: 'Email',
-          //       href: 'mailto:wkpcoder@163.com',
-          //       'aria-label': 'Email',
-          //     },
-          //     // {
-          //     //   label: 'X(Twitter)',
-          //     //   href: 'https://twitter.com/x_wukaipeng',
-          //     //   'aria-label': 'X',
-          //     // },
-          //     // {
-          //     //   label: '即刻',
-          //     //   href: 'https://okjk.co/8FI5oD',
-          //     //   'aria-label': '即刻',
-          //     // }
-          //   ]
-          // },
-          // {
-          //   type: 'dropdown',
-          //   label: 'RSS',
-          //   position: 'right',
-          //   items: [
-          //     {
-          //       label: '博客 RSS 📶',
-          //       href: 'https://wukaipeng.com/blog/rss.xml',
-          //       'aria-label': 'RSS',
-          //     },
-          //     {
-          //       label: '周刊 RSS 📶',
-          //       href: 'https://wukaipeng.com/weekly/rss.xml',
-          //       'aria-label': 'RSS',
-          //     },
-          //     // {
-          //     //   to: 'sandwich',
-          //     //   label: '写作工具 🥪 文章前后添加固定内容',
-          //     // },
-          //     // {
-          //     //   to: 'what-week-of-the-year-is-it-this-week',
-          //     //   label: '写作工具 📅 本周是今年的第几周',
-          //     // }
-          //   ],
-          // },
           {
             href: 'https://github.com/Penggeor/ken',
-            // label: 'GitHub',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
@@ -231,27 +149,6 @@ const config: Config = {
       footer: {
         style: 'dark',
         links: [
-          // {
-          //   title: '本站',
-          //   items: [
-          //     {
-          //       label: '技术',
-          //       to: 'technique',
-          //     },
-          //     {
-          //       label: '英语',
-          //       to: 'english',
-          //     },
-          //     {
-          //       label: '知识库',
-          //       to: 'read',
-          //     },
-          //     {
-          //       label: '博客',
-          //       to: 'blog',
-          //     },
-          //   ],
-          // },
           {
             title: '联系方式',
             items: [
@@ -410,6 +307,7 @@ const config: Config = {
         blogSidebarTitle: '✨',
         blogSidebarCount: 'ALL',
         authorsMapPath: '../author.yaml',
+        onUntruncatedBlogPosts: 'ignore',
         feedOptions: {
           type: 'all',
           title: 'Deving 周刊',
@@ -419,15 +317,6 @@ const config: Config = {
         ...MathEquations,
       },
     ],
-    // [
-    //   'posthog-docusaurus',
-    //   {
-    //     apiKey: process.env.POSTHOG_API_KEY,
-    //     appUrl: 'https://app.posthog.com', // optional
-    //     enableInDevelopment: true, // optional
-    //   },
-    // ],
-    // PostHogPlugin,
     'plugin-image-zoom',
   ],
 
