@@ -92,18 +92,6 @@ const config: Config = {
           srcDark: 'img/Logokp-logo-v1-dark@3x.png',
         },
         items: [
-          // {
-          //   to: 'tech',
-          //   label: '🌃 技术',
-          // },
-          // {
-          //   to: 'eng',
-          //   label: '🌌 英文',
-          // },
-          // {
-          //   to: 'post',
-          //   label: '🎇 思考',
-          // },
           {
             to: 'weekly',
             label: '🌃 周刊'  ,
@@ -112,7 +100,6 @@ const config: Config = {
           {
             to: 'technique',
             label: '🦄 技术',
-            // position: 'left',
           },
           {
             to: 'class',
@@ -352,35 +339,6 @@ const config: Config = {
         minHeadingLevel: 2,
         maxHeadingLevel: 6,
       },
-      algolia: {
-        // The application ID provided by Algolia
-        appId: process.env.ALGOLIA_APP_ID,
-
-        // Public API key: it is safe to commit it
-        apiKey: process.env.ALGOLIA_API_KEY,
-
-        indexName: process.env.ALGOLIA_INDEX_NAME,
-
-        // Optional: see doc section below
-        contextualSearch: false,
-
-        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        // externalUrlRegex: 'external\\.com|domain\\.com',
-
-        // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-        replaceSearchResultPathname: {
-          from: '/zh-CN/', // or as RegExp: /\/docs\//
-          to: '/',
-        },
-
-        // Optional: Algolia search parameters
-        searchParameters: {},
-
-        // Optional: path for search page that enabled by default (`false` to disable it)
-        searchPagePath: 'search',
-
-        //... other Algolia params
-      },
       imageZoom: {
         // CSS selector to apply the plugin to, defaults to '.markdown img'
         selector: '.markdown img',
@@ -456,70 +414,20 @@ const config: Config = {
           type: 'all',
           title: 'Deving 周刊',
           copyright: `版权 © ${new Date().getFullYear()} 吴楷鹏`,
-          description: `每周更新有料周刊，分享编程、生活、健康和思考 feedId:60244255202015232+userId:69676769296017408`,
+          description: '每周更新有料周刊，分享编程、生活、健康和思考 feedId:60244255202015232+userId:69676769296017408',
         },
         ...MathEquations,
       },
     ],
     // [
-    //   '@docusaurus/plugin-content-blog',
+    //   'posthog-docusaurus',
     //   {
-    //     id: 'blog',
-    //     path: 'blog',
-    //     blogTitle: '博客',
-    //     routeBasePath: '/',
-    //     blogSidebarTitle: '✨',
-    //     blogSidebarCount: 'ALL',
-    //     authorsMapPath: '../author.yaml',
-    //     // ...MathEquations,
+    //     apiKey: process.env.POSTHOG_API_KEY,
+    //     appUrl: 'https://app.posthog.com', // optional
+    //     enableInDevelopment: true, // optional
     //   },
     // ],
-    // [
-    //   '@docusaurus/plugin-content-blog',
-    //   {
-    //     id: 'blog-tech',
-    //     path: 'blog-tech',
-    //     blogTitle: '博客',
-    //     routeBasePath: 'tech',
-    //     blogSidebarTitle: '✨',
-    //     blogSidebarCount: 'ALL',
-    //     authorsMapPath: '../author.yaml',
-    //     ...MathEquations,
-    //   },
-    // ],
-    // [
-    //   '@docusaurus/plugin-content-blog',
-    //   {
-    //     id: 'blog-engh',
-    //     path: 'blog-engh',
-    //     blogTitle: 'Essay',
-    //     routeBasePath: 'eng',
-    //     blogSidebarTitle: '🌟',
-    //     blogSidebarCount: 'ALL',
-    //     authorsMapPath: '../author.yaml',
-    //     ...MathEquations,
-    //   },
-    // ],
-    // [
-    //   '@docusaurus/plugin-content-blog',
-    //   {
-    //     id: 'blog-post',
-    //     path: 'blog-post',
-    //     blogTitle: '阅读',
-    //     routeBasePath: 'post',
-    //     blogSidebarTitle: '💫',
-    //     blogSidebarCount: 'ALL',
-    //     ...MathEquations,
-    //   },
-    // ],
-    [
-      'posthog-docusaurus',
-      {
-        apiKey: process.env.POSTHOG_API_KEY,
-        appUrl: 'https://app.posthog.com', // optional
-        enableInDevelopment: true, // optional
-      },
-    ],
+    // PostHogPlugin,
     'plugin-image-zoom',
   ],
 
@@ -541,6 +449,37 @@ const config: Config = {
   markdown: {
     mermaid: true,
   },
+}
+
+if (process.env?.POSTHOG_API_KEY) {
+  config.plugins.push([
+    'posthog-docusaurus',
+    {
+      apiKey: process.env.POSTHOG_API_KEY,
+      appUrl: 'https://app.posthog.com', // optional
+      enableInDevelopment: true, // optional
+    },
+  ])
+} else {
+  console.warn('[Warning]可添加 POSTHOG_API_KEY 环境变量以启用 PostHog 插件')
+}
+
+if (
+  process.env.ALGOLIA_APP_ID &&
+  process.env.ALGOLIA_API_KEY &&
+  process.env.ALGOLIA_INDEX_NAME
+) {
+  config.themeConfig.algolia = {
+    appId: process.env.ALGOLIA_APP_ID,
+    apiKey: process.env.ALGOLIA_API_KEY,
+    indexName: process.env.ALGOLIA_INDEX_NAME,
+    searchParameters: {},
+    searchPagePath: 'search',
+  }
+} else {
+  console.warn(
+    '[Warning]可添加 ALGOLIA_APP_ID、ALGOLIA_API_KEY 和 ALGOLIA_INDEX_NAME 环境变量以启用 Algolia 搜索插件'
+  )
 }
 
 export default config
