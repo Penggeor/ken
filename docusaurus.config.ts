@@ -376,8 +376,8 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'docs-engh',
-        path: 'docs-engh',
+        id: 'docs-english',
+        path: 'docs-english',
         routeBasePath: 'english',
         ...ContentParam,
       },
