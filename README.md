@@ -23,7 +23,7 @@ graph LR;
 
 技术供应层面上：
 
-1. [Docusaurus V3.0](https://docusaurus.io/)： Facebook 开源的博客网站，**名字有点难拼写**，它由 Docu 和 saurus 组合而成，前者是指“文档”，后者是指“蜥蜴”，寓意轻量快捷的文档生成框架。
+1. [Docusaurus V3.7](https://docusaurus.io/)： Facebook 开源的博客网站，**名字有点难拼写**，它由 Docu 和 saurus 组合而成，前者是指“文档”，后者是指“蜥蜴”，寓意轻量快捷的文档生成框架。
 
    ![Docusaurus](https://ph-files.imgix.net/7a8c1deb-6539-476c-bd6a-907c830b2394.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&fit=max&dpr=2)
 
@@ -69,3 +69,13 @@ npm run start
 ```
 
 然后访问 `http://localhost:3000` 即可看到效果。
+
+
+## 快速部署
+
+### Vercel
+
+点击下方按钮 👇 快速部署到你的 Vercel 账号上
+
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FPenggeor%2Fken)
