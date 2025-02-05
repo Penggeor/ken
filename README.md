@@ -62,27 +62,13 @@ graph LR;
 ## 技术栈
 
 1. [Docusaurus V3.7](https://docusaurus.io/)： Facebook 开源的博客网站，**名字有点难拼写**，它由 Docu 和 saurus 组合而成，前者是指“文档”，后者是指“蜥蜴”，寓意轻量快捷的文档生成框架。
-
-   ![Docusaurus](https://ph-files.imgix.net/7a8c1deb-6539-476c-bd6a-907c830b2394.png?auto=compress&codec=mozjpeg&cs=strip&auto=format&fit=max&dpr=2)
-
-2. [霞鹭字体](https://github.com/lxgw/LxgwWenKai)：开源的中文字体，非常好看。
-
-   ![LXGW](https://lxgw.github.io/images/posts/klee-simpchin/wenkai-overview.png)
-
-3. [Giscus](https://giscus.app/)：开源的评论集成工具，直接利用 GitHub Discuss，不用自己维护一个数据库。
-
-4. [Posthog](https://posthog.com/)：开源的网站监控工具。它有 cloud 版本，有一百万事件的免费额度。
-
-5. [Nginx](https://www.nginx.com/)：反向代理服务器。
-
-6. [Docker](https://www.docker.com/)：部署网站
-
-7. Algolia：网站内搜索服务，对于开源项目可以免费使用。
-
-8. 又拍云 + uPic：又拍云提供云存储功能，uPic 是一款免费的图片上传应用，两者结合完成图床功能。
-
-9. [UCloud](https://www.ucloud.cn/site/active/kuaijiesale.html?invitation_code=C1xCCE664C27422)：提供服务器、域名、SSL 证书。
-
+2. [Giscus](https://giscus.app/)：开源的评论集成工具，直接利用 GitHub Discuss，不用自己维护一个数据库。
+3. [Posthog](https://posthog.com/)：开源的网站监控工具。它的 cloud 版本有一百万事件的免费额度。
+4. [Nginx](https://www.nginx.com/)：反向代理服务器。
+5. [Docker](https://www.docker.com/)：部署网站
+6. Algolia：网站内搜索服务，对于开源项目可以免费使用。
+7. 又拍云 + uPic：又拍云提供云存储功能，uPic 是一款免费的图片上传应用，两者结合完成图床功能。
+8. [UCloud](https://www.ucloud.cn/site/active/kuaijiesale.html?invitation_code=C1xCCE664C27422)：提供服务器、域名、SSL 证书。
 10. Github Action：CI/CD 部署
 
 ## Feedback
