@@ -124,12 +124,12 @@ const config: Config = {
               },
               {
                 label: '📶 博客 RSS',
-                to: 'blog/rss.xml',
+                to: 'https://wukaipeng.com/blog/rss.xml',
                 'aria-label': 'RSS',
               },
               {
                 label: '📶 周刊 RSS',
-                to: 'weekly/rss.xml',
+                to: 'https://wukaipeng.com/weekly/rss.xml',
                 'aria-label': 'RSS',
               },
             ]
