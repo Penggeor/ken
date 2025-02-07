@@ -17,7 +17,7 @@ export default function Home(): JSX.Element {
     >
       <HomepageHeader />
       <main>
-        <Car />
+        {/* <Car /> */}
       </main>
     </Layout>
   );
