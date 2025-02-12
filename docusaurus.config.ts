@@ -310,9 +310,9 @@ const config: Config = {
         onUntruncatedBlogPosts: 'ignore',
         feedOptions: {
           type: 'all',
-          title: 'Deving 周刊',
+          title: '「DevingWeekly | 效率周刊」',
           copyright: `版权 © ${new Date().getFullYear()} 吴楷鹏`,
-          description: '每周更新有料周刊，分享编程、生活、健康和思考 feedId:60244255202015232+userId:69676769296017408',
+          description: '每周更新，精选高效率工具，用技术差重构时间 ROI （feedId:60244255202015232+userId:69676769296017408）',
         },
         ...MathEquations,
       },
