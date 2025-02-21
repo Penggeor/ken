@@ -1,23 +1,42 @@
-import React from 'react';
-// import { useBlogPost } from '@docusaurus/theme-common/internal'
+import React, {type ReactNode} from 'react';
 import BlogPostItem from '@theme-original/BlogPostItem';
-import GiscusComponent from '@site/src/components/Giscus';
-// import useIsBrowser from '@docusaurus/useIsBrowser';
+import type BlogPostItemType from '@theme/BlogPostItem';
+import type {WrapperProps} from '@docusaurus/types';
+import InlineCopyButton from '@site/src/components/InlineCopyButton';
 
-export default function BlogPostItemWrapper(props) {
-  // const { metadata, isBlogPostPage } = useBlogPost()
-  // const isBrowser = useIsBrowser();
+type Props = WrapperProps<typeof BlogPostItemType>;
 
-  // const { frontMatter } = metadata
-  // const { disabledComments } = frontMatter
+export default function BlogPostItemWrapper(props: Props): ReactNode {
+  const metadata = props.children?.type?.metadata;
+  const permalink = metadata?.permalink;
+  const isWeeklyBlog = permalink?.includes?.('/weekly/');
+  const isBlog = permalink?.includes?.('/blog/');
 
   return (
     <>
       <BlogPostItem {...props} />
-      {/* {(!disabledComments && isBlogPostPage) && (
-        <GiscusComponent />
-      )} */}
-      <GiscusComponent />
+      {isWeeklyBlog && (
+        <blockquote style={{margin: 'var(--ifm-spacing-vertical) 0'}}>
+          <p>
+            ✨ 每周分享好事、好物、好书，目前仅在本站发布，欢迎 RSS 订阅：{' '}
+            <span style={{display: 'inline-flex', alignItems: 'center'}}>
+              https://wukaipeng.com/weekly/rss.xml
+              <InlineCopyButton content="https://wukaipeng.com/weekly/rss.xml" />
+            </span>
+          </p>
+        </blockquote>
+      )}
+      {isBlog && (
+        <blockquote style={{margin: 'var(--ifm-spacing-vertical) 0'}}>
+          <p>
+            ✨ 分享对编程、生活和宇宙的思考，目前仅在本站发布，欢迎 RSS 订阅：{' '}
+            <span style={{display: 'inline-flex', alignItems: 'center'}}>
+              https://wukaipeng.com/blog/rss.xml
+              <InlineCopyButton content="https://wukaipeng.com/blog/rss.xml" />
+            </span>
+          </p>
+        </blockquote>
+      )}
     </>
   );
 }
